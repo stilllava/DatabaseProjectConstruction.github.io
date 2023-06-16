@@ -1,0 +1,8 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8Ï”ëÈ‹1
+i
+java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8æ”ëÈ‹1
+P
+java:S1481"3Remove this unused "enquiryTeacher" local variable.(â‡¹©8ç”ëÈ‹1
+U
+java:S1481"3Remove this unused "enquiryStudent" local variable.(²åÛÿÿÿÿÿ8è”ëÈ‹1

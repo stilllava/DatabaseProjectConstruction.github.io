@@ -1,0 +1,22 @@
+
+m	java:S1178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8ÐÏê›Œ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8ÑÏê›Œ1
+d
+java:S2095C"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ÚÑê›Œ1
+j
+java:S2095A"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ÚÑê›Œ1
+i
+java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8àÑê›Œ1
+t
+java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(¼ Òþüÿÿÿÿ8âÑê›Œ1
+I
+java:S11251"'Remove the unnecessary boolean literal.(Â™•”ÿÿÿÿÿ8ãÑê›Œ1
+X
+java:S6437A"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8åÑê›Œ1
+Z	java:S106B"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ8åÑê›Œ1
+h
+java:S1858G"K"position" is already a string, there's no need to call "toString()" on it.(«’¦ô8æÑê›Œ1
+t
+java:S1858N"R"passwordcorrect" is already a string, there's no need to call "toString()" on it.(‹Û”Ýýÿÿÿÿ8æÑê›Œ1
+Z	java:S106P"9Replace this use of System.out or System.err by a logger.(•åà¤øÿÿÿÿ8çÑê›Œ1
+J	java:S108a")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8çÑê›Œ1

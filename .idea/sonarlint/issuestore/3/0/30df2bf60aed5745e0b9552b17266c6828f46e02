@@ -1,0 +1,62 @@
+
+b	java:S112m"FDefine and throw a dedicated exception instead of using a generic one.(³‰›Æ8Îõ¾™Œ1
+b	java:S112o"FDefine and throw a dedicated exception instead of using a generic one.(”Æß…8Îõ¾™Œ1
+g	java:S112~"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8Îõ¾™Œ1
+h	java:S112ƒ"FDefine and throw a dedicated exception instead of using a generic one.(×¡ûÊÿÿÿÿÿ8Ïõ¾™Œ1
+h	java:S112–"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ñõ¾™Œ1
+h	java:S112˜"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ñõ¾™Œ1
+h	java:S112¥"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Òõ¾™Œ1
+h	java:S112ª"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Òõ¾™Œ1
+c	java:S112º"FDefine and throw a dedicated exception instead of using a generic one.(³‰›Æ8Òõ¾™Œ1
+c	java:S112¼"FDefine and throw a dedicated exception instead of using a generic one.(”Æß…8Òõ¾™Œ1
+h	java:S112Ï"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8Òõ¾™Œ1
+h	java:S112Ô"FDefine and throw a dedicated exception instead of using a generic one.(×¡ûÊÿÿÿÿÿ8Òõ¾™Œ1
+Ê
+java:S1192e"§Define a constant instead of duplicating this literal "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false" 3 times.(Á·™úÿÿÿÿ8Óõ¾™Œ1
+l
+java:S1192f"JDefine a constant instead of duplicating this literal "s20211576" 6 times.(º×Èÿÿÿÿÿ8Óõ¾™Œ1
+Š
+java:S1192d"mDefine a constant instead of duplicating this literal "com.microsoft.sqlserver.jdbc.SQLServerDriver" 3 times.(¾½Ùµ8Óõ¾™Œ1
+r	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü‘˜úÿÿÿÿ8Ôõ¾™Œ1
+m	java:S117d"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8Ôõ¾™Œ1
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8Ôõ¾™Œ1
+s	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÅÏäøÿÿÿÿ8Ôõ¾™Œ1
+n	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8Ôõ¾™Œ1
+`
+java:S1163ƒ"=Refactor this code to not throw exceptions in finally blocks.(×¡ûÊÿÿÿÿÿ8Öõ¾™Œ1
+`
+java:S1163ª"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8Öõ¾™Œ1
+`
+java:S1163Ô"=Refactor this code to not throw exceptions in finally blocks.(×¡ûÊÿÿÿÿÿ8Öõ¾™Œ1
+W
+java:S1143ƒ"4Remove this throw statement from this finally block.(×¡ûÊÿÿÿÿÿ8Öõ¾™Œ1
+W
+java:S1143ª"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8Öõ¾™Œ1
+W
+java:S1143Ô"4Remove this throw statement from this finally block.(×¡ûÊÿÿÿÿÿ8Öõ¾™Œ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8×õ¾™Œ1
+d
+java:S2095s"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8€ö¾™Œ1
+e
+java:S2095œ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ÿõ¾™Œ1
+e
+java:S2095¿"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8€ö¾™Œ1
+H
+java:S1948*"&Make "data" transient or serializable.(¹½ÿöùÿÿÿÿ8„ö¾™Œ1
+U	java:S106-"9Replace this use of System.out or System.err by a logger.(òÇ›8Œö¾™Œ1
+i
+java:S3252@"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8ö¾™Œ1
+g
+java:S1858_"J"loginID" is already a string, there's no need to call "toString()" on it.(ÆĞó…8•ö¾™Œ1
+X
+java:S6437k"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8—ö¾™Œ1
+R
+java:S1481q"0Remove this unused "columnCount" local variable.(ª‡ÕŸüÿÿÿÿ8˜ö¾™Œ1
+c
+java:S2147—"ECombine this catch with the one at line 149, which has the same body.(É®£8›ö¾™Œ1
+Y
+java:S6437”"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8œö¾™Œ1
+L
+java:S1481")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8ö¾™Œ1
+Y
+java:S6437¸"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Ÿö¾™Œ1

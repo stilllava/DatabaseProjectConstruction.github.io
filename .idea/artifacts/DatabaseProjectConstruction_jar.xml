@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DatabaseProjectConstruction:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DatabaseProjectConstruction_jar</output-path>
+    <root id="archive" name="DatabaseProjectConstruction.jar">
+      <element id="module-output" name="DatabaseProjectConstruction" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../sqljdbc_12.2.0.0_chs/sqljdbc_12.2/chs/mssql-jdbc-12.2.0.jre11.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

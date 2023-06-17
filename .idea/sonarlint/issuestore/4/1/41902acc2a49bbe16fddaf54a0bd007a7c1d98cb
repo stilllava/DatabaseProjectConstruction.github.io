@@ -1,0 +1,162 @@
+
+a	java:S112Ê"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112Ì"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112Ù"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112Ş"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+f
+java:S1192f"KDefine a constant instead of duplicating this literal "s20211576" 10 times.(º×Èÿÿÿÿÿ
+l
+java:S1192"PDefine a constant instead of duplicating this literal "' where Sno = '" 7 times.(×¡šøÿÿÿÿ
+ƒ
+java:S1192d"mDefine a constant instead of duplicating this literal "com.microsoft.sqlserver.jdbc.SQLServerDriver" 5 times.(æœÎê
+Ã
+java:S1192e"§Define a constant instead of duplicating this literal "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false" 5 times.(Á·™úÿÿÿÿ
+s
+java:S1192Ê"WDefine a constant instead of duplicating this literal "Connection Successful!" 3 times.(àŠÓ»øÿÿÿÿ
+J
+java:S1066"/Merge this if statement with the enclosing one.(èÁ§•ıÿÿÿÿ
+f	java:S117d"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê
+g	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê
+g	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê
+l	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şë¬şÿÿÿÿ
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê
+g	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ
+Y
+java:S1163Ş"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ
+P
+java:S1143Ş"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹
+^
+java:S2095˜"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦
+d
+java:S2095É"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ
+^
+java:S2095Ğ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦
+^
+java:S2095Ë"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦
+d
+java:S2095–"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ
+<
+java:S1948/"&Make "data" transient or serializable.(ÊŸ•ö
+V	java:S125#"<This block of commented-out lines of code should be removed.(³ÆŞ¹úÿÿÿÿ
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(û¯ˆÏ
+b
+java:S32526"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ
+m
+java:S3776Y"RRefactor this method to reduce its Cognitive Complexity from 76 to the 15 allowed.(¼ Òşüÿÿÿÿ
+B
+java:S1125["'Remove the unnecessary boolean literal.(˜™Ê…ûÿÿÿÿ
+B
+java:S1125\"'Remove the unnecessary boolean literal.(›„—Ãüÿÿÿÿ
+<
+java:S1125]"'Remove the unnecessary boolean literal.(÷ıï
+=
+java:S1125^"'Remove the unnecessary boolean literal.(½€­ë
+B
+java:S1125_"'Remove the unnecessary boolean literal.(Ù¾…İüÿÿÿÿ
+=
+java:S1125`"'Remove the unnecessary boolean literal.(’øóƒ
+B
+java:S1125a"'Remove the unnecessary boolean literal.(Åà·Éûÿÿÿÿ
+B
+java:S1125b"'Remove the unnecessary boolean literal.(ˆÄ€Íşÿÿÿÿ
+C	java:S108b")Either remove or fill this block of code.(ˆÄ€Íşÿÿÿÿ
+Q
+java:S6437l"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ
+N	java:S106m"9Replace this use of System.out or System.err by a logger.(ÂóÑ´
+C	java:S108w")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ
+B
+java:S1125"'Remove the unnecessary boolean literal.(èÁ§•ıÿÿÿÿ
+>
+java:S1125€"'Remove the unnecessary boolean literal.(áô¦ˆ
+C
+java:S1125"'Remove the unnecessary boolean literal.(´×„Àùÿÿÿÿ
+>
+java:S1125‚"'Remove the unnecessary boolean literal.(œòğ
+>
+java:S1125ƒ"'Remove the unnecessary boolean literal.(Åâ
+>
+java:S1125„"'Remove the unnecessary boolean literal.(Ô˜Öé
+C
+java:S1125…"'Remove the unnecessary boolean literal.(Îêãœûÿÿÿÿ
+>
+java:S1125†"'Remove the unnecessary boolean literal.(šşşğ
+C
+java:S1125Œ"'Remove the unnecessary boolean literal.(·Õèêşÿÿÿÿ
+C
+java:S1125"'Remove the unnecessary boolean literal.(öÌ‰ùÿÿÿÿ
+C
+java:S1125"'Remove the unnecessary boolean literal.(Ê³³Çşÿÿÿÿ
+>
+java:S1125’"'Remove the unnecessary boolean literal.(”ÏÑ
+>
+java:S1125”"'Remove the unnecessary boolean literal.(Êè´Ë
+>
+java:S1125–"'Remove the unnecessary boolean literal.(¾Úâñ
+C
+java:S1125˜"'Remove the unnecessary boolean literal.(¶ˆñàşÿÿÿÿ
+>
+java:S1125š"'Remove the unnecessary boolean literal.(ƒú´±
+R
+java:S6437Ÿ"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ
+O	java:S106 "9Replace this use of System.out or System.err by a logger.(ÂóÑ´
+D	java:S108ª")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ
+C
+java:S1125¸"'Remove the unnecessary boolean literal.(„ºèøÿÿÿÿ
+C
+java:S1125¹"'Remove the unnecessary boolean literal.(·Â•äùÿÿÿÿ
+C
+java:S1125º"'Remove the unnecessary boolean literal.(²„Ì¹øÿÿÿÿ
+C
+java:S1125»"'Remove the unnecessary boolean literal.(‹ÂÇÙøÿÿÿÿ
+>
+java:S1125¼"'Remove the unnecessary boolean literal.(ÂÉ“ğ
+>
+java:S1125½"'Remove the unnecessary boolean literal.(ÕóÍÿ
+>
+java:S1125¾"'Remove the unnecessary boolean literal.(­º”
+C
+java:S1125¿"'Remove the unnecessary boolean literal.(ÀòØÍûÿÿÿÿ
+>
+java:S1125À"'Remove the unnecessary boolean literal.(¬«¶º
+R
+java:S6437É"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ
+T	java:S106Ê"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ
+O	java:S106Ì"9Replace this use of System.out or System.err by a logger.(Â–‘ö
+D	java:S108à")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ
+?
+java:S1481è")Remove this unused "flag" local variable.(ŒÖı$
+>
+java:S1125ë"'Remove the unnecessary boolean literal.(‰‚ÛË
+>
+java:S1125ï"'Remove the unnecessary boolean literal.(ü£Æ»
+C
+java:S1125ó"'Remove the unnecessary boolean literal.(öÆëºıÿÿÿÿ
+=
+java:S1125ö"'Remove the unnecessary boolean literal.(­ı»^
+C
+java:S1125ú"'Remove the unnecessary boolean literal.(²‹š³ıÿÿÿÿ
+C
+java:S1125ş"'Remove the unnecessary boolean literal.(º¤Îşÿÿÿÿ
+>
+java:S1125‚"'Remove the unnecessary boolean literal.(«î§²
+C
+java:S1125†"'Remove the unnecessary boolean literal.(ûºŠğşÿÿÿÿ
+C
+java:S1125Š"'Remove the unnecessary boolean literal.(æÀ­óûÿÿÿÿ
+R
+java:S6437–"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ
+T	java:S106—"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ
+O	java:S106™"9Replace this use of System.out or System.err by a logger.(Â–‘ö
+D	java:S108¯")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ
+B
+java:S1481¼"+Remove this unused "insert" local variable.(÷åœ
+\
+java:S2147Ë"ECombine this catch with the one at line 329, which has the same body.(É®£
+R
+java:S6437Ç"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ
+T	java:S106È"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ
+E
+java:S1481Ò")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ
+â
+java:S6541Y"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 222 to 64, Complexity from 52 to 14, Nesting Level from 5 to 2, Number of Variables from 52 to 6.(¼ Òşüÿÿÿÿ

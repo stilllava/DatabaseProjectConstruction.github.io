@@ -159,7 +159,6 @@ public class WindowManagerInformationUpdateStudentInsert {
         return "col" + (getColumnNumber(sb.toString()) - 1);
     }
 
-    // 将字母列名转换为数字列号，例如 A -> 1, B -> 2, Z -> 26, AA -> 27, AB -> 28
     private static int getColumnNumber(String column) {
         int result = 0;
         for (int i = 0; i < column.length(); i++) {

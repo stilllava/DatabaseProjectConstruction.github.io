@@ -55,3 +55,5 @@ U
 %src/SystemInterface/WindowForget.java,c\e\ce6e67e8f9b524f04a92c30dd25897ac126b5b46
 X
 (src/SystemInterface/windowsRegister.java,a\d\ad9a32a3d230ee04c1019ddaac01eb3e7dfb0ecb
+M
+src/SystemInterface/Test.java,9\6\96d7eff2927d559f7e363323246ef070aa83a098

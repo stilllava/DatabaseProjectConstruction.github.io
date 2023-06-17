@@ -53,3 +53,5 @@ b
 2src/SystemInterface/WindowStudentCourseChoose.java,5\4\5405e1cf1fd0790e1baaf5cb8bc8117beeec4897
 U
 %src/SystemInterface/WindowForget.java,c\e\ce6e67e8f9b524f04a92c30dd25897ac126b5b46
+M
+src/SystemInterface/Test.java,9\6\96d7eff2927d559f7e363323246ef070aa83a098

@@ -20,12 +20,6 @@ l
 l
 <src/SystemInterface/WindowManagerInformationUpdateMajor.java,8\5\8559e2028bf69b0a1cd90f81b4fb6844f69496a2
 n
->src/SystemInterface/WindowManagerInformationUpdateStudent.java,4\1\41902acc2a49bbe16fddaf54a0bd007a7c1d98cb
-q
-Asrc/SystemInterface/WindowManagerInformationUpdateStudentAdd.java,e\3\e3a255e3cbb291d8c6cb063f748d763dff2af3c6
-t
-Dsrc/SystemInterface/WindowManagerInformationUpdateStudentInsert.java,5\f\5f4d409c36c2b980be4229e999374a1718e7ff44
-n
 >src/SystemInterface/WindowManagerInformationUpdateTeacher.java,8\3\83cea2f55bf408f6e1e084971ef397eaf41b551e
 t
 Dsrc/SystemInterface/WindowManagerInformationUpdateStudentUpdate.java,e\9\e9526413fb95fdfa33ea839257e52cd140d683b0
@@ -53,5 +47,3 @@ b
 2src/SystemInterface/WindowStudentCourseChoose.java,5\4\5405e1cf1fd0790e1baaf5cb8bc8117beeec4897
 U
 %src/SystemInterface/WindowForget.java,c\e\ce6e67e8f9b524f04a92c30dd25897ac126b5b46
-M
-src/SystemInterface/Test.java,9\6\96d7eff2927d559f7e363323246ef070aa83a098

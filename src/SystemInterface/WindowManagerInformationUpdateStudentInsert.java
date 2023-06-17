@@ -171,7 +171,7 @@ public class WindowManagerInformationUpdateStudentInsert {
 
     // 建立数据库连接
     private static Connection getConnection() throws SQLException {
-        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Test;encrypt=false";
+        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
         String user = "s20211576";
         String password = "s20211576";
         return DriverManager.getConnection(url, user, password);

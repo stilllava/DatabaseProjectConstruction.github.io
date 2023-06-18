@@ -19,8 +19,6 @@ M
 src/SystemInterface/Main.java,d\5\d565efb7962924e5bff03326613ae3a6990c89e8
 V
 &src/SystemInterface/WindowStudent.java,f\f\ffcc39242e054e5f4c4a4985b4247453aaae2e0a
-X
-(src/SystemInterface/windowsRegister.java,a\d\ad9a32a3d230ee04c1019ddaac01eb3e7dfb0ecb
 n
 >src/SystemInterface/WindowManagerInformationUpdateAcademy.java,2\0\20660ba45607cd3ad406c27ba940f01e8522b718
 l
@@ -51,3 +49,5 @@ V
 &src/SystemInterface/WindowTeacher.java,4\0\40c205d73104e6a6ad2fe767c62ea52494d71685
 a
 1src/SystemInterface/WindowTeacherScoreManage.java,8\5\85682d5c1ab03debddf8d19e09529befb8dbdd36
+X
+(src/SystemInterface/windowsRegister.java,a\d\ad9a32a3d230ee04c1019ddaac01eb3e7dfb0ecb

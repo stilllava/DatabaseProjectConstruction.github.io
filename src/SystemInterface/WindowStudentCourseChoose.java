@@ -32,7 +32,6 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
     JTextField txtEmp_Name = new JTextField(12);
     JLabel labelCredit = new JLabel("学分");
     JTextField txtCredit = new JTextField(12);
-    JButton btnList = new JButton("信息一览");
     JButton btnSemestersEnquire = new JButton("当前学期内可选课程查询");
     JButton btnCnoEnquire = new JButton("课程号查询");
     JButton btnTeacherEnquire = new JButton("授课教师查询");
@@ -46,8 +45,8 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
     public WindowStudentCourseChoose() {
         frame1.setTitle("教务管理系统学生界面-学生选课界面");
         frame1.setVisible(true);
-        frame1.setSize(900,680);
-        frame1.setLocation(100, 150);
+        frame1.setSize(800,540);
+        frame1.setLocation(10, 10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame1.add(panelNorth, BorderLayout.NORTH);
         panelNorth.add(panelNorthEast,BorderLayout.EAST);
@@ -56,7 +55,7 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
         panelNorthWest.setLayout(new GridLayout(6,2));
         panelNorthEast.setLayout(new GridLayout(4,2));
         panelCenter.setLayout(new GridLayout(2,1));
-        panelNorthEast.add(btnList);panelNorthEast.add(btnSemestersEnquire);
+        panelNorthEast.add(btnSemestersEnquire);
         panelNorthEast.add(btnCnoEnquire);panelNorthEast.add(btnCnameEnquire);
         panelNorthEast.add(btnTeacherEnquire);panelNorthEast.add(btnCreditEnquire);
         panelNorthEast.add(btnChoose);
@@ -99,7 +98,6 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
         JScrollPane scrollPane = new JScrollPane(table);
         frame1.add(scrollPane,BorderLayout.CENTER);
         scrollPane.setViewportView(table);
-        btnList.addActionListener(this);
         btnSemestersEnquire.addActionListener(this);
         btnCnoEnquire.addActionListener(this);
         btnCnameEnquire.addActionListener(this);
@@ -112,10 +110,7 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btnList) {//数据一览
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Sde_name='"+comSdept.getText().trim()+"'";
-            Connect(sql);
-        }else if (e.getSource() == btnSemestersEnquire) {
+        if (e.getSource() == btnSemestersEnquire) {
             String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Semester='"+comSemester.getSelectedItem()+"' and Sde_name='"+comSdept.getText().trim()+"'";
             Connect(sql);
         }else if (e.getSource() == btnCnoEnquire) {

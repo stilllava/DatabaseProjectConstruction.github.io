@@ -26,7 +26,7 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
     JLabel labelClassno = new JLabel("班级号");
     JTextField textClassno = new JTextField(12);
     JLabel labelHomeaddress = new JLabel("家庭住址");
-    JTextField textHomeaddress = new JTextField(50);
+    JTextField textHomeaddress = new JTextField(12);
     JLabel labelSdept = new JLabel("所在系");
     JTextField textSdept = new JTextField(12);
     JLabel labelPostcode = new JLabel("邮政编码");
@@ -49,8 +49,8 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
         frame1.setTitle("教务管理系统管理员界面-信息维护功能-学生信息维护");
         System.out.println(getColumns());
         frame1.setVisible(true);
-        frame1.setSize(1200,800);
-        frame1.setLocation(600, 800);
+        frame1.setSize(880,660);
+        frame1.setLocation(10,10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         table.setSize(350,400);
         scrollPane.setBounds(0,0,352,250);
@@ -69,13 +69,22 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
         panelNorth.add(labelHomeaddress);panelNorth.add(textHomeaddress);
         panelNorth.add(labelSdept);panelNorth.add(textSdept);
         panelNorth.add(labelPostcode);panelNorth.add(textPostcode);
+        labelNo.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelName.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelSex.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelBirth.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelEntrancedate.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelClassno.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelHomeaddress.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelSdept.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelPostcode.setHorizontalAlignment(SwingConstants.RIGHT);
         panelCenter.setLayout(new GridLayout(6,1));
         panelCenter.add(btnAdd);
         panelCenter.add(btnUpdate);panelCenter.add(btnSearch);
+        panelCenter.add(btnInsert);
         panelCenter.add(labelWarning1);panelCenter.add(labelWarning2);
-        panelSouth.add(scrollPane);
+        frame1.add(scrollPane,BorderLayout.SOUTH);
         scrollPane.setViewportView(table);
-        panelSouth.add(btnInsert);
         btnAdd.addActionListener(this);
         btnUpdate.addActionListener(this);
         btnSearch.addActionListener(this);
@@ -211,7 +220,12 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
                     int row = 0;
                     while (rs.next()) {
                         for (int col = 0; col < numColumns; col++) {
-                            data[row][col] = rs.getString(col + 1);
+                            if(col == 3||col == 4){
+                                data[row][col] = rs.getString(col + 1).substring(0,10);
+                            }
+                            else{
+                                data[row][col] = rs.getString(col + 1);
+                            }
                         }
                         row++;
                     }

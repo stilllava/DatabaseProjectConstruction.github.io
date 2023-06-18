@@ -35,12 +35,12 @@ java:S1143©"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8÷
 W
 java:S1143Ó"4Remove this throw statement from this finally block.(×¡ûÊÿÿÿÿÿ8÷Ò›ßŒ1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8øÒ›ßŒ1
-d
-java:S2095r"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8§Ó›ßŒ1
 e
 java:S2095›"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8§Ó›ßŒ1
 e
 java:S2095¾"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8§Ó›ßŒ1
+d
+java:S2095r"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8§Ó›ßŒ1
 H
 java:S1948)"&Make "data" transient or serializable.(¹½ÿöùÿÿÿÿ8¬Ó›ßŒ1
 U	java:S106,"9Replace this use of System.out or System.err by a logger.(òÇ›8¶Ó›ßŒ1

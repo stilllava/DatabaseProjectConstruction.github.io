@@ -44,13 +44,13 @@ W
 java:S1143ß"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8â†¬ìŒ1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8â†¬ìŒ1
 e
+java:S2095¥"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ƒ‡¬ìŒ1
+e
 java:S2095ƒ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ƒ‡¬ìŒ1
 e
 java:S2095Ñ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ƒ‡¬ìŒ1
 d
 java:S2095f"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ƒ‡¬ìŒ1
-e
-java:S2095¥"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ƒ‡¬ìŒ1
 t	java:S116"YRename this field "TeacherRelated" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õîø8ƒ‡¬ìŒ1
 C
 java:S1948"&Make "data" transient or serializable.(Ø½Ê8†‡¬ìŒ1

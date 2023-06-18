@@ -50,10 +50,10 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
     Object[][] data = new Object[getColumns()][8];
 
     public WindowManagerTeacherCourse() {
-        frame1.setTitle("教务管理系统管理员界面--教师所授课程管理");
+        frame1.setTitle("教务管理系统管理员界面--教师授课管理");
         frame1.setVisible(true);
-        frame1.setSize(620, 800);
-        frame1.setLocation(300, 249);
+        frame1.setSize(620, 680);
+        frame1.setLocation(10, 10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame1.add(panel, BorderLayout.NORTH);
         frame1.add(panel4, BorderLayout.CENTER);

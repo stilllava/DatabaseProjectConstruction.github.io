@@ -1,120 +1,120 @@
 
-h	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(Éû‘‰ûÿÿÿÿ8¸•ô—Œ1
-h	java:S112•"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8¸•ô—Œ1
-c	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¥†Ã8¸•ô—Œ1
-h	java:S112¢"FDefine and throw a dedicated exception instead of using a generic one.(×¡ûÊÿÿÿÿÿ8¸•ô—Œ1
-h	java:S112Ê"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8¸•ô—Œ1
-h	java:S112Ì"FDefine and throw a dedicated exception instead of using a generic one.(×¡ûÊÿÿÿÿÿ8¸•ô—Œ1
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Éû‘‰ûÿÿÿÿ8¸•ô—Œ1
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8¸•ô—Œ1
+c	java:S112˜"FDefine and throw a dedicated exception instead of using a generic one.(¥†Ã8¸•ô—Œ1
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(×¡ûÊÿÿÿÿÿ8¸•ô—Œ1
+h	java:S112Å"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8¸•ô—Œ1
+h	java:S112Ç"FDefine and throw a dedicated exception instead of using a generic one.(×¡ûÊÿÿÿÿÿ8¸•ô—Œ1
+h	java:S112Ó"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹•ô—Œ1
 h	java:S112Ø"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹•ô—Œ1
-h	java:S112İ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹•ô—Œ1
-h	java:S112í"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8¹•ô—Œ1
-h	java:S112ï"FDefine and throw a dedicated exception instead of using a generic one.(×¡ûÊÿÿÿÿÿ8¹•ô—Œ1
+h	java:S112è"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8¹•ô—Œ1
+h	java:S112ê"FDefine and throw a dedicated exception instead of using a generic one.(×¡ûÊÿÿÿÿÿ8¹•ô—Œ1
+h	java:S112÷"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹•ô—Œ1
 h	java:S112ü"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹•ô—Œ1
-h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹•ô—Œ1
 L
 java:S3740"/Provide the parametrized type for this generic.(ö‹ÃÚ8»•ô—Œ1
 L
 java:S3740"/Provide the parametrized type for this generic.(ö‹ÃÚ8»•ô—Œ1
 n
-java:S1192‹"KDefine a constant instead of duplicating this literal "s20211576" 12 times.(º×Èÿÿÿÿÿ8¦Ó”˜Œ1
+java:S1192†"KDefine a constant instead of duplicating this literal "s20211576" 12 times.(º×Èÿÿÿÿÿ8¦Ó”˜Œ1
 ‹
-java:S1192‰"mDefine a constant instead of duplicating this literal "com.microsoft.sqlserver.jdbc.SQLServerDriver" 6 times.(¾½Ùµ8—Ò•˜Œ1
+java:S1192„"mDefine a constant instead of duplicating this literal "com.microsoft.sqlserver.jdbc.SQLServerDriver" 6 times.(¾½Ùµ8—Ò•˜Œ1
 Ë
-java:S1192Š"§Define a constant instead of duplicating this literal "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false" 6 times.(Á·™úÿÿÿÿ8…›”˜Œ1
+java:S1192…"§Define a constant instead of duplicating this literal "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false" 6 times.(Á·™úÿÿÿÿ8…›”˜Œ1
 k
-java:S1192M"NDefine a constant instead of duplicating this literal "å¹´ç¬¬2å­¦æœŸ" 4 times.(Š˜¥ï8½•ô—Œ1
+java:S1192L"NDefine a constant instead of duplicating this literal "å¹´ç¬¬2å­¦æœŸ" 4 times.(Š˜¥ï8½•ô—Œ1
 m
-java:S1192z"PDefine a constant instead of duplicating this literal "'and Sde_name='" 4 times.(ó…¨ğ8ù™œ˜Œ1
+java:S1192u"PDefine a constant instead of duplicating this literal "'and Sde_name='" 4 times.(ó…¨ğ8ù™œ˜Œ1
 j
-java:S1192L"NDefine a constant instead of duplicating this literal "å¹´ç¬¬1å­¦æœŸ" 5 times.(†àÂ08½•ô—Œ1
-n	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8˜Ò•˜Œ1
-n	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8˜Ò•˜Œ1
-n	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8˜Ò•˜Œ1
-n	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8˜Ò•˜Œ1
-n	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8˜Ò•˜Œ1
-n	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8™Ò•˜Œ1
+java:S1192K"NDefine a constant instead of duplicating this literal "å¹´ç¬¬1å­¦æœŸ" 5 times.(†àÂ08½•ô—Œ1
+n	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8˜Ò•˜Œ1
+n	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8˜Ò•˜Œ1
+n	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8˜Ò•˜Œ1
+n	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8˜Ò•˜Œ1
+n	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8˜Ò•˜Œ1
+n	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8™Ò•˜Œ1
 F
-java:S1604¨"(Make this anonymous inner class a lambda(ü†¥Õ8™Ò•˜Œ1
+java:S1604£"(Make this anonymous inner class a lambda(ü†¥Õ8™Ò•˜Œ1
 `
-java:S1163¢"=Refactor this code to not throw exceptions in finally blocks.(×¡ûÊÿÿÿÿÿ8šÒ•˜Œ1
+java:S1163"=Refactor this code to not throw exceptions in finally blocks.(×¡ûÊÿÿÿÿÿ8šÒ•˜Œ1
 `
-java:S1163İ"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8šÒ•˜Œ1
+java:S1163Ø"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8šÒ•˜Œ1
 `
-java:S1163"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8šÒ•˜Œ1
+java:S1163ü"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8šÒ•˜Œ1
 W
-java:S1143¢"4Remove this throw statement from this finally block.(×¡ûÊÿÿÿÿÿ8›Ò•˜Œ1
+java:S1143"4Remove this throw statement from this finally block.(×¡ûÊÿÿÿÿÿ8›Ò•˜Œ1
 W
-java:S1143İ"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8›Ò•˜Œ1
+java:S1143Ø"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8›Ò•˜Œ1
 W
-java:S1143"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8›Ò•˜Œ1
+java:S1143ü"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8›Ò•˜Œ1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8À•ô—Œ1
 g
-java:S2259¸"IA "NullPointerException" could be thrown; "insertEmpNo" is nullable here.(åìß¾8úÓ•˜Œ1
+java:S2259³"IA "NullPointerException" could be thrown; "insertEmpNo" is nullable here.(åìß¾8úÓ•˜Œ1
 k
-java:S2095“"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8úÓ•˜Œ1
+java:S2095Ş"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ûÓ•˜Œ1
 e
-java:S2095ó"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8úÓ•˜Œ1
+java:S2095¸"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8úÓ•˜Œ1
 e
-java:S2095½"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8úÓ•˜Œ1
+java:S2095î"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8úÓ•˜Œ1
+e
+java:S2095Ë"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ûÓ•˜Œ1
+e
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8§“˜Œ1
 j
-java:S2095å"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ö¸Øıÿÿÿÿ8úÓ•˜Œ1
+java:S2095à"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ö¸Øıÿÿÿÿ8úÓ•˜Œ1
 e
-java:S2095”"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8§“˜Œ1
+java:S2095“"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8€§“˜Œ1
 k
-java:S2095¼"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ûÓ•˜Œ1
+java:S2095·"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ûÓ•˜Œ1
 k
-java:S2095ã"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ûÓ•˜Œ1
-e
-java:S2095˜"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8€§“˜Œ1
-e
-java:S2095Ğ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ûÓ•˜Œ1
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8úÓ•˜Œ1
 T
-java:S2589Q"7Remove this expression which always evaluates to "true"(êÓË«8ûÓ•˜Œ1
+java:S2589P"7Remove this expression which always evaluates to "true"(êÓË«8ûÓ•˜Œ1
 Y
-java:S2589W"7Remove this expression which always evaluates to "true"(—ùßßüÿÿÿÿ8ûÓ•˜Œ1
+java:S2589V"7Remove this expression which always evaluates to "true"(—ùßßüÿÿÿÿ8ûÓ•˜Œ1
 y	java:S116"XRename this field "labelEmp_Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã”¼òùÿÿÿÿ8—ô—Œ1
 w	java:S116 "VRename this field "txtEmp_Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹á™ıøÿÿÿÿ8—ô—Œ1
 i
-java:S32523"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8š—ô—Œ1
-U	java:S106J"9Replace this use of System.out or System.err by a logger.(¡óæ¦8‡Ô•˜Œ1
+java:S32522"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8š—ô—Œ1
+U	java:S106I"9Replace this use of System.out or System.err by a logger.(¡óæ¦8‡Ô•˜Œ1
 t
-java:S3776r"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¼ Òşüÿÿÿÿ8‹Ô•˜Œ1
+java:S3776p"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(¼ Òşüÿÿÿÿ8‹Ô•˜Œ1
 Y
-java:S6437"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Ô•˜Œ1
-[	java:S106‘"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ8Ô•˜Œ1
-V	java:S106™"9Replace this use of System.out or System.err by a logger.(Å—ï¶8Ô•˜Œ1
+java:S6437‹"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Ô•˜Œ1
+[	java:S106Œ"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ8Ô•˜Œ1
+V	java:S106”"9Replace this use of System.out or System.err by a logger.(Å—ï¶8Ô•˜Œ1
 E
-java:S1481š"'Remove this unused "rs" local variable.(Æà¾Ú8¡’à›Œ1
+java:S1481•"'Remove this unused "rs" local variable.(Æà¾Ú8¡’à›Œ1
 `
-java:S1854·"BRemove this useless assignment to local variable "insertStuTotal".(ÃêÁÿ8’Ô•˜Œ1
+java:S1854²"BRemove this useless assignment to local variable "insertStuTotal".(ÃêÁÿ8’Ô•˜Œ1
 m
-java:S1858¯"J"loginID" is already a string, there's no need to call "toString()" on it.(ëäÜÆùÿÿÿÿ8“Ô•˜Œ1
+java:S1858ª"J"loginID" is already a string, there's no need to call "toString()" on it.(ëäÜÆùÿÿÿÿ8“Ô•˜Œ1
 Q
-java:S1481·"3Remove this unused "insertStuTotal" local variable.(ÃêÁÿ8•Ô•˜Œ1
+java:S1481²"3Remove this unused "insertStuTotal" local variable.(ÃêÁÿ8•Ô•˜Œ1
 Y
-java:S6437È"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8—Ô•˜Œ1
+java:S6437Ã"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8—Ô•˜Œ1
 S
-java:S1481Î"0Remove this unused "columnCount" local variable.(ÕæÙóüÿÿÿÿ8—Ô•˜Œ1
+java:S1481É"0Remove this unused "columnCount" local variable.(ÕæÙóüÿÿÿÿ8—Ô•˜Œ1
 L
-java:S1481Ò")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8˜Ô•˜Œ1
+java:S1481Í")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8˜Ô•˜Œ1
 Y
-java:S6437ë"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8™Ô•˜Œ1
+java:S6437æ"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8™Ô•˜Œ1
 L
-java:S1481õ")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8šÔ•˜Œ1
-p	java:S100†"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†»³íüÿÿÿÿ8›Ô•˜Œ1
+java:S1481ğ")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8šÔ•˜Œ1
+p	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†»³íüÿÿÿÿ8›Ô•˜Œ1
 Y
-java:S6437“"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Ô•˜Œ1
-V	java:S106•"9Replace this use of System.out or System.err by a logger.(Â–‘ö8Ô•˜Œ1
-K	java:S108©")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8Ô•˜Œ1
+java:S6437"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Ô•˜Œ1
+V	java:S106"9Replace this use of System.out or System.err by a logger.(Â–‘ö8Ô•˜Œ1
+K	java:S108¤")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8Ô•˜Œ1
 Y
-java:S6437¼"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8 Ô•˜Œ1
-V	java:S106¾"9Replace this use of System.out or System.err by a logger.(Å—ï¶8 Ô•˜Œ1
+java:S6437·"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8 Ô•˜Œ1
+V	java:S106¹"9Replace this use of System.out or System.err by a logger.(Å—ï¶8 Ô•˜Œ1
 R
-java:S1481Â"/Remove this unused "numColumns" local variable.(Ëê¯¯ıÿÿÿÿ8¡Ô•˜Œ1
+java:S1481½"/Remove this unused "numColumns" local variable.(Ëê¯¯ıÿÿÿÿ8¡Ô•˜Œ1
 K
-java:S1481Å"(Remove this unused "row" local variable.(¾§¶‹üÿÿÿÿ8¡Ô•˜Œ1
-K	java:S108Ô")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8¢Ô•˜Œ1
+java:S1481À"(Remove this unused "row" local variable.(¾§¶‹üÿÿÿÿ8¡Ô•˜Œ1
+K	java:S108Ï")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8¢Ô•˜Œ1
 Y
-java:S6437ã"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8£Ô•˜Œ1
+java:S6437Ş"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8£Ô•˜Œ1
 H
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8­Á•˜Œ1
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8×–¿îŒ1

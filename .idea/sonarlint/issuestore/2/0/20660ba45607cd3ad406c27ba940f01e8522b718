@@ -21,14 +21,14 @@ java:S1163ä"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Ò
 W
 java:S1143ä"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8“©†ø‹1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8–©†ø‹1
-k
-java:S2095£"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Å¯†ø‹1
-e
-java:S2095¥"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Å¯†ø‹1
 j
 java:S2095n"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Å¯†ø‹1
 d
 java:S2095p"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Å¯†ø‹1
+e
+java:S2095¥"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Å¯†ø‹1
+k
+java:S2095£"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Å¯†ø‹1
 e
 java:S2095Ö"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Å¯†ø‹1
 C

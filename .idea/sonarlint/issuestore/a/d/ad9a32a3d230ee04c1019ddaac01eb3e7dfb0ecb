@@ -23,10 +23,10 @@ java:S1143–"4Remove this throw statement from this finally block.(×¡ûÊÿÿÿÿÿ8ì
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8¹ŠÁàŒ1
 `
 java:S2259P"DA "NullPointerException" could be thrown; "dbConn" is nullable here.(Ø™ı8’ŒÁàŒ1
-c
-java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ø™ı8¤†ãŒ1
 e
 java:S2095‹"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8’ŒÁàŒ1
+c
+java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ø™ı8¤†ãŒ1
 j
 java:S2095I"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8’ŒÁàŒ1
 k

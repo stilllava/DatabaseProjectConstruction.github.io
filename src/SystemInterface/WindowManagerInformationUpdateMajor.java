@@ -34,8 +34,8 @@ public class WindowManagerInformationUpdateMajor extends JFrame implements Actio
         frame1.setTitle("教务管理系统管理员界面-信息维护功能-专业信息维护");
         System.out.println(getColumns());
         frame1.setVisible(true);
-        frame1.setSize(1200,800);
-        frame1.setLocation(600, 800);
+        frame1.setSize(760,500);
+        frame1.setLocation(10,10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         table.setSize(350,400);
         scrollPane.setBounds(0,0,352,250);

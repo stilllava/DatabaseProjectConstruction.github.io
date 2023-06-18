@@ -11,8 +11,6 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
     JPanel panel = new JPanel();
     JFrame frame1 = new JFrame();
     JPanel panelNorth = new JPanel();
-    JPanel panelCenter = new JPanel();
-    JPanel panelSouth = new JPanel();
     JLabel labelNo = new JLabel("教工号");
     JTextField textNo = new JTextField(12);
     JLabel labelName = new JLabel("姓名");
@@ -23,10 +21,6 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
     JTextField textSdept = new JTextField(12);
     JLabel labelPosition = new JLabel("职位");
     JTextField textPosition = new JTextField(12);
-    /*
-    JLabel labelStatusAttendance = new JLabel("就读状态");
-    JTextField textStatusAttendance = new JTextField(12);
-     */
     JButton btnAdd = new JButton("添加");
     JButton btnUpdate = new JButton("修改");
     JButton btnSearch = new JButton("查询");
@@ -39,15 +33,13 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
         frame1.setTitle("教务管理系统管理员界面-信息维护功能-教师信息维护");
         System.out.println(getColumns());
         frame1.setVisible(true);
-        frame1.setSize(1200,800);
-        frame1.setLocation(600, 800);
+        frame1.setSize(540,640);
+        frame1.setLocation(10,10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         table.setSize(350,400);
         scrollPane.setBounds(0,0,352,250);
         frame1.add(panel);
         panel.add(panelNorth, BorderLayout.NORTH);
-        panel.add(panelCenter, BorderLayout.CENTER);
-        panel.add(panelSouth, BorderLayout.SOUTH);
         panelNorth.setLayout(new GridLayout(11,2));
         panelNorth.add(labelNo);panelNorth.add(textNo);
         panelNorth.add(labelName);panelNorth.add(textName);
@@ -56,9 +48,9 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
         panelNorth.add(labelPosition);panelNorth.add(textPosition);
         panelNorth.add(btnAdd);
         panelNorth.add(btnUpdate);panelNorth.add(btnSearch);
-        panelCenter.add(scrollPane);
+        panelNorth.add(btnInsert);
+        frame1.add(scrollPane, BorderLayout.SOUTH);
         scrollPane.setViewportView(table);
-        panelSouth.add(btnInsert);
         btnAdd.addActionListener(this);
         btnUpdate.addActionListener(this);
         btnSearch.addActionListener(this);
@@ -165,7 +157,7 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
                 try {
                     Class.forName(Driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
+                     // 如果连接成功 控制台输出
                     Statement stmt = dbConn.createStatement();
                     System.out.println(sql);
                     ResultSet rs = stmt.executeQuery(sql);
@@ -226,7 +218,7 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
                 try {
                     Class.forName(Driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
+                     // 如果连接成功 控制台输出
                     Statement stmt = dbConn.createStatement();
                     System.out.println(sql);
                     ResultSet rs = stmt.executeQuery(sql);
@@ -270,7 +262,7 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
         try {
             Class.forName(Driver2);
             dbConn = DriverManager.getConnection(url, userName, userPwd);
-            System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
+             // 如果连接成功 控制台输出
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         } catch (SQLException e) {

@@ -27,7 +27,7 @@ public class WindowManagerTeacherCourseAdd extends JFrame implements ActionListe
     JTextField txtStuTotal = new JTextField(12);
     JButton btnAdd = new JButton("添加");
     public WindowManagerTeacherCourseAdd() {
-        frame1.setTitle("教务管理系统学生界面");
+        frame1.setTitle("教务管理系统-管理员界面-教师授课管理-添加课程信息");
         frame1.setVisible(true);
         frame1.setSize(380,400);
         frame1.setLocation(300, 249);

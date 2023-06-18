@@ -49,8 +49,8 @@ public class WindowTeacher extends JFrame implements ActionListener{
         table = new JTable(data, columnNames);
         frame1.setTitle("教务管理系统-教师界面");
         frame1.setVisible(true);
-        frame1.setSize(800, 680);
-        frame1.setLocation(300, 249);
+        frame1.setSize(680, 540);
+        frame1.setLocation(10, 10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame1.add(panelNorth, BorderLayout.NORTH);
         frame1.add(panelCenter, BorderLayout.CENTER);

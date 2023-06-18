@@ -27,11 +27,11 @@ public class WindowManagerInformationUpdateAcademy extends JFrame implements Act
     String [] columnNames = {"学院编号","学院名","学院简介"};
     Object[][] data = new Object[getColumns()][10];
     public WindowManagerInformationUpdateAcademy() {
-        frame1.setTitle("教务管理系统管理员界面-信息维护功能-学员信息维护");
+        frame1.setTitle("教务管理系统管理员界面-信息维护功能-学院信息维护");
         System.out.println(getColumns());
         frame1.setVisible(true);
-        frame1.setSize(1200,800);
-        frame1.setLocation(600, 800);
+        frame1.setSize(720,660);
+        frame1.setLocation(10,10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         table.setSize(350,400);
         scrollPane.setBounds(0,0,352,250);

@@ -37,8 +37,8 @@ public class WindowManagerInformationUpdateClass extends JFrame implements Actio
         frame1.setTitle("教务管理系统管理员界面-信息维护功能-班级信息维护");
         System.out.println(getColumns());
         frame1.setVisible(true);
-        frame1.setSize(1200,800);
-        frame1.setLocation(600, 800);
+        frame1.setSize(660,500);
+        frame1.setLocation(10,10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         table.setSize(350,400);
         scrollPane.setBounds(0,0,352,250);
@@ -168,7 +168,12 @@ public class WindowManagerInformationUpdateClass extends JFrame implements Actio
                     int row = 0;
                     while (rs.next()) {
                         for (int col = 0; col < numColumns; col++) {
-                            data[row][col] = rs.getString(col + 1);
+                            if(col == 2){
+                                data[row][col] = rs.getString(col + 1).substring(0,10);
+                            }
+                            else {
+                                data[row][col] = rs.getString(col + 1);
+                            }
                         }
                         row++;
                     }

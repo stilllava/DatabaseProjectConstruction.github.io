@@ -21,16 +21,16 @@ java:S1163ø"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Ò
 W
 java:S1143ø"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8øİ¡ù‹1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8Äš×Î‰1
-e
-java:S2095·"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Éã¡ù‹1
 k
 java:S2095µ"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Éã¡ù‹1
 e
-java:S2095ê"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Éã¡ù‹1
-d
-java:S2095y"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Éã¡ù‹1
+java:S2095·"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Éã¡ù‹1
 j
 java:S2095w"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Éã¡ù‹1
+d
+java:S2095y"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Éã¡ù‹1
+e
+java:S2095ê"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Éã¡ù‹1
 C
 java:S1948 "&Make "data" transient or serializable.(ÊŸ•ö8Ğã¡ù‹1
 U	java:S106#"9Replace this use of System.out or System.err by a logger.(û¯ˆÏ8Öã¡ù‹1

@@ -12,6 +12,7 @@ import java.sql.*;
 public class WindowTeacher extends JFrame implements ActionListener{
     String loginID = windowsRegister.loginID;
     String loginName = windowsRegister.loginName;
+    static String sqlScoreManage = "";
     JFrame frame1 = new JFrame();
     JPanel panelNorth = new JPanel();
     JPanel panelSouth = new JPanel();
@@ -70,7 +71,6 @@ public class WindowTeacher extends JFrame implements ActionListener{
         // 添加监听器，监听表格的行选中事件
         table.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             public void valueChanged(ListSelectionEvent event) {
-                String sqlInsert = "";
                 // 获取当前选中行的索引
                 int row = table.getSelectedRow();
                 if (row >= 0) {
@@ -80,9 +80,9 @@ public class WindowTeacher extends JFrame implements ActionListener{
                     String insertEmpName = table.getValueAt(row, 1).toString();
                     String insertSex = table.getValueAt(row, 3).toString();
                     String insertSdeNo = table.getValueAt(row, 4).toString();
-                    //中间变量insertEmpName
                     String insertSdeName = table.getValueAt(row, 5).toString();
                     String insertPosition = table.getValueAt(row, 6).toString();
+                    String sqlScoreManage = "use Academic_Affairs_Management_System_20211576 select * from Teacher_Score_Manage_view where Emp_no = '" + loginID.trim() + "'";
                 }
             }
         });
@@ -100,6 +100,10 @@ public class WindowTeacher extends JFrame implements ActionListener{
         }
         if (e.getSource() == btnScoreManage){
             //如果没有选中行，则弹出提示框
+            if (table.getSelectedRow() == -1) {
+                JOptionPane.showMessageDialog(null, "请先选中课程再进行此操作！", "提示", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
             WindowTeacherScoreManage windowTeacherScoreManage = new WindowTeacherScoreManage();
         }
     }
@@ -141,10 +145,9 @@ public class WindowTeacher extends JFrame implements ActionListener{
                 throw new RuntimeException(exc);
             }
         }
-        // Create a new DefaultTableModel with the data and column names
+
         DefaultTableModel model = new DefaultTableModel(data, columnNames);
 
-        // Set the model for the JTable
         table.setModel(model);
     }
     public int getColumns () {

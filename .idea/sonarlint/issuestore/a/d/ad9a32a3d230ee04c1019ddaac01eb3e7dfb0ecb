@@ -23,12 +23,12 @@ java:S1143–"4Remove this throw statement from this finally block.(×¡ûÊÿÿÿÿÿ8ì
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8¹ŠÁàŒ1
 `
 java:S2259P"DA "NullPointerException" could be thrown; "dbConn" is nullable here.(Ø™ı8’ŒÁàŒ1
-j
-java:S2095I"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8’ŒÁàŒ1
 c
 java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ø™ı8¤†ãŒ1
 e
 java:S2095‹"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8’ŒÁàŒ1
+j
+java:S2095I"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8’ŒÁàŒ1
 k
 java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(İÔ¥¥ùÿÿÿÿ8™ŒÁàŒ1
 t
@@ -78,3 +78,9 @@ Y
 java:S6437ƒ"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Ä†ãŒ1
 S
 java:S1481‰"0Remove this unused "columnCount" local variable.(ª‡ÕŸüÿÿÿÿ8Ä†ãŒ1
+V
+java:S1128"9Remove this unused import 'java.awt.event.WindowAdapter'.(­ˆàÛ8‚ğÑéŒ1
+Y
+java:S1128"7Remove this unused import 'java.awt.event.WindowEvent'.(Àø®Ãÿÿÿÿÿ8‚ğÑéŒ1
+^
+java:S1128"ARemove this unused import 'java.sql.DriverManager.getConnection'.(£¶ÖŠ8‚ğÑéŒ1

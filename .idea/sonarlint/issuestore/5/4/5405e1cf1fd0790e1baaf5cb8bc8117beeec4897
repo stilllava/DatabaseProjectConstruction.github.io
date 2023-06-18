@@ -51,23 +51,23 @@ v	java:S120"ZRename this package name to match the regular expression '^[a-z_
 g
 java:S2259¸"IA "NullPointerException" could be thrown; "insertEmpNo" is nullable here.(åìß¾8úÓ•˜Œ1
 k
-java:S2095¼"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ûÓ•˜Œ1
-e
-java:S2095˜"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8€§“˜Œ1
-e
-java:S2095ó"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8úÓ•˜Œ1
-e
-java:S2095”"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8§“˜Œ1
-k
 java:S2095“"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8úÓ•˜Œ1
 e
-java:S2095Ğ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ûÓ•˜Œ1
+java:S2095ó"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8úÓ•˜Œ1
 e
 java:S2095½"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8úÓ•˜Œ1
 j
 java:S2095å"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ö¸Øıÿÿÿÿ8úÓ•˜Œ1
+e
+java:S2095”"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8§“˜Œ1
+k
+java:S2095¼"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ûÓ•˜Œ1
 k
 java:S2095ã"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ûÓ•˜Œ1
+e
+java:S2095˜"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8€§“˜Œ1
+e
+java:S2095Ğ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ûÓ•˜Œ1
 T
 java:S2589Q"7Remove this expression which always evaluates to "true"(êÓË«8ûÓ•˜Œ1
 Y

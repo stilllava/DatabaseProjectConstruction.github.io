@@ -39,8 +39,6 @@ c
 3src/SystemInterface/WindowManagerTeacherCourse.java,d\c\dcf7dde80fd027a443d739b67584668563c177ff
 V
 &src/SystemInterface/WindowStudent.java,f\f\ffcc39242e054e5f4c4a4985b4247453aaae2e0a
-M
-src/SystemInterface/Main.java,d\5\d565efb7962924e5bff03326613ae3a6990c89e8
 ]
 -src/SystemInterface/WindowStudentEnquiry.java,3\0\30df2bf60aed5745e0b9552b17266c6828f46e02
 b

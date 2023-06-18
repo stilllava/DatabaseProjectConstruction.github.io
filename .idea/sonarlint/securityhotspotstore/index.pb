@@ -41,8 +41,6 @@ V
 &src/SystemInterface/WindowStudent.java,f\f\ffcc39242e054e5f4c4a4985b4247453aaae2e0a
 ]
 -src/SystemInterface/WindowStudentEnquiry.java,3\0\30df2bf60aed5745e0b9552b17266c6828f46e02
-M
-src/SystemInterface/Main.java,d\5\d565efb7962924e5bff03326613ae3a6990c89e8
 b
 2src/SystemInterface/WindowStudentCourseChoose.java,5\4\5405e1cf1fd0790e1baaf5cb8bc8117beeec4897
 U

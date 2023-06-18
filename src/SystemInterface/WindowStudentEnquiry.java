@@ -9,7 +9,6 @@ import java.sql.*;
 
 public class WindowStudentEnquiry extends JFrame implements ActionListener {
     String loginID = windowsRegister.loginID;
-
     JFrame frame1 = new JFrame();
     JPanel panelNorth = new JPanel();
     JPanel panelSouth = new JPanel();
@@ -38,7 +37,7 @@ public class WindowStudentEnquiry extends JFrame implements ActionListener {
     JLabel txtStatus;
     JButton btnEnquiry = new JButton("已选课程列表");
     JTable table = new JTable();
-    String[] columnNames = {"学期", "学号" , "课程号", "课程名", "任课教师工号", "学分" , "系号"};
+    String[] columnNames = { "序号", "学期", "课程号", "课程名", "任课教师工号", "学分"};
     Object[][] data = new Object[getColumns()][7];
 
     public WindowStudentEnquiry() {
@@ -79,7 +78,7 @@ public class WindowStudentEnquiry extends JFrame implements ActionListener {
         panelNorth.add(labelStatus);panelNorth.add(txtStatus);
         JScrollPane scrollPane = new JScrollPane(table);
         panelCenter.add(btnEnquiry);
-        panelSouth.add(scrollPane);
+        frame1.add(scrollPane,BorderLayout.SOUTH);
         scrollPane.setViewportView(table);
         btnEnquiry.addActionListener(this);
     }

@@ -1,4 +1,105 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹
+b	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(³‰›Æ8»•€ãŒ1
+b	java:S112x"FDefine and throw a dedicated exception instead of using a generic one.(”Æß…8»•€ãŒ1
+h	java:S112ˆ"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8»ãŒ1
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(×¡ûÊÿÿÿÿÿ8»ãŒ1
+h	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉÏÀãŒ1
+h	java:S112¢"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉÏÀãŒ1
+h	java:S112¯"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉÏÀãŒ1
+h	java:S112´"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉÏÀãŒ1
+c	java:S112Å"FDefine and throw a dedicated exception instead of using a generic one.(³‰›Æ8ÉÏÀãŒ1
+c	java:S112Ç"FDefine and throw a dedicated exception instead of using a generic one.(”Æß…8ÉÏÀãŒ1
+h	java:S112Õ"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8ÉÏÀãŒ1
+h	java:S112Ú"FDefine and throw a dedicated exception instead of using a generic one.(×¡ûÊÿÿÿÿÿ8ÉÏÀãŒ1
+Ê
+java:S1192l"§Define a constant instead of duplicating this literal "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false" 3 times.(Á·™úÿÿÿÿ8ÊÏÀãŒ1
+l
+java:S1192o"JDefine a constant instead of duplicating this literal "s20211576" 6 times.(º×Èÿÿÿÿÿ8ÊÏÀãŒ1
+Š
+java:S1192k"mDefine a constant instead of duplicating this literal "com.microsoft.sqlserver.jdbc.SQLServerDriver" 3 times.(æœÎê8ÊÏÀãŒ1
+m	java:S117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8¼•€ãŒ1
+n	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8ËÏÀãŒ1
+s	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛòÑÍÿÿÿÿÿ8ÌÏÀãŒ1
+n	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8ÌÏÀãŒ1
+E
+java:S1604G"(Make this anonymous inner class a lambda(ü†¥Õ8“˜µãŒ1
+`
+java:S1163"=Refactor this code to not throw exceptions in finally blocks.(×¡ûÊÿÿÿÿÿ8¼•€ãŒ1
+`
+java:S1163´"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8ÍÏÀãŒ1
+`
+java:S1163Ú"=Refactor this code to not throw exceptions in finally blocks.(×¡ûÊÿÿÿÿÿ8ÍÏÀãŒ1
+W
+java:S1143"4Remove this throw statement from this finally block.(×¡ûÊÿÿÿÿÿ8½•€ãŒ1
+W
+java:S1143´"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8ÍÏÀãŒ1
+W
+java:S1143Ú"4Remove this throw statement from this finally block.(×¡ûÊÿÿÿÿÿ8ÍÏÀãŒ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8½•€ãŒ1
+d
+java:S2095|"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8åÏÀãŒ1
+e
+java:S2095¦"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Ö•€ãŒ1
+e
+java:S2095Ê"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8åÏÀãŒ1
+z	java:S116$"YRename this field "TeacherRelated" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó¥»ıÿÿÿÿ8×•€ãŒ1
+H
+java:S1948#"&Make "data" transient or serializable.(¹½ÿöùÿÿÿÿ8Ù•€ãŒ1
+R
+java:S1948$"0Make "TeacherRelated" transient or serializable.(Ó¥»ıÿÿÿÿ8Ù•€ãŒ1
+U	java:S106&"9Replace this use of System.out or System.err by a logger.(òÇ›8Ü•€ãŒ1
+U	java:S106'"9Replace this use of System.out or System.err by a logger.(¡öÊ±8Ü•€ãŒ1
+U	java:S106/"9Replace this use of System.out or System.err by a logger.(û‰ÄÄ8æ•€ãŒ1
 i
-java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8±ìÌÉ‹1
+java:S32525"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8Ü•€ãŒ1
+d
+java:S1854U"BRemove this useless assignment to local variable "insertPosition".(Ÿ‚¿ùÿÿÿÿ8¡Ÿ¼ãŒ1
+c
+java:S1854T"ARemove this useless assignment to local variable "insertSdeName".(Ø®Ùşÿÿÿÿ8–Œ¶ãŒ1
+\
+java:S1854R"?Remove this useless assignment to local variable "insertSdeNo".(ÍèÜ€8ñƒ»ãŒ1
+_
+java:S1854Q"=Remove this useless assignment to local variable "insertSex".(®ğ±Šşÿÿÿÿ8ñƒ»ãŒ1
+^
+java:S1854P"ARemove this useless assignment to local variable "insertEmpName".(ö–Ÿ·8ñƒ»ãŒ1
+a
+java:S1854O"?Remove this useless assignment to local variable "insertEmpNo".(Û¡ö–şÿÿÿÿ8Şê½ãŒ1
+^
+java:S1854N"BRemove this useless assignment to local variable "insertSemester".(Šä×8Şê½ãŒ1
+P
+java:S1481I".Remove this unused "sqlInsert" local variable.(†¿‰øüÿÿÿÿ8éÜĞãŒ1
+O
+java:S1481N"3Remove this unused "insertSemester" local variable.(Šä×8ßê½ãŒ1
+l
+java:S1858O"J"loginID" is already a string, there's no need to call "toString()" on it.(Û¡ö–şÿÿÿÿ8·˜µãŒ1
+R
+java:S1481O"0Remove this unused "insertEmpNo" local variable.(Û¡ö–şÿÿÿÿ8ßê½ãŒ1
+O
+java:S1481P"2Remove this unused "insertEmpName" local variable.(ö–Ÿ·8˜Œ¶ãŒ1
+P
+java:S1481Q".Remove this unused "insertSex" local variable.(®ğ±Šşÿÿÿÿ8òƒ»ãŒ1
+M
+java:S1481R"0Remove this unused "insertSdeNo" local variable.(ÍèÜ€8¢Ÿ¼ãŒ1
+T
+java:S1481T"2Remove this unused "insertSdeName" local variable.(Ø®Ùşÿÿÿÿ8¤Ÿ¼ãŒ1
+U
+java:S1481U"3Remove this unused "insertPosition" local variable.(Ÿ‚¿ùÿÿÿÿ8¤Ÿ¼ãŒ1
+i
+java:S1854g"LRemove this useless assignment to local variable "windowTeacherScoreManage".(œú¬8ß•€ãŒ1
+Z
+java:S1481g"=Remove this unused "windowTeacherScoreManage" local variable.(œú¬8à•€ãŒ1
+j	java:S100j"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷«„„8İë¿ãŒ1
+U	java:S106n"9Replace this use of System.out or System.err by a logger.(Â–‘ö8÷ÏÀãŒ1
+X
+java:S6437t"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8À»ãŒ1
+R
+java:S1481z"0Remove this unused "columnCount" local variable.(ª‡ÕŸüÿÿÿÿ8ôÏÀãŒ1
+c
+java:S2147¡"ECombine this catch with the one at line 159, which has the same body.(É®£8õÏÀãŒ1
+Y
+java:S6437"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8õÏÀãŒ1
+L
+java:S1481¨")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8öÏÀãŒ1
+V	java:S106¿"9Replace this use of System.out or System.err by a logger.(Â–‘ö8¦èÁãŒ1
+Y
+java:S6437Ã"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8øÏÀãŒ1

@@ -41,7 +41,7 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
     JButton btnChoose = new JButton("选课");
     JTable table = new JTable();
     String sqlInsert = "";
-    String[] columnNames = {"学期","可选修系","可选修专业","课程号","课程名","教师名","学分","选课人数"};
+    String[] columnNames = {"学期","可选修系","可选修专业","课程号","课程名","教师名","学分","可选课人数"};
     String[][] data = new String[getColumns()][8];
     public WindowStudentCourseChoose() {
         frame1.setTitle("教务管理系统学生界面-学生选课界面");
@@ -97,7 +97,7 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
         panelNorthWest.add(labelEmp_Name);panelNorthWest.add(txtEmp_Name);
         panelNorthWest.add(labelCredit);panelNorthWest.add(txtCredit);
         JScrollPane scrollPane = new JScrollPane(table);
-        panelCenter.add(scrollPane);
+        frame1.add(scrollPane,BorderLayout.CENTER);
         scrollPane.setViewportView(table);
         btnList.addActionListener(this);
         btnSemestersEnquire.addActionListener(this);

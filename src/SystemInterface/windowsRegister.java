@@ -14,6 +14,7 @@ public class windowsRegister extends JFrame implements ActionListener {
     JPanel panel = new JPanel();
     JFrame frame1 = new JFrame();
     public static String loginID = "";
+    public static String loginName = "";
     JLabel labelNo = new JLabel("学号/教工号");
     JTextField txtLabelNo = new JTextField(12);
     JLabel labelPassword = new JLabel("密码");
@@ -36,7 +37,6 @@ public class windowsRegister extends JFrame implements ActionListener {
         panel.add(buttonForget);
         buttonRegister.addActionListener(this);
         buttonForget.addActionListener(this);
-
     }
 
     public static void main(String[] args) {
@@ -60,7 +60,6 @@ public class windowsRegister extends JFrame implements ActionListener {
                 else{
                     userInput = txtLabelNo.getText();
                 }
-                System.out.println(userInput);
                 String passwordInput = txtLabelPassword.getText().toString();
                 String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;database=Academic_Affairs_Management_System_20211576;encrypt=false";
@@ -83,7 +82,6 @@ public class windowsRegister extends JFrame implements ActionListener {
                     while (rs.next()) {
                         String passwordCorrect;
                         String position = rs.getString("Position");
-                        System.out.println(position);
                         rs1 = stml.executeQuery(sql1);
                         while (rs1.next()) {
                             passwordCorrect = rs1.getString("password");
@@ -93,10 +91,13 @@ public class windowsRegister extends JFrame implements ActionListener {
 
                                 if (position.toString().trim().equals("学生")){
                                     loginID = userInput;
+                                    loginName = getName(loginID);
                                     WindowStudent student = new WindowStudent();
                                 }else if (position.trim().equals("教务管理人员")){
                                     WindowManager manager = new WindowManager();
                                 }else{
+                                    loginID = userInput;
+                                    loginName = getName(loginID);
                                     WindowTeacher teacher = new WindowTeacher();
                                 }
                                 frame1.dispose();
@@ -116,5 +117,39 @@ public class windowsRegister extends JFrame implements ActionListener {
         else if (e.getSource() == buttonForget) {
             WindowForget forget = new WindowForget();
         }
+    }
+    public String getName(String loginID){
+        String loginName = null;
+        String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
+        String sql = "use Academic_Affairs_Management_System_20211576 select * from Teacher_view where Emp_no = '" + loginID.trim() + "'";
+        String userName = "s20211576"; // 默认用户名
+        String userPwd = "s20211576"; // 密码
+        Connection dbConn = null;
+        try {
+            Class.forName(Driver2);
+            dbConn = DriverManager.getConnection(url, userName, userPwd);
+        } catch (ClassNotFoundException ea) {
+            throw new RuntimeException(ea);
+        } catch (SQLException eb) {
+            throw new RuntimeException(eb);
+        }
+        int columnCount = 0;
+        try {
+            Statement stmt = dbConn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                loginName = rs.getString("Emp_name");
+            }
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        } finally {
+            try {
+                dbConn.close();
+            } catch (SQLException exc) {
+                throw new RuntimeException(exc);
+            }
+        }
+        return loginName;
     }
 }

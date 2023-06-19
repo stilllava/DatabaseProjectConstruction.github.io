@@ -1,10 +1,10 @@
 
 m	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8êöÒÎ‹1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8ëöÒÎ‹1
-j
-java:S20958"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ñöÒÎ‹1
 d
 java:S2095:"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ñöÒÎ‹1
+j
+java:S20958"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ñöÒÎ‹1
 r	java:S116"VRename this field "labelEmp_No" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®äÖ¨8òöÒÎ‹1
 p	java:S116"TRename this field "txtEmp_No" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Äîİá8òöÒÎ‹1
 y	java:S116"XRename this field "labelEmp_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÈ»‚úÿÿÿÿ8òöÒÎ‹1

@@ -20,12 +20,12 @@ java:S1163¯"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Ò
 W
 java:S1143¯"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8î¢ù‹1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8ğò¡¹‡1
-k
-java:S2095Á"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8­ñ¢ù‹1
-e
-java:S2095Â"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8­ñ¢ù‹1
 e
 java:S2095¡"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8­ñ¢ù‹1
+e
+java:S2095Â"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8­ñ¢ù‹1
+k
+java:S2095Á"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8­ñ¢ù‹1
 w	java:S116"VRename this field "labelEmp_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¤±øûÿÿÿÿ8åó¡¹‡1
 p	java:S116"TRename this field "txtEmp_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡”û¼8åó¡¹‡1
 H

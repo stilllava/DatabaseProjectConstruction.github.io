@@ -11,7 +11,7 @@ public class WindowManager extends JFrame implements ActionListener{
     JButton btnTeacherCourse = new JButton("教师授课信息维护");
     JButton btnStudentCourse = new JButton("学生可选课程信息维护");
     JButton btnEnquiry = new JButton("教师学生信息查询系统");
-    JButton btnAddTeacherPassword = new JButton("添加教务管理系统用户");
+    JButton btnAddTeacherPassword = new JButton("添加教务管理系统管理员用户");
     public WindowManager() {
         frame1.setTitle("教务管理系统管理员界面");
         frame1.setVisible(true);

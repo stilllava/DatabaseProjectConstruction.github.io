@@ -34,14 +34,14 @@ java:S1143º"4Remove this throw statement from this finally block.(×¡ûÊÿÿÿÿÿ8ª
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8İùÌ’1
 `
 java:S2259P"DA "NullPointerException" could be thrown; "dbConn" is nullable here.(Ø™ı8î€Í’1
-e
-java:S2095¯"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8î€Í’1
-c
-java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ø™ı8î€Í’1
-e
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8¢ÂĞ’1
 j
 java:S2095I"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8î€Í’1
+e
+java:S2095¯"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8î€Í’1
+e
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8¢ÂĞ’1
+c
+java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ø™ı8î€Í’1
 k
 java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(İÔ¥¥ùÿÿÿÿ8ı€Í’1
 t

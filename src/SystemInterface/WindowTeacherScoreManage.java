@@ -74,7 +74,7 @@ public class WindowTeacherScoreManage extends JFrame implements ActionListener{
                 else{
                     JOptionPane.showMessageDialog(null, "录入成功!", "提示", JOptionPane.INFORMATION_MESSAGE);
                     //将录入的分数写入数据库
-                    String sql = "use Academic_Affairs_Management_System_20211576 update SC_20211576 set Grade = " + txtLabelScore.getText().trim() + " where Sno = '" + table.getValueAt(table.getSelectedRow(),4).toString().trim() + "' and Cno = '" + txtLabelCno.getText().trim() + "' and Semester = '" + txtLabelSemester.getText().trim() + "' and Emp_no = '" + loginID.trim() + "'";
+                    String sql = "use Academic_Affairs_Management_System_20211576 update Teacher_Manage_SC_view set Grade = " + txtLabelScore.getText().trim() + " where Sno = '" + table.getValueAt(table.getSelectedRow(),4).toString().trim() + "' and Cno = '" + txtLabelCno.getText().trim() + "' and Semester = '" + txtLabelSemester.getText().trim() + "' and Emp_no = '" + loginID.trim() + "'";
                     System.out.println(sql);
                     GiveGrade(sql);
                     //刷新表格

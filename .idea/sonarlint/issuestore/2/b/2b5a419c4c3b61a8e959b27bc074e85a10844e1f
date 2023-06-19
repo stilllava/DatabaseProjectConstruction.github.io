@@ -24,14 +24,14 @@ java:S1163§"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Ò
 W
 java:S1143§"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8îˆ ù‹1
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹
+e
+java:S2095º"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8œŒ ù‹1
 k
 java:S2095¹"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Œ ù‹1
 b
 java:S2095H"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ö¸Øıÿÿÿÿ
 e
 java:S2095™"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Œ ù‹1
-e
-java:S2095º"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8œŒ ù‹1
 r	java:S116"XRename this field "labelEmp_Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã”¼òùÿÿÿÿ
 p	java:S116"VRename this field "txtEmp_Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹á™ıøÿÿÿÿ
 f	java:S116'"QRename this field "Driver" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê

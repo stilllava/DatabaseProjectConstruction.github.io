@@ -21,13 +21,13 @@ W
 java:S1143Ğ"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8Óï ù‹1
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹
 e
-java:S2095Â"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Ôó ù‹1
-j
-java:S2095Q"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Ôó ù‹1
-e
 java:S2095‘"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Ôó ù‹1
+e
+java:S2095Â"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Ôó ù‹1
 k
 java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Ôó ù‹1
+j
+java:S2095Q"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Ôó ù‹1
 d
 java:S2095S"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Ôó ù‹1
 C

@@ -150,7 +150,7 @@ public class WindowTeacherScoreManage extends JFrame implements ActionListener{
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
         String userName = "s20211576"; // 默认用户名
         String userPwd = "s20211576"; // 密码
-        String sql = "use Academic_Affairs_Management_System_20211576 select * from Teacher_Manage_SC_view where Emp_name = '" + loginName.trim() + "'";
+        String sql = "use Academic_Affairs_Management_System_20211576 select * from Teacher_Manage_SC_view where Emp_name = '" + loginName.trim() + "' and Semester = '" + txtLabelSemester.getText().trim() + "' and Cno = '" + txtLabelCno.getText().trim() + "' and Cname = '" + txtLabelCname.getText().trim() + "'";
         System.out.println(sql);
         Connection dbConn = null;
         try {

@@ -7,8 +7,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
-public class WindowStudentEnquiry extends JFrame implements ActionListener {
+public class WindowStudentScoreEnquiry extends JFrame implements ActionListener {
     String loginID = windowsRegister.loginID;
+    String loginName = windowsRegister.loginName;
     JFrame frame1 = new JFrame();
     JPanel panelNorth = new JPanel();
     JPanel panelSouth = new JPanel();
@@ -17,46 +18,36 @@ public class WindowStudentEnquiry extends JFrame implements ActionListener {
     JLabel txtSno;
     JLabel labelSname = new JLabel("姓名");
     JLabel txtSname;
-    JLabel labelSex = new JLabel("性别");
-    JLabel txtSex;
-    JLabel labelBirth = new JLabel("出生日期");
-    JLabel txtBirth;
     JLabel labelEntranceDate = new JLabel("入学日期");
     JLabel txtEntranceDate;
     JLabel labelClass = new JLabel("班级号");
     JLabel txtClass;
-    JLabel labelAddress = new JLabel("家庭住址");
-    JLabel txtAddress;
     JLabel labelSdeNo = new JLabel("系号");
     JLabel txtSdeNo;
     JLabel labelSdeName = new JLabel("所在系");
     JLabel txtSdeName;
-    JLabel labelPostcode = new JLabel("邮政编码");
-    JLabel txtPostcode;
     JLabel labelStatus = new JLabel("就读状态");
     JLabel txtStatus;
-    JButton btnEnquiry = new JButton("已选课程列表");
+    JButton btnEnquiry = new JButton("成绩查询");
+    JLabel btnWarning = new JLabel("分数为空白或0表示该课程尚未结课或教师尚未赋分，请稍后查询!");
     JTable table = new JTable();
-    String[] columnNames = {"学期", "课程号", "课程名", "任课教师工号", "学分"};
+    String[] columnNames = {"学期","课程号","课程名","授课教师","成绩"};
     Object[][] data = new Object[getColumns()][5];
 
-    public WindowStudentEnquiry() {
+    public WindowStudentScoreEnquiry() {
         System.out.println(loginID);
+        System.out.println(getColumns());
         Object[] StudentRelated = new Object[11];
         getInformation(StudentRelated);
-        txtSno = new JLabel((String) StudentRelated[0]);
-        txtSname = new JLabel((String) StudentRelated[1]);
-        txtSex = new JLabel((String) StudentRelated[2]);
-        txtBirth = new JLabel((String) StudentRelated[3]);
+        txtSno = new JLabel(loginID);
+        txtSname = new JLabel(loginName);
         txtEntranceDate = new JLabel((String) StudentRelated[4]);
         txtClass = new JLabel((String) StudentRelated[5]);
-        txtAddress = new JLabel((String) StudentRelated[6]);
         txtSdeNo = new JLabel((String) StudentRelated[7]);
         txtSdeName = new JLabel((String) StudentRelated[8]);
-        txtPostcode = new JLabel((String) StudentRelated[9]);
         txtStatus = new JLabel((String) StudentRelated[10]);
         table = new JTable(data, columnNames);
-        frame1.setTitle("教务管理系统学生界面-学生信息查询");
+        frame1.setTitle("教务管理系统学生界面-学生成绩查询");
         frame1.setVisible(true);
         frame1.setSize(680, 600);
         frame1.setLocation(10, 10);
@@ -64,20 +55,17 @@ public class WindowStudentEnquiry extends JFrame implements ActionListener {
         frame1.add(panelNorth, BorderLayout.NORTH);
         frame1.add(panelCenter, BorderLayout.CENTER);
         frame1.add(panelSouth, BorderLayout.SOUTH);
-        panelNorth.setLayout(new GridLayout(6, 4));
+        panelNorth.setLayout(new GridLayout(4, 4));
         panelNorth.add(labelSno);panelNorth.add(txtSno);
         panelNorth.add(labelSname);panelNorth.add(txtSname);
-        panelNorth.add(labelSex);panelNorth.add(txtSex);
-        panelNorth.add(labelBirth);panelNorth.add(txtBirth);
         panelNorth.add(labelEntranceDate);panelNorth.add(txtEntranceDate);
         panelNorth.add(labelClass);panelNorth.add(txtClass);
-        panelNorth.add(labelAddress);panelNorth.add(txtAddress);
         panelNorth.add(labelSdeNo);panelNorth.add(txtSdeNo);
         panelNorth.add(labelSdeName);panelNorth.add(txtSdeName);
-        panelNorth.add(labelPostcode);panelNorth.add(txtPostcode);
         panelNorth.add(labelStatus);panelNorth.add(txtStatus);
         JScrollPane scrollPane = new JScrollPane(table);
-        panelCenter.add(btnEnquiry);
+        panelCenter.setLayout(new GridLayout(2, 1));
+        panelCenter.add(btnEnquiry);panelCenter.add(btnWarning);
         frame1.add(scrollPane,BorderLayout.SOUTH);
         scrollPane.setViewportView(table);
         btnEnquiry.addActionListener(this);
@@ -85,56 +73,54 @@ public class WindowStudentEnquiry extends JFrame implements ActionListener {
 
 
     public static void main(String[] args) {
-        new WindowStudentEnquiry();
+        new WindowStudentScoreEnquiry();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnEnquiry) {
-            String sqlEnquiryStudent = "use Academic_Affairs_Management_System_20211576 select * from Student_Enquiry_view where Sno = '" + loginID.toString() + "'";
-            btnEnquiry(sqlEnquiryStudent);
-        }
-    }
-    public void btnEnquiry(String sql){
-        String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
-        String userName = "s20211576"; // 默认用户名
-        String userPwd = "s20211576"; // 密码
-        Connection dbConn = null;
-        try {
-            Class.forName(Driver2);
-            dbConn = DriverManager.getConnection(url, userName, userPwd);
-        } catch (ClassNotFoundException ea) {
-            throw new RuntimeException(ea);
-        } catch (SQLException eb) {
-            throw new RuntimeException(eb);
-        }
-        int columnCount = 0;
-        try {
-            Statement stmt = dbConn.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next()) {
-                data[0][0] = rs.getString("Semester");
-                data[0][1] = rs.getString("Cno");
-                data[0][2] = rs.getString("Cname");
-                data[0][3] = rs.getString("Emp_name");
-                data[0][4] = rs.getString("Credit");
-            }
-        } catch (SQLException ex) {
-            throw new RuntimeException(ex);
-        } finally {
+            String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+            String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
+            String userName = "s20211576"; // 默认用户名
+            String userPwd = "s20211576"; // 密码
+            String sqlCourseEnquiry = "select * from Student_Score_Enquiry_view where Sno = '" + loginID + "' and Sname = '" + loginName + "' order by Semester asc";
+            System.out.println(sqlCourseEnquiry);
+            Connection dbConn = null;
             try {
-                dbConn.close();
-            } catch (SQLException exc) {
-                throw new RuntimeException(exc);
+                Class.forName(Driver2);
+                dbConn = DriverManager.getConnection(url, userName, userPwd);
+            } catch (ClassNotFoundException e1) {
+                throw new RuntimeException(e1);
+            } catch (SQLException e2) {
+                throw new RuntimeException(e2);
             }
+            try {
+                Statement stmt = dbConn.createStatement();
+                ResultSet rs = stmt.executeQuery(sqlCourseEnquiry);
+                ResultSetMetaData rsmd = rs.getMetaData();
+                int count = 0;
+                while (rs.next()&&count<getColumns()) {
+                    data[count][0] = rs.getString("Semester");
+                    data[count][1] = rs.getString("Cno");
+                    data[count][2] = rs.getString("Cname");
+                    data[count][3] = rs.getString("Emp_name");
+                    data[count][4] = rs.getString("Grade");
+                    count++;
+                }
+            } catch (SQLException e3) {
+                throw new RuntimeException(e3);
+            } finally {
+                try {
+                    dbConn.close();
+                } catch (SQLException e4) {
+                    throw new RuntimeException(e4);
+                }
+            }
+            DefaultTableModel model = new DefaultTableModel(data, columnNames);
+            table.setModel(model);
         }
-        // Create a new DefaultTableModel with the data and column names
-        DefaultTableModel model = new DefaultTableModel(data, columnNames);
-
-        // Set the model for the JTable
-        table.setModel(model);
     }
+
     public int getColumns () {
         String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
@@ -152,7 +138,7 @@ public class WindowStudentEnquiry extends JFrame implements ActionListener {
         int columnCount;
         try {
             Statement stmt = dbConn.createStatement();
-            ResultSet rs = stmt.executeQuery("use Academic_Affairs_Management_System_20211576 select * from Student_Enquiry_view");
+            ResultSet rs = stmt.executeQuery("use Academic_Affairs_Management_System_20211576 select * from Student_Score_Enquiry_view");
             ResultSetMetaData rsmd = rs.getMetaData();
             columnCount = 0;
             while (rs.next()) {
@@ -170,12 +156,13 @@ public class WindowStudentEnquiry extends JFrame implements ActionListener {
         }
         return columnCount;
     }
+    //保留
     public void getInformation(Object[] StudentRelated){
         String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
         String userName = "s20211576"; // 默认用户名
         String userPwd = "s20211576"; // 密码
-        String sql = "use Academic_Affairs_Management_System_20211576 select * from Student_view where Sno = " + loginID.trim();
+        String sql = "use Academic_Affairs_Management_System_20211576 select * from Student_view where Sno = '" + loginID.trim() + "'";
         Connection dbConn = null;
         try {
             Class.forName(Driver2);

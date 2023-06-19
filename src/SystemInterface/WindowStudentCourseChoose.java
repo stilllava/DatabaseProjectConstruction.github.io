@@ -7,11 +7,14 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Scanner;
 
 public class WindowStudentCourseChoose extends JFrame implements ActionListener {
     String loginID = windowsRegister.loginID;
@@ -40,6 +43,7 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
     JButton btnChoose = new JButton("选课");
     JTable table = new JTable();
     String sqlInsert = "";
+    String sqlCheck = "";
     String[] columnNames = {"学期","可选修系","可选修专业","课程号","课程名","教师名","学分","可选课人数"};
     String[][] data = new String[getColumns()][8];
     public WindowStudentCourseChoose() {
@@ -111,19 +115,19 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnSemestersEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Semester='"+comSemester.getSelectedItem()+"' and Sde_name='"+comSdept.getText().trim()+"'";
+            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Semester='"+comSemester.getSelectedItem()+"' and Sde_name='"+comSdept.getText().trim()+"' and Semester='"+comSemester.getSelectedItem()+"'";
             Connect(sql);
         }else if (e.getSource() == btnCnoEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Cno='" + txtCno.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"'";
+            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Cno='" + txtCno.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"' and Semester='"+comSemester.getSelectedItem()+"'";
             Connect(sql);
         } else if (e.getSource() == btnCnameEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Cname='" + txtCname.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"'";
+            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Cname='" + txtCname.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"' and Semester='"+comSemester.getSelectedItem()+"'";
             Connect(sql);
         } else if (e.getSource() == btnTeacherEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Emp_Name='" + txtEmp_Name.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"'";
+            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Emp_Name='" + txtEmp_Name.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"' and Semester='"+comSemester.getSelectedItem()+"'";
             Connect(sql);
         } else if (e.getSource() == btnCreditEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Credit='" + txtCredit.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"'";
+            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Credit='" + txtCredit.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"' and Semester='"+comSemester.getSelectedItem()+"'";
             Connect(sql);
         } else if (e.getSource() == btnChoose) {
             if(sqlInsert.equals("")) {
@@ -137,7 +141,6 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
                 try {
                     Class.forName(Driver2);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
                 } catch (ClassNotFoundException ec) {
                     throw new RuntimeException(ec);
                 } catch (SQLException ex) {
@@ -145,9 +148,17 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
                 }
                 try {
                     Statement stmt = dbConn.createStatement();
-                    System.out.println(sqlInsert);
+                    System.out.println("sqlInsert:"+sqlInsert);
+                    if(checkInsert(sqlCheck) == true){
+                        JOptionPane.showMessageDialog(null, "该课程已选！", "提示", JOptionPane.ERROR_MESSAGE);
+                        dbConn.close();
+                        return;
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "选课成功！", "提示", JOptionPane.INFORMATION_MESSAGE);
+                    }
                     ResultSet rs = stmt.executeQuery(sqlInsert);
-                    checkInserted(sqlInsert);
+
                 } catch (SQLException ee) {
                     throw new RuntimeException(ee);
                 } finally {
@@ -177,10 +188,48 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
                     String insertCredit = table.getValueAt(row, 6).toString();
                     String insertStuTotal = table.getValueAt(row, 7).toString();
                     sqlInsert = "INSERT INTO Course_chosen_20211576(Semester,Sno,Cno,Cname,Emp_no,Credit,Course_Offered_Sde_no) VALUES ('" + insertSemester.trim() + "','" + insertSno.trim() + "','" + insertCno.trim() + "','" + insertCname.trim() + "','" + insertEmpNo.trim() + "'," + insertCredit + ",'" + insertCourseOfferedSdeNo.trim() + "')";
+                    sqlCheck = "SELECT * FROM Course_chosen_20211576 where Sno='" + insertSno.trim() + "' and Cno='" + insertCno.trim() + "' and Semester='" + insertSemester.trim() + "' and Course_Offered_Sde_no='" + insertCourseOfferedSdeNo.trim() + "' and Emp_no='" + insertEmpNo.trim() + "'";
                 }
             }
         });
 
+    }
+
+    private boolean checkInsert(String sqlCheck) {
+        String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
+        String userName = "s20211576"; // 默认用户名
+        String userPwd = "s20211576"; // 密码
+        boolean flag = false;
+        Connection dbConn = null;
+        try {
+            Class.forName(Driver2);
+            dbConn = DriverManager.getConnection(url, userName, userPwd);
+        } catch (ClassNotFoundException ex) {
+            throw new RuntimeException(ex);
+        } catch (SQLException exc) {
+            throw new RuntimeException(exc);
+        }
+        int columnCount;
+        try {
+            Statement stmt = dbConn.createStatement();
+            ResultSet rs = stmt.executeQuery(sqlCheck);
+            ResultSetMetaData rsmd = rs.getMetaData();
+            columnCount = 0;
+            while (rs.next()) {
+                flag = true;
+                break;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                dbConn.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return flag;
     }
 
     private String getEmpNo(String insertEmpName) {
@@ -201,7 +250,7 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
         int columnCount;
         try {
             Statement stmt = dbConn.createStatement();
-            ResultSet rs = stmt.executeQuery("use Academic_Affairs_Management_System_20211576 select * from Emp_view where Emp_Name='" + insertEmpName + "'");
+            ResultSet rs = stmt.executeQuery("use Academic_Affairs_Management_System_20211576 select * from Teacher_view where Emp_Name='" + insertEmpName + "'");
             ResultSetMetaData rsmd = rs.getMetaData();
             columnCount = 0;
             while (rs.next()) {
@@ -299,44 +348,6 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
 
         // Set the model for the JTable
         table.setModel(model);
-    }
-    public void checkInserted(String sqlInsert){
-        String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
-        String userName = "s20211576"; // 默认用户名
-        String userPwd = "s20211576"; // 密码
-        Connection dbConn = null;
-        try {
-            Class.forName(Driver);
-            dbConn = DriverManager.getConnection(url, userName, userPwd);
-            Statement stmt = dbConn.createStatement();
-            System.out.println(sqlInsert);
-            ResultSet rs = stmt.executeQuery(sqlInsert);
-            // Get the number of columns in the ResultSet
-            ResultSetMetaData rsmd = rs.getMetaData();
-            int numColumns = rsmd.getColumnCount();
-
-            // Retrieve all rows of data from the ResultSet and store in the data array
-            int row = 0;
-            while (rs.next()) {
-                data[0][0] = rs.getString(1);
-                data[0][1] = rs.getString(2);
-                data[0][2] = rs.getString(3);
-                data[0][3] = rs.getString(4);
-                data[0][4] = rs.getString(5);
-                data[0][5] = rs.getString(6);
-            }
-            rs.close();
-            stmt.close();
-            dbConn.close();
-        } catch (Exception em) {
-            em.printStackTrace();
-        } finally {
-            try {
-            } catch (Exception ec) {
-                ec.printStackTrace();
-            }
-        }
     }
     public String getSdept(){
         String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";

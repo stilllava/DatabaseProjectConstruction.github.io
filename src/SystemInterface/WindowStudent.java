@@ -10,6 +10,7 @@ public class WindowStudent extends JFrame implements ActionListener {
     JFrame frame1 = new JFrame();
     JButton btnEnquiry = new JButton("信息查询+已选课列表");
     JButton btnCourseChoose = new JButton("选课");
+    JButton btnScoreEnquiry = new JButton("查询成绩");
     public WindowStudent() {
         frame1.setTitle("教务管理系统学生界面");
         frame1.setVisible(true);
@@ -18,10 +19,12 @@ public class WindowStudent extends JFrame implements ActionListener {
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame1.add(panel);
         panel.setLayout(new GridLayout(1,3));
-        panel.add(btnEnquiry, BorderLayout.CENTER);
-        panel.add(btnCourseChoose, BorderLayout.EAST);
+        panel.add(btnEnquiry);
+        panel.add(btnCourseChoose);
+        panel.add(btnScoreEnquiry);
         btnEnquiry.addActionListener(this);
         btnCourseChoose.addActionListener(this);
+        btnScoreEnquiry.addActionListener(this);
     }
     public static void main(String[] args) {
         new WindowStudent();
@@ -34,6 +37,9 @@ public class WindowStudent extends JFrame implements ActionListener {
         }
         if (e.getSource() == btnCourseChoose) {
             WindowStudentCourseChoose wscc = new WindowStudentCourseChoose();
+        }
+        if (e.getSource() == btnScoreEnquiry) {
+            WindowStudentScoreEnquiry wsse = new WindowStudentScoreEnquiry();
         }
     }
 }

@@ -39,3 +39,15 @@ b
 -src/SystemInterface/WindowStudentEnquiry.java,3\0\30df2bf60aed5745e0b9552b17266c6828f46e02
 V
 &src/SystemInterface/WindowTeacher.java,4\0\40c205d73104e6a6ad2fe767c62ea52494d71685
+X
+(src/SystemInterface/windowsRegister.java,a\d\ad9a32a3d230ee04c1019ddaac01eb3e7dfb0ecb
+a
+1src/SystemInterface/WindowTeacherScoreManage.java,8\5\85682d5c1ab03debddf8d19e09529befb8dbdd36
+n
+>src/SystemInterface/WindowManagerInformationUpdateStudent.java,4\1\41902acc2a49bbe16fddaf54a0bd007a7c1d98cb
+d
+4src/SystemInterface/WindowManagerEnquiryStudent.java,7\8\782d97810b8c9c904f22ba8fb7e79c64535ec358
+e
+5src/SystemInterface/WindowManagerCourseAvailable.java,2\b\2b5a419c4c3b61a8e959b27bc074e85a10844e1f
+M
+src/SystemInterface/Main.java,d\5\d565efb7962924e5bff03326613ae3a6990c89e8

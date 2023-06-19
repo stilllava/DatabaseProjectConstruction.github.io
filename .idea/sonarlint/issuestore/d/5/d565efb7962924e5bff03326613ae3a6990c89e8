@@ -1,0 +1,10 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8ß´ÌŠ1
+M
+java:S1481	"0Remove this unused "comSemester" local variable.(û8ï´ÌŠ1
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ïY8ï´ÌŠ1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Óç–´øÿÿÿÿ8ï´ÌŠ1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ï´ÌŠ1
+O
+java:S1128"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8ï´ÌŠ1

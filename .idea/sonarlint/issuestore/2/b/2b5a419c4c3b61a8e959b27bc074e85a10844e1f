@@ -1,0 +1,70 @@
+
+h	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8âˆ ù‹1
+h	java:S112•"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ãˆ ù‹1
+h	java:S112¢"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ãˆ ù‹1
+h	java:S112§"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8äˆ ù‹1
+E
+java:S3740"/Provide the parametrized type for this generic.(ö‹ÃÚ
+E
+java:S3740"/Provide the parametrized type for this generic.(ö‹ÃÚ
+E
+java:S3740"/Provide the parametrized type for this generic.(İ÷¡ß
+E
+java:S3740"/Provide the parametrized type for this generic.(İ÷¡ß
+l
+java:S1192*"JDefine a constant instead of duplicating this literal "s20211576" 6 times.(º×Èÿÿÿÿÿ8êˆ ù‹1
+Š
+java:S1192'"mDefine a constant instead of duplicating this literal "com.microsoft.sqlserver.jdbc.SQLServerDriver" 3 times.(æœÎê8êˆ ù‹1
+Ê
+java:S1192("§Define a constant instead of duplicating this literal "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false" 3 times.(Á·™úÿÿÿÿ8ëˆ ù‹1
+n	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8ìˆ ù‹1
+n	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8ìˆ ù‹1
+`
+java:S1163§"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8îˆ ù‹1
+W
+java:S1143§"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8îˆ ù‹1
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹
+e
+java:S2095™"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Œ ù‹1
+k
+java:S2095¹"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Œ ù‹1
+e
+java:S2095º"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8œŒ ù‹1
+b
+java:S2095H"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ö¸Øıÿÿÿÿ
+r	java:S116"XRename this field "labelEmp_Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã”¼òùÿÿÿÿ
+p	java:S116"VRename this field "txtEmp_Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹á™ıøÿÿÿÿ
+f	java:S116'"QRename this field "Driver" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê
+>
+java:S1948)"(Make "dbConn" transient or serializable.(È¡ß
+i
+java:S32523"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8â˜®ˆ1
+Z
+java:S1117‹"7Rename "url" which hides the field declared at line 40.(Á·™úÿÿÿÿ8·Œ ù‹1
+_
+java:S1117Œ"<Rename "userName" which hides the field declared at line 42.(º×Èÿÿÿÿÿ8·Œ ù‹1
+Y
+java:S1117";Rename "userPwd" which hides the field declared at line 43.(ÓÄ„©8¸Œ ù‹1
+X
+java:S1117":Rename "dbConn" which hides the field declared at line 41.(È¡ß8¸Œ ù‹1
+c
+java:S2147”"ECombine this catch with the one at line 146, which has the same body.(É®£8¹Œ ù‹1
+Y
+java:S6437‘"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8ºŒ ù‹1
+L
+java:S1481›")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8¼Œ ù‹1
+p	java:S100¬"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†»³íüÿÿÿÿ8½Œ ù‹1
+X
+java:S1117²":Rename "Driver" which hides the field declared at line 39.(æœÎê8¿Œ ù‹1
+Z
+java:S1117³"7Rename "url" which hides the field declared at line 40.(Á·™úÿÿÿÿ8ÀŒ ù‹1
+_
+java:S1117´"<Rename "userName" which hides the field declared at line 42.(º×Èÿÿÿÿÿ8ÀŒ ù‹1
+Y
+java:S1117µ";Rename "userPwd" which hides the field declared at line 43.(ÓÄ„©8ÁŒ ù‹1
+X
+java:S1117¶":Rename "dbConn" which hides the field declared at line 41.(È¡ß8ÁŒ ù‹1
+Y
+java:S6437¹"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8ÂŒ ù‹1
+V	java:S106»"9Replace this use of System.out or System.err by a logger.(Â–‘ö8ÃŒ ù‹1
+K	java:S108Ï")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8ÅŒ ù‹1

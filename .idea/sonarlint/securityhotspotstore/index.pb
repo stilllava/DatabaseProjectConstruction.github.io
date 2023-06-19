@@ -5,8 +5,6 @@ i
 9src/function/WindowManagerAddTeacherPasswordFunction.java,9\5\95c8ce9413550ab549cfd542540f4971c4cde3e6
 X
 (src/SystemInterface/TransportString.java,4\6\4685e86799f1de849749f641bc10e85788aaa675
-e
-5src/SystemInterface/WindowManagerCourseAvailable.java,2\b\2b5a419c4c3b61a8e959b27bc074e85a10844e1f
 ]
 -src/SystemInterface/WindowManagerEnquiry.java,d\9\d982450433803196497192f5b55707821a526e59
 d
@@ -15,8 +13,6 @@ h
 8src/SystemInterface/WindowManagerAddTeacherPassword.java,3\7\37b5ef5b9c754ef3ab58503db279d8d9624279ad
 U
 %src/SystemInterface/WindowForget.java,c\e\ce6e67e8f9b524f04a92c30dd25897ac126b5b46
-M
-src/SystemInterface/Main.java,d\5\d565efb7962924e5bff03326613ae3a6990c89e8
 V
 &src/SystemInterface/WindowStudent.java,f\f\ffcc39242e054e5f4c4a4985b4247453aaae2e0a
 n
@@ -25,8 +21,6 @@ l
 <src/SystemInterface/WindowManagerInformationUpdateClass.java,7\1\71bb73b4223f925a22ea57f2af3cee9bb23e463d
 l
 <src/SystemInterface/WindowManagerInformationUpdateMajor.java,8\5\8559e2028bf69b0a1cd90f81b4fb6844f69496a2
-d
-4src/SystemInterface/WindowManagerEnquiryStudent.java,7\8\782d97810b8c9c904f22ba8fb7e79c64535ec358
 g
 7src/SystemInterface/WindowManagerInformationUpdate.java,8\7\8752f5c19f93f4c255cf6a6f113b1644414d3aeb
 V
@@ -35,8 +29,6 @@ n
 >src/SystemInterface/WindowManagerInformationUpdateTeacher.java,8\3\83cea2f55bf408f6e1e084971ef397eaf41b551e
 t
 Dsrc/SystemInterface/WindowManagerInformationUpdateStudentInsert.java,5\f\5f4d409c36c2b980be4229e999374a1718e7ff44
-n
->src/SystemInterface/WindowManagerInformationUpdateStudent.java,4\1\41902acc2a49bbe16fddaf54a0bd007a7c1d98cb
 c
 3src/SystemInterface/WindowManagerTeacherCourse.java,d\c\dcf7dde80fd027a443d739b67584668563c177ff
 f
@@ -47,7 +39,3 @@ b
 -src/SystemInterface/WindowStudentEnquiry.java,3\0\30df2bf60aed5745e0b9552b17266c6828f46e02
 V
 &src/SystemInterface/WindowTeacher.java,4\0\40c205d73104e6a6ad2fe767c62ea52494d71685
-a
-1src/SystemInterface/WindowTeacherScoreManage.java,8\5\85682d5c1ab03debddf8d19e09529befb8dbdd36
-X
-(src/SystemInterface/windowsRegister.java,a\d\ad9a32a3d230ee04c1019ddaac01eb3e7dfb0ecb

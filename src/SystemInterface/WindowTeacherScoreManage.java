@@ -69,7 +69,7 @@ public class WindowTeacherScoreManage extends JFrame implements ActionListener{
             else{
                 //如果选中行，若有成绩则弹窗无法修改，若无成绩则直接录入
                 if(table.getValueAt(table.getSelectedRow(),5) != null){
-                    JOptionPane.showMessageDialog(null, "该学生已有成绩，无法修改!", "提示", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "该学生已有成绩，无法修改!（请联系教务进行修改!）", "提示", JOptionPane.INFORMATION_MESSAGE);
                 }
                 else{
                     JOptionPane.showMessageDialog(null, "录入成功!", "提示", JOptionPane.INFORMATION_MESSAGE);

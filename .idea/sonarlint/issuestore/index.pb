@@ -45,3 +45,11 @@ b
 2src/SystemInterface/WindowStudentCourseChoose.java,5\4\5405e1cf1fd0790e1baaf5cb8bc8117beeec4897
 e
 5src/SystemInterface/WindowManagerCourseAvailable.java,2\b\2b5a419c4c3b61a8e959b27bc074e85a10844e1f
+a
+1src/SystemInterface/WindowTeacherScoreManage.java,8\5\85682d5c1ab03debddf8d19e09529befb8dbdd36
+V
+&src/SystemInterface/WindowTeacher.java,4\0\40c205d73104e6a6ad2fe767c62ea52494d71685
+b
+2src/SystemInterface/WindowStudentScoreEnquiry.java,0\5\05fbf029d8ce99500d8bdee5a9c8f679bae026ff
+X
+(src/SystemInterface/windowsRegister.java,a\d\ad9a32a3d230ee04c1019ddaac01eb3e7dfb0ecb

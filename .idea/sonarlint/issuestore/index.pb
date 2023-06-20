@@ -7,8 +7,6 @@ X
 (src/SystemInterface/TransportString.java,4\6\4685e86799f1de849749f641bc10e85788aaa675
 ]
 -src/SystemInterface/WindowManagerEnquiry.java,d\9\d982450433803196497192f5b55707821a526e59
-U
-%src/SystemInterface/WindowForget.java,c\e\ce6e67e8f9b524f04a92c30dd25897ac126b5b46
 n
 >src/SystemInterface/WindowManagerInformationUpdateAcademy.java,2\0\20660ba45607cd3ad406c27ba940f01e8522b718
 l

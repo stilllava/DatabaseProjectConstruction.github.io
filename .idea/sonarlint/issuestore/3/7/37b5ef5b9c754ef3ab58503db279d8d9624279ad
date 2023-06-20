@@ -1,0 +1,28 @@
+
+m	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8Ì™æ¼1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8üóå¼1
+j
+java:S2095="HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Ş™æ¼1
+d
+java:S2095>"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Ş™æ¼1
+r	java:S116"VRename this field "labelEmp_No" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®äÖ¨8‚ôå¼1
+p	java:S116"TRename this field "txtEmp_No" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Äîİá8‚ôå¼1
+y	java:S116"XRename this field "labelEmp_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÈ»‚úÿÿÿÿ8‚ôå¼1
+w	java:S116"VRename this field "txtEmp_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ—ùÿÿÿÿ8‚ôå¼1
+|	java:S116"[Rename this field "labelEmp_SdeptNo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÀĞªùÿÿÿÿ8‚ôå¼1
+u	java:S116"YRename this field "txtEmp_SdeptNo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(——Àµ8‚ôå¼1
+i
+java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8†ôå¼1
+8
+java:S36261"Remove this redundant jump.(ûÁİ…8ˆôå¼1
+c
+java:S18589"A"getText" returns a string, there's no need to call "toString()".(È¯û„üÿÿÿÿ8é™æ¼1
+c
+java:S18589"A"getText" returns a string, there's no need to call "toString()".(È¯û„üÿÿÿÿ8é™æ¼1
+c
+java:S18589"A"getText" returns a string, there's no need to call "toString()".(È¯û„üÿÿÿÿ8é™æ¼1
+c
+java:S18589"A"getText" returns a string, there's no need to call "toString()".(È¯û„üÿÿÿÿ8é™æ¼1
+X
+java:S6437="6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8ê™æ¼1
+J	java:S108G")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8ê™æ¼1

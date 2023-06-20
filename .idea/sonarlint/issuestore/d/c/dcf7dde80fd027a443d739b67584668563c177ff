@@ -1,0 +1,57 @@
+
+h	java:S112•"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8©’¼1
+h	java:S112—"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8©’¼1
+h	java:S112£"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8©’¼1
+h	java:S112¨"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8©’¼1
+Q
+java:S3740"/Provide the parametrized type for this generic.(“˜Ä¥ÿÿÿÿÿ8¬’¼1
+Q
+java:S3740"/Provide the parametrized type for this generic.(“˜Ä¥ÿÿÿÿÿ8¬’¼1
+L
+java:S3740#"/Provide the parametrized type for this generic.(É¨¨»8¬’¼1
+L
+java:S3740#"/Provide the parametrized type for this generic.(É¨¨»8¬’¼1
+m
+java:S1192"JDefine a constant instead of duplicating this literal "s20211576" 4 times.(º×Èÿÿÿÿÿ8¬’¼1
+n	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8­’¼1
+n	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8­’¼1
+`
+java:S1163¨"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8®’¼1
+W
+java:S1143¨"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8®’¼1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8¯’¼1
+e
+java:S2095»"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ã’¼1
+e
+java:S2095›"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ã’¼1
+k
+java:S2095º"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ã’¼1
+w	java:S116"VRename this field "labelEmp_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¤±øûÿÿÿÿ8ã’¼1
+p	java:S116"TRename this field "txtEmp_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡”û¼8ã’¼1
+H
+java:S19481"&Make "data" transient or serializable.(ÆçŸùÿÿÿÿ8æ’¼1
+i
+java:S32528"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8ì’¼1
+[
+java:S1854t"9Remove this useless assignment to local variable "wmtca".(…³çıÿÿÿÿ8ğ’¼1
+L
+java:S1481t"*Remove this unused "wmtca" local variable.(…³çıÿÿÿÿ8ñ’¼1
+c
+java:S2147–"ECombine this catch with the one at line 148, which has the same body.(É®£8ó’¼1
+Y
+java:S6437“"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8ó’¼1
+L
+java:S1481")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8ô’¼1
+p	java:S100­"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†»³íüÿÿÿÿ8ô’¼1
+Y
+java:S6437º"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8ö’¼1
+V	java:S106¼"9Replace this use of System.out or System.err by a logger.(Â–‘ö8ö’¼1
+K	java:S108Í")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8÷’¼1
+c
+java:S1128"ARemove this unused import 'javax.swing.table.AbstractTableModel'.(““öıÿÿÿÿ8÷’¼1
+S
+java:S1128	"6Remove this unused import 'java.awt.event.MouseEvent'.(›õ8ø’¼1
+O
+java:S1128"-Remove this unused import 'java.util.Vector'.(ÿŒ¸Áÿÿÿÿÿ8ø’¼1
+V
+java:S1128"9Remove this unused import 'javax.swing.UIManager.getInt'.(¯™Ã8ø’¼1

@@ -13,6 +13,7 @@ public class WindowTeacher extends JFrame implements ActionListener{
     String loginID = windowsRegister.loginID;
     String loginName = windowsRegister.loginName;
     static String sqlScoreManage = "";
+    static String sqlScore = "";
     JFrame frame1 = new JFrame();
     JPanel panelNorth = new JPanel();
     JPanel panelSouth = new JPanel();
@@ -45,7 +46,6 @@ public class WindowTeacher extends JFrame implements ActionListener{
         txtSdeNo = new JLabel((String)TeacherRelated[3]);
         txtSdeName = new JLabel((String)TeacherRelated[4]);
         txtPosition = new JLabel((String)TeacherRelated[5]);
-        System.out.println(TeacherRelated[0]+" "+TeacherRelated[1]+" "+TeacherRelated[2]+" "+TeacherRelated[3]+" "+TeacherRelated[4]+" "+TeacherRelated[5]);
         table = new JTable(data, columnNames);
         frame1.setTitle("教务管理系统-教师界面");
         frame1.setVisible(true);
@@ -75,24 +75,23 @@ public class WindowTeacher extends JFrame implements ActionListener{
                 int row = table.getSelectedRow();
                 if (row >= 0) {
                     // 获取选中行的各列的数据
+                    //String[] columnNames = {"学期","允许选课系","系名","课程号","课程名","学分","可选课人数"};
                     String insertSemester = table.getValueAt(row, 0).toString();
-                    String insertEmpNo = loginID.toString();
-                    String insertEmpName = table.getValueAt(row, 1).toString();
-                    String insertSex = table.getValueAt(row, 3).toString();
-                    String insertSdeNo = table.getValueAt(row, 4).toString();
-                    String insertSdeName = table.getValueAt(row, 5).toString();
-                    String insertPosition = table.getValueAt(row, 6).toString();
-                    String sqlScoreManage = "use Academic_Affairs_Management_System_20211576 select * from Teacher_Score_Manage_view where Emp_no = '" + loginID.trim() + "'";
+                    String insertSdeNo = table.getValueAt(row, 1).toString();
+                    String insertSdeName = table.getValueAt(row, 2).toString();
+                    String insertCno = table.getValueAt(row, 3).toString();
+                    String insertCname = table.getValueAt(row, 4).toString();
+                    String insertCredit = table.getValueAt(row, 5).toString();
+                    String insertStuTotal = table.getValueAt(row, 6).toString();
+                    sqlScoreManage = "use Academic_Affairs_Management_System_20211576 select * from Teacher_Score_Manage_view where Emp_no = '" + loginID.trim() + "' and Semester = '" + insertSemester.trim() + "' and Cno = '" + insertCno.trim() + "'";
+                    sqlScore = "use Academic_Affairs_Management_System_20211576 select * from Teacher_Manage_SC_view where Emp_name = '" + loginName.trim() + "' and Semester = '" + insertSemester.trim() + "' and Cno = '" + insertCno.trim() + "'";
                 }
             }
         });
     }
-
-
     public static void main(String[] args) {
         new WindowTeacher();
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnEnquiry) {
@@ -104,7 +103,14 @@ public class WindowTeacher extends JFrame implements ActionListener{
                 JOptionPane.showMessageDialog(null, "请先选中课程再进行此操作！", "提示", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            WindowTeacherScoreManage windowTeacherScoreManage = new WindowTeacherScoreManage();
+
+            if(getInformationSC(TeacherRelated,sqlScore) == true){
+                JOptionPane.showMessageDialog(null, "该课程无人选择，无法进行赋分操作!", "提示", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            else{
+                WindowTeacherScoreManage windowTeacherScoreManage = new WindowTeacherScoreManage();
+            }
         }
     }
     public void Enquiry(){
@@ -127,14 +133,16 @@ public class WindowTeacher extends JFrame implements ActionListener{
         try {
             Statement stmt = dbConn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
+            int i=0;
             while (rs.next()) {
-                data[0][0] = rs.getString("Semester");
-                data[0][1] = rs.getString("Course_Offered_Sde_no");
-                data[0][2] = rs.getString("Sde_name");
-                data[0][3] = rs.getString("Cno");
-                data[0][4] = rs.getString("Cname");
-                data[0][5] = rs.getString("Credit");
-                data[0][6] = rs.getString("Stu_total");
+                data[i][0] = rs.getString("Semester");
+                data[i][1] = rs.getString("Course_Offered_Sde_no");
+                data[i][2] = rs.getString("Sde_name");
+                data[i][3] = rs.getString("Cno");
+                data[i][4] = rs.getString("Cname");
+                data[i][5] = rs.getString("Credit");
+                data[i][6] = rs.getString("Stu_total");
+                i++;
             }
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
@@ -145,9 +153,7 @@ public class WindowTeacher extends JFrame implements ActionListener{
                 throw new RuntimeException(exc);
             }
         }
-
         DefaultTableModel model = new DefaultTableModel(data, columnNames);
-
         table.setModel(model);
     }
     public int getColumns () {
@@ -220,6 +226,51 @@ public class WindowTeacher extends JFrame implements ActionListener{
             } catch (SQLException exc) {
                 throw new RuntimeException(exc);
             }
+        }
+    }
+    public boolean getInformationSC(Object[] TeacherRelated, String sql){
+        String Driver4 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
+        String userName = "s20211576"; // 默认用户名
+        String userPwd = "s20211576"; // 密码
+        sql = sqlScore;
+        Connection dbConn = null;
+        try {
+            Class.forName(Driver4);
+            dbConn = DriverManager.getConnection(url, userName, userPwd);
+        } catch (ClassNotFoundException ea) {
+            throw new RuntimeException(ea);
+        } catch (SQLException eb) {
+            throw new RuntimeException(eb);
+        }
+        try {
+            Statement stmt = dbConn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                TeacherRelated[0] = rs.getString("Semester");
+                TeacherRelated[1] = rs.getString("Cno");
+                TeacherRelated[2] = rs.getString("Cname");
+            }
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        } finally {
+            try {
+                dbConn.close();
+            } catch (SQLException exc) {
+                throw new RuntimeException(exc);
+            }
+        }
+        int flag = 0;
+        for(int i=0;i<3;i++){
+            if(TeacherRelated[i].equals("")){
+                flag++;
+            }
+        }
+        if(flag==3){
+            return true;
+        }
+        else{
+            return false;
         }
     }
 }

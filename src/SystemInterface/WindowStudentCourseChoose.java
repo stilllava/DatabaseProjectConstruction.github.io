@@ -93,7 +93,6 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
             comSemester.addItem((date+1)+"-"+(date+2)+"年第1学期");
             comSemester.setSelectedIndex(2);
         }
-
         panelNorthWest.add(labelSdept);panelNorthWest.add(comSdept);
         panelNorthWest.add(labelCno);panelNorthWest.add(txtCno);
         panelNorthWest.add(labelCname);panelNorthWest.add(txtCname);
@@ -149,7 +148,7 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
                 try {
                     Statement stmt = dbConn.createStatement();
                     System.out.println("sqlInsert:"+sqlInsert);
-                    if(checkInsert(sqlCheck) == true){
+                    if(checkInsert(sqlCheck) == true){//checkInsert:检查该生是否已选过这门课
                         JOptionPane.showMessageDialog(null, "该课程已选！", "提示", JOptionPane.ERROR_MESSAGE);
                         dbConn.close();
                         return;
@@ -192,9 +191,7 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
                 }
             }
         });
-
     }
-
     private boolean checkInsert(String sqlCheck) {
         String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
@@ -231,7 +228,6 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
         }
         return flag;
     }
-
     private String getEmpNo(String insertEmpName) {
         String insertEmpNo = null;
         String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";

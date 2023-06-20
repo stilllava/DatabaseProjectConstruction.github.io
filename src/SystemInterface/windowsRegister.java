@@ -12,9 +12,11 @@ import static java.sql.DriverManager.getConnection;
 
 public class windowsRegister extends JFrame implements ActionListener {
     JPanel panel = new JPanel();
+    JPanel panelNorth = new JPanel();
     JFrame frame1 = new JFrame();
     public static String loginID = "";
     public static String loginName = "";
+    JLabel labelName = new JLabel("教务系统登陆界面");
     JLabel labelNo = new JLabel("学号/教工号");
     JTextField txtLabelNo = new JTextField(12);
     JLabel labelPassword = new JLabel("密码");
@@ -26,10 +28,12 @@ public class windowsRegister extends JFrame implements ActionListener {
         //创建界面
         frame1.setTitle("教务管理系统登陆界面");
         frame1.setVisible(true);
-        frame1.setSize(250, 150);
+        frame1.setSize(450, 250);
         frame1.setLocation(300, 249);
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame1.add(panelNorth,BorderLayout.NORTH);
         frame1.add(panel, BorderLayout.CENTER);
+        panelNorth.add(labelName);
         panel.setLayout(new GridLayout(3, 2));
         panel.add(labelNo);panel.add(txtLabelNo);
         panel.add(labelPassword);panel.add(txtLabelPassword);
@@ -88,7 +92,6 @@ public class windowsRegister extends JFrame implements ActionListener {
                             if(passwordInput.equals(passwordCorrect.toString().trim())) {
                                 JOptionPane.showMessageDialog(null, "登陆成功");
                                 //关闭界面，打开新界面
-
                                 if (position.toString().trim().equals("学生")){
                                     loginID = userInput;
                                     loginName = getStudentName(loginID);

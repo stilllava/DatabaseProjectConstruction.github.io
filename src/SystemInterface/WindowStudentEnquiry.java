@@ -129,10 +129,7 @@ public class WindowStudentEnquiry extends JFrame implements ActionListener {
                 throw new RuntimeException(exc);
             }
         }
-        // Create a new DefaultTableModel with the data and column names
         DefaultTableModel model = new DefaultTableModel(data, columnNames);
-
-        // Set the model for the JTable
         table.setModel(model);
     }
     public int getColumns () {

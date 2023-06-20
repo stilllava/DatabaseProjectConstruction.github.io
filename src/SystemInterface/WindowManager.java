@@ -15,8 +15,8 @@ public class WindowManager extends JFrame implements ActionListener{
     public WindowManager() {
         frame1.setTitle("教务管理系统管理员界面");
         frame1.setVisible(true);
-        frame1.setSize(500,300);
-        frame1.setLocation(300, 300);
+        frame1.setSize(600,300);
+        frame1.setLocation(10, 10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame1.add(panel, BorderLayout.CENTER);
         panel.setLayout(new GridLayout(2,3));

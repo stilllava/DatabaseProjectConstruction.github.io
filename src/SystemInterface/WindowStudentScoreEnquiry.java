@@ -120,7 +120,6 @@ public class WindowStudentScoreEnquiry extends JFrame implements ActionListener 
             table.setModel(model);
         }
     }
-
     public int getColumns () {
         String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";

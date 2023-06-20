@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 
 public class WindowTeacherScoreManage extends JFrame implements ActionListener{
-    String loginID = windowsRegister.loginID;
     String loginName = windowsRegister.loginName;
     JPanel panelNorth = new JPanel();
     JPanel panelCenter = new JPanel();

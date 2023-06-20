@@ -9,7 +9,6 @@ import java.sql.*;
 import java.util.Calendar;
 
 public class WindowManagerCourseAvailable extends JFrame implements ActionListener {
-    JPanel panelEast = new JPanel();
     JPanel panelNorth = new JPanel();
     JPanel panelCenter = new JPanel();
     JPanel panelNorthEast = new JPanel();
@@ -27,14 +26,7 @@ public class WindowManagerCourseAvailable extends JFrame implements ActionListen
     JTextField txtEmp_Name = new JTextField(12);
     JLabel labelCredit = new JLabel("学分");
     JTextField txtCredit = new JTextField(12);
-    JButton btnList = new JButton("信息一览");
-    JButton btnSemestersEnquire = new JButton("当前学期内可选课程查询");
-    JButton btnSdeptEnquire = new JButton("当前系可选课程查询");
-    JButton btnSemesterandSdeptEnquire = new JButton("当前学期内当前系可选课程查询");
-    JButton btnCnoEnquire = new JButton("课程号查询");
-    JButton btnTeacherEnquire = new JButton("授课教师查询");
-    JButton btnCreditEnquire = new JButton("学分对应课程查询");
-    JButton btnCnameEnquire = new JButton("课程名查询");
+    JButton btnList = new JButton("查询");
     JTable table = new JTable();
     String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
@@ -46,8 +38,8 @@ public class WindowManagerCourseAvailable extends JFrame implements ActionListen
     public WindowManagerCourseAvailable() {
         frame1.setTitle("教务管理系统管理员界面-学生可选课程管理");
         frame1.setVisible(true);
-        frame1.setSize(900,800);
-        frame1.setLocation(300, 249);
+        frame1.setSize(900,650);
+        frame1.setLocation(100, 100);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame1.add(panelNorth, BorderLayout.NORTH);
         frame1.add(panelCenter, BorderLayout.CENTER);
@@ -82,55 +74,32 @@ public class WindowManagerCourseAvailable extends JFrame implements ActionListen
         } catch (ClassNotFoundException | SQLException ex) {
             ex.printStackTrace();
         }
-        comSdept.setSelectedItem("软件工程");
+        comSdept.setSelectedIndex(10);
         panelNorthWest.add(labelCno);panelNorthWest.add(txtCno);
         panelNorthWest.add(labelCname);panelNorthWest.add(txtCname);
         panelNorthWest.add(labelEmp_Name);panelNorthWest.add(txtEmp_Name);
         panelNorthWest.add(labelCredit);panelNorthWest.add(txtCredit);
-        panelNorthEast.add(btnList);panelNorthEast.add(btnSemestersEnquire);
-        panelNorthEast.add(btnSdeptEnquire);panelNorthEast.add(btnSemesterandSdeptEnquire);
-        panelNorthEast.add(btnCnoEnquire);panelNorthEast.add(btnCnameEnquire);
-        panelNorthEast.add(btnTeacherEnquire);panelNorthEast.add(btnCreditEnquire);
+        panelNorthEast.add(btnList);
         JScrollPane scrollPane = new JScrollPane(table);
         panelCenter.add(scrollPane);
         scrollPane.setViewportView(table);
         btnList.addActionListener(this);
-        btnSemestersEnquire.addActionListener(this);
-        btnSdeptEnquire.addActionListener(this);
-        btnCnoEnquire.addActionListener(this);
-        btnCnameEnquire.addActionListener(this);
-        btnTeacherEnquire.addActionListener(this);
-        btnCreditEnquire.addActionListener(this);
-        btnSemesterandSdeptEnquire.addActionListener(this);
     }
     public static void main(String[] args) {
         new WindowManagerCourseAvailable();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btnList) {//数据一览
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view";
-            Connect(sql);
-        }else if (e.getSource() == btnSemestersEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Semester='"+comSemester.getSelectedItem()+"'";
-            Connect(sql);
-        }else if (e.getSource() == btnSdeptEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Sde_name='"+comSdept.getSelectedItem().toString().trim()+"'";
-            Connect(sql);
-        }else if (e.getSource() == btnSemesterandSdeptEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Semester='"+comSemester.getSelectedItem()+"' and Sde_name='"+comSdept.getSelectedItem().toString().trim()+"'";
-            Connect(sql);
-        }else if (e.getSource() == btnCnoEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Cno='" + txtCno.getText().trim() + "'";
-            Connect(sql);
-        } else if (e.getSource() == btnCnameEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Cname='" + txtCname.getText().trim() + "'";
-            Connect(sql);
-        } else if (e.getSource() == btnTeacherEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Emp_Name='" + txtEmp_Name.getText().trim() + "'";
-            Connect(sql);
-        } else if (e.getSource() == btnCreditEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Credit='" + txtCredit.getText().trim() + "'";
+        if (e.getSource() == btnList) {
+            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Semester = '"+comSemester.getSelectedItem()+"' and Sde_name = '"+comSdept.getSelectedItem()+"'";
+            if(txtCno.getText().length()!=0)
+                sql+=" and Cno = '"+txtCno.getText()+"'";
+            if(txtCname.getText().length()!=0)
+                sql+=" and Cname = '"+txtCname.getText()+"'";
+            if(txtEmp_Name.getText().length()!=0)
+                sql+=" and Emp_Name = '"+txtEmp_Name.getText()+"'";
+            if(txtCredit.getText().length()!=0)
+                sql+=" and Credit = '"+txtCredit.getText()+"'";
             Connect(sql);
         }
     }

@@ -17,8 +17,6 @@ public class WindowManagerInformationUpdateClass extends JFrame implements Actio
     JTextField textClassNo = new JTextField(12);
     JLabel labelSdeNo = new JLabel("所属系号");
     JTextField textSdeNo = new JTextField(12);
-    JLabel labelEntranceDate = new JLabel("入学时间");
-    JTextField textEntranceDate = new JTextField(12);
     JLabel labelNum = new JLabel("学生人数");
     JTextField textNum = new JTextField(12);
     JButton btnAdd = new JButton("添加");
@@ -47,8 +45,6 @@ public class WindowManagerInformationUpdateClass extends JFrame implements Actio
         panelNorth.add(textClassNo);
         panelNorth.add(labelSdeNo);
         panelNorth.add(textSdeNo);
-        panelNorth.add(labelEntranceDate);
-        panelNorth.add(textEntranceDate);
         panelNorth.add(labelNum);
         panelNorth.add(textNum);
         panelNorth.add(btnAdd);
@@ -70,14 +66,13 @@ public class WindowManagerInformationUpdateClass extends JFrame implements Actio
         if (e.getSource() == btnAdd) {
             if (textClassNo.getText().trim().equals("") == false
                     && textSdeNo.getText().trim().equals("") == false
-                    && textEntranceDate.getText().trim().equals("") == false
                     && textNum.getText().trim().equals("") == false) {
                 String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
                 String userName = "s20211576"; // 默认用户名
                 String userPwd = "s20211576"; // 密码
                 String sql0 = "use Academic_Affairs_Management_System_20211576 select * from Manager_Class_view where Class_no ='" + textClassNo.getText() + "'";
-                String sql = "insert into Academic_Affairs_Management_System_20211576.dbo.Class_20211576(Class_no,Sde_no,Entrance_date,Num) values('" + textClassNo.getText() + "','" + textSdeNo.getText() + "','" + textEntranceDate.getText() + "'," + textNum.getText() + ")";
+                String sql = "insert into Academic_Affairs_Management_System_20211576.dbo.Class_20211576(Class_no,Sde_no,Num) values('" + textClassNo.getText() + "','" + textSdeNo.getText() + "'," + textNum.getText() + ")";
                 Connection dbConn = null;
                 try {
                     Class.forName(Driver);
@@ -121,8 +116,6 @@ public class WindowManagerInformationUpdateClass extends JFrame implements Actio
                 String sql = null;
                 if (textSdeNo.getText().trim().equals("") == false)
                     sql = "update Academic_Affairs_Management_System_20211576.dbo.Class_20211576 set Sde_no = '" + textSdeNo.getText() + "' where Class_no = '" + textClassNo.getText() + "'";
-                else if (textEntranceDate.getText().trim().equals("") == false)
-                    sql = "update Academic_Affairs_Management_System_20211576.dbo.Class_20211576 set Entrance_date = '" + textEntranceDate.getText() + "' where Class_no = '" + textClassNo.getText() + "'";
                 else if (textNum.getText().trim().equals("") == false)
                     sql = "update Academic_Affairs_Management_System_20211576.dbo.Class_20211576 set Num = " + textNum.getText() + " where Class_no = '" + textClassNo.getText() + "'";
                 Connection dbConn = null;
@@ -158,7 +151,6 @@ public class WindowManagerInformationUpdateClass extends JFrame implements Actio
             }
             if (textClassNo.getText().equals("") == true
                     && textSdeNo.getText().equals("") == true
-                    && textEntranceDate.getText().equals("") == true
                     && textNum.getText().equals("") == true) {
                 String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
@@ -197,36 +189,37 @@ public class WindowManagerInformationUpdateClass extends JFrame implements Actio
                     }
                 }
             } else {
-                int flag = 0;
-                String Input = null;
-                String sql = null;
-                if (textClassNo.getText().equals("") == false) {
-                    Input = textClassNo.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Class_view where Class_no = " + "'" + Input + "'";
-                    flag = 1;
-                } else if (textSdeNo.getText().equals("") == false) {
-                    Input = textSdeNo.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Class_view where Sde_no = " + "'" + Input + "'";
-                    flag = 2;
-                } else if (textEntranceDate.getText().equals("") == false) {
-                    Input = textEntranceDate.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Class_view where Entrance_date = " + "'" + Input + "'";
-                } else if (textNum.getText().equals("") == false) {
-                    Input = textNum.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Class_view where Num = " + Input;
-                    flag = 4;
+                //清空表格
+                for (int i = 0; i < getColumns(); i++) {
+                    for (int j = 0; j < 10; j++) {
+                        data[i][j] = "";
+                    }
                 }
-                String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+                int flag = 0;
+                String input = null;
+                String sql = "SELECT * FROM Manager_Class_view WHERE 1=1 ";
+                if (!textClassNo.getText().isEmpty()) {
+                    input = textClassNo.getText();
+                    sql += "and Class_no = '"+input+"' ";
+                }
+                if (!textSdeNo.getText().isEmpty()) {
+                    input = textSdeNo.getText();
+                    sql += "and Sde_no = '"+input+"' ";
+                }
+                if (!textNum.getText().isEmpty()) {
+                    input = textNum.getText();
+                    sql += "and Num = "+input+" ";
+                }
+                String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
-                String userName = "s20211576"; // 默认用户名
-                String userPwd = "s20211576"; // 密码
-                Connection dbConn = null;
-                try {
-                    Class.forName(Driver);
-                    dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    Statement stmt = dbConn.createStatement();
-                    System.out.println(sql);
+                String username = "s20211576";
+                String password = "s20211576";
+                try{
+                    Class.forName(driver);
+                    Connection conn = DriverManager.getConnection(url, username, password);
+                    Statement stmt = conn.createStatement();
                     ResultSet rs = stmt.executeQuery(sql);
+                    System.out.println(sql);
                     int count = 0;
                     while (rs.next()) {
                         data[count][0] = rs.getString("Class_no");
@@ -236,16 +229,10 @@ public class WindowManagerInformationUpdateClass extends JFrame implements Actio
                         count++;
                     }
                     rs.close();
-                    stmt.close();
-                    dbConn.close();
-                } catch (Exception em) {
-                    em.printStackTrace();
-                } finally {
-                    try {
-                    } catch (Exception ec) {
-                        ec.printStackTrace();
-                    }
+                } catch (Exception e1) {
+                    e1.printStackTrace();
                 }
+
             }
             DefaultTableModel model = new DefaultTableModel(data, columnNames);
             table.setModel(model);

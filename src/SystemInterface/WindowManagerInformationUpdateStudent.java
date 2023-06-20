@@ -221,15 +221,11 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
                 try {
                     Class.forName(Driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
                     Statement stmt = dbConn.createStatement();
                     System.out.println(sql);
                     ResultSet rs = stmt.executeQuery(sql);
-                    // Get the number of columns in the ResultSet
                     ResultSetMetaData rsmd = rs.getMetaData();
                     int numColumns = rsmd.getColumnCount();
-
-                    // Retrieve all rows of data from the ResultSet and store in the data array
                     int row = 0;
                     while (rs.next()) {
                         for (int col = 0; col < numColumns; col++) {
@@ -253,62 +249,75 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
                         ec.printStackTrace();
                     }
                 }
+                DefaultTableModel model = new DefaultTableModel(data, columnNames);
+                table.setModel(model);
             }
             else {
-                //在数据库中进行查询,先对textNo中内容进行查询，当textNo中为空时方可对textName进行查询,往后以此类推
+                //清空表格
+                for (int i = 0; i < getColumns(); i++) {
+                    for (int j = 0; j < 10; j++) {
+                        data[i][j] = "";
+                    }
+                }
                 int flag = 0;
                 String Input = null;
-                String sql = null;
-                if (textNo.getText().equals("") == false) {
-                    Input = textNo.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Sno = " + "'" +Input + "'";
-                    flag = 1;
-                } else if (textName.getText().equals("") == false) {
-                    Input = textName.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Sname = " + "'" +Input + "'";
-                    flag = 2;
-                } else if (textSex.getText().equals("") == false) {
-                    Input = textSex.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Sex = " + "'" +Input + "'";
-                } else if (textBirth.getText().equals("") == false) {
-                    Input = textBirth.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Birth BETWEEN '" + Input + "' AND dateadd(second,-1,dateadd(day,1,'" + Input + "'))";
-                    flag = 4;
-                } else if (textEntrancedate.getText().equals("") == false) {
-                    Input = textEntrancedate.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Entrance_date BETWEEN '" + Input + "' AND dateadd(second,-1,dateadd(day,1,'" + Input + "'))";
-                    flag = 5;
-                } else if (textClassno.getText().equals("") == false) {
-                    Input = textClassno.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Class_no = " + "'" +Input + "'";
-                    flag = 6;
-                } else if (textHomeaddress.getText().equals("") == false) {
-                    Input = textHomeaddress.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Home_addr = " + "'" +Input + "'";
-                    flag = 7;
-                } else if (textSdept.getText().equals("") == false) {
-                    Input = textSdept.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Sde_no = " + "'" +Input + "'";
-                    flag = 8;
-                } else if (textPostcode.getText().equals("") == false) {
-                    Input = textPostcode.getText();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Postcode = " + "'" +Input + "'";
-                    flag = 9;
-                }
-                String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+                String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
                 String userName = "s20211576"; // 默认用户名
                 String userPwd = "s20211576"; // 密码
+                String[][] data = new String[getColumns()][10];
+                String inputNo = textNo.getText();
+                String inputName = textName.getText();
+                String inputSex = textSex.getText();
+                String inputBirth = textBirth.getText();
+                String inputEntrancedate = textEntrancedate.getText();
+                String inputClassno = textClassno.getText();
+                String inputHomeaddress = textHomeaddress.getText();
+                String inputSdept = textSdept.getText();
+                String inputPostcode = textPostcode.getText();
+                String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where 1=1";
+                if (!inputNo.equals("")) {
+                    sql += " and Sno='" + inputNo + "'";
+                }
+                if (!inputName.equals("")) {
+                    sql += " and Sname='" + inputName + "'";
+                }
+                if (!inputSex.equals("")) {
+                    sql += " and Sex='" + inputSex + "'";
+                }
+                if (!inputBirth.equals("")) {
+                    sql += " and Birth BETWEEN '" + inputBirth + "' AND dateadd(second,-1,dateadd(day,1,'" + inputBirth + "'))";
+                }
+                if (!inputEntrancedate.equals("")) {
+                    sql += " and Entrance_date BETWEEN '" + inputEntrancedate + "' AND dateadd(second,-1,dateadd(day,1,'" + inputEntrancedate + "'))";
+                }
+                if (!inputClassno.equals("")) {
+                    sql += " and Class_no='" + inputClassno + "'";
+                }
+                if (!inputHomeaddress.equals("")) {
+                    sql += " and Home_addr='" + inputHomeaddress + "'";
+                }
+                if (!inputSdept.equals("")) {
+                    sql += " and Sde_no='" + inputSdept + "'";
+                }
+                if (!inputPostcode.equals("")) {
+                    sql += " and Postcode='" + inputPostcode + "'";
+                }
+                System.out.println(sql); // 打印完整的SQL查询语句
                 Connection dbConn = null;
                 try {
-                    Class.forName(Driver);
+                    Class.forName(driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
+                } catch (ClassNotFoundException e1) {
+                    e1.printStackTrace();
+                } catch (SQLException e2) {
+                    e2.printStackTrace();
+                }
+                try{
                     Statement stmt = dbConn.createStatement();
-                    System.out.println(sql);
                     ResultSet rs = stmt.executeQuery(sql);
                     int count = 0;
-                    while(rs.next()){
+                    while (rs.next()) {
                         data[count][0] = rs.getString("Sno");
                         data[count][1] = rs.getString("Sname");
                         data[count][2] = rs.getString("Sex");
@@ -324,17 +333,20 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
                     rs.close();
                     stmt.close();
                     dbConn.close();
-                } catch (Exception em) {
-                    em.printStackTrace();
+                } catch (SQLException e2) {
+                    e2.printStackTrace();
                 } finally {
                     try {
-                    } catch (Exception ec) {
-                        ec.printStackTrace();
+                        if (dbConn != null) {
+                            dbConn.close();
+                        }
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
                     }
                 }
+                DefaultTableModel model = new DefaultTableModel(data, columnNames);
+                table.setModel(model);
             }
-            DefaultTableModel model = new DefaultTableModel(data, columnNames);
-            table.setModel(model);
         }
     }
     public int getColumns() {
@@ -346,7 +358,6 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
         try {
             Class.forName(Driver2);
             dbConn = DriverManager.getConnection(url, userName, userPwd);
-            System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         } catch (SQLException e) {

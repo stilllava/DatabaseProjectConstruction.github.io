@@ -9,7 +9,6 @@ import java.sql.*;
 import java.util.Vector;
 
 public class WindowManagerEnquiryStudent extends JFrame implements ActionListener {
-    JPanel panel = new JPanel();
     JFrame frame1 = new JFrame();
     JPanel panelNorth = new JPanel();
     JPanel panelSouth = new JPanel();
@@ -36,18 +35,19 @@ public class WindowManagerEnquiryStudent extends JFrame implements ActionListene
     JTable table = new JTable();
     JScrollPane scrollPane = new JScrollPane(table);
 
-    String[] columnNames = {"学号", "姓名", "性别", "出生日期", "入学日期", "班级号", "家庭住址", "所在系", "邮政编码","就读状态"};
+    String[] columnNames = {"学号", "姓名", "性别", "出生日期", "入学日期", "班级号", "家庭住址", "所在系", "邮政编码", "就读状态"};
     Object[][] data = new Object[getColumns()][10];
+
     public WindowManagerEnquiryStudent() {
         table = new JTable(data, columnNames);
         frame1.setTitle("教务管理系统管理员界面-信息维护功能-学生信息查询");
         frame1.setVisible(true);
-        frame1.setSize(800, 680);
-        frame1.setLocation(300, 249);
+        frame1.setSize(800, 750);
+        frame1.setLocation(10, 10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame1.add(panelNorth, BorderLayout.NORTH);
         frame1.add(panelSouth, BorderLayout.CENTER);
-        panelNorth.setLayout(new GridLayout(9, 2));
+        panelNorth.setLayout(new GridLayout(11, 2));
         panelNorth.add(labelNo);
         panelNorth.add(textNo);
         panelNorth.add(labelName);
@@ -66,9 +66,9 @@ public class WindowManagerEnquiryStudent extends JFrame implements ActionListene
         panelNorth.add(textSdept);
         panelNorth.add(labelPostcode);
         panelNorth.add(textPostcode);
-        panelSouth.add(btnEnquiry, BorderLayout.NORTH);
-        panelSouth.add(labelStatus, BorderLayout.NORTH);
-        panelSouth.add(scrollPane, BorderLayout.CENTER);
+        panelNorth.add(btnEnquiry, BorderLayout.NORTH);
+        panelNorth.add(labelStatus, BorderLayout.NORTH);
+        frame1.add(scrollPane, BorderLayout.SOUTH);
         scrollPane.setViewportView(table);
         btnEnquiry.addActionListener(this);
     }
@@ -94,7 +94,7 @@ public class WindowManagerEnquiryStudent extends JFrame implements ActionListene
                     && textClassno.getText().toString().equals("") == true
                     && textHomeaddress.getText().toString().equals("") == true
                     && textSdept.getText().toString().equals("") == true
-                    && textPostcode.getText().toString().equals("") == true){
+                    && textPostcode.getText().toString().equals("") == true) {
                 String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
                 String userName = "s20211576"; // 默认用户名
@@ -128,48 +128,36 @@ public class WindowManagerEnquiryStudent extends JFrame implements ActionListene
                         ec.printStackTrace();
                     }
                 }
-            }
-            else {
-                //在数据库中进行查询,先对textNo中内容进行查询，当textNo中为空时方可对textName进行查询,往后以此类推
+                DefaultTableModel model = new DefaultTableModel(data, columnNames);
+                table.setModel(model);
+            } else {
+                //清空表格
+                for (int i = 0; i < getColumns(); i++) {
+                    for (int j = 0; j < 10; j++) {
+                        data[i][j] = "";
+                    }
+                }
                 int flag = 0;
                 String Input = null;
-                String sql = null;
-                if (textNo.getText().toString().equals("") == false) {
-                    Input = textNo.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Sno = " + "'" +Input + "'";
-                    flag = 1;
-                } else if (textName.getText().toString().equals("") == false) {
-                    Input = textName.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select password from Manager_Student_view where Sname = " + "'" +Input + "'";
-                    flag = 2;
-                } else if (textSex.getText().toString().equals("") == false) {
-                    Input = textSex.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select password from Manager_Student_view where Sex = " + "'" +Input + "'";
-                } else if (textBirth.getText().toString().equals("") == false) {
-                    Input = textBirth.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Birth BETWEEN '" + Input + "' AND dateadd(second,-1,dateadd(day,1,'" + Input + "'))";
-                    flag = 4;
-                } else if (textEntrancedate.getText().toString().equals("") == false) {
-                    Input = textEntrancedate.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Entrance_date BETWEEN '" + Input + "' AND dateadd(second,-1,dateadd(day,1,'" + Input + "'))";
-                    flag = 5;
-                } else if (textClassno.getText().toString().equals("") == false) {
-                    Input = textClassno.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Class_no = " + "'" +Input + "'";
-                    flag = 6;
-                } else if (textHomeaddress.getText().toString().equals("") == false) {
-                    Input = textHomeaddress.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Home_addr = " + "'" +Input + "'";
-                    flag = 7;
-                } else if (textSdept.getText().toString().equals("") == false) {
-                    Input = textSdept.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Sde_no = " + "'" +Input + "'";
-                    flag = 8;
-                } else if (textPostcode.getText().toString().equals("") == false) {
-                    Input = textPostcode.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Postcode = " + "'" +Input + "'";
-                    flag = 9;
-                }
+                String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where 1=1 ";
+                if (textNo.getText().toString().equals("") == false)
+                    sql += " and Sno = " + "'" + textNo.getText() + "'";
+                if (textName.getText().toString().equals("") == false)
+                    sql += " and Sname = " + "'" + textName.getText() + "'";
+                if (textSex.getText().toString().equals("") == false)
+                    sql += "and Sex = " + "'" + textSex.getText() + "'";
+                if (textBirth.getText().toString().equals("") == false)
+                    sql += "and Birth = " + "'" + textBirth.getText() + "'";
+                if (textEntrancedate.getText().toString().equals("") == false)
+                    sql += "and Entrance_date = " + "'" + textEntrancedate.getText() + "'";
+                if (textClassno.getText().toString().equals("") == false)
+                    sql += "and Class_no = " + "'" + textClassno.getText() + "'";
+                if (textHomeaddress.getText().toString().equals("") == false)
+                    sql += "and Home_address = " + "'" + textHomeaddress.getText() + "'";
+                if (textSdept.getText().toString().equals("") == false)
+                    sql += "and Sdept = " + "'" + textSdept.getText() + "'";
+                if (textPostcode.getText().toString().equals("") == false)
+                    sql += "and Postcode = " + "'" + textPostcode.getText() + "'";
                 String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
                 String userName = "s20211576"; // 默认用户名
@@ -181,17 +169,19 @@ public class WindowManagerEnquiryStudent extends JFrame implements ActionListene
                     Statement stmt = dbConn.createStatement();
                     System.out.println(sql);
                     ResultSet rs = stmt.executeQuery(sql);
-                    while(rs.next()){
-                        data[0][0] = rs.getString("Sno");
-                        data[0][1] = rs.getString("Sname");
-                        data[0][2] = rs.getString("Sex");
-                        data[0][3] = rs.getString("Birth");
-                        data[0][4] = rs.getString("Entrance_date");
-                        data[0][5] = rs.getString("Class_no");
-                        data[0][6] = rs.getString("Home_addr");
-                        data[0][7] = rs.getString("Sde_no");
-                        data[0][8] = rs.getString("Postcode");
-                        data[0][9] = rs.getString("AttendanceStatus");
+                    int count = 0;
+                    while (rs.next()) {
+                        data[count][0] = rs.getString("Sno");
+                        data[count][1] = rs.getString("Sname");
+                        data[count][2] = rs.getString("Sex");
+                        data[count][3] = rs.getString("Birth");
+                        data[count][4] = rs.getString("Entrance_date");
+                        data[count][5] = rs.getString("Class_no");
+                        data[count][6] = rs.getString("Home_addr");
+                        data[count][7] = rs.getString("Sde_no");
+                        data[count][8] = rs.getString("Postcode");
+                        data[count][9] = rs.getString("AttendanceStatus");
+                        count++;
                     }
                     rs.close();
                     stmt.close();
@@ -204,9 +194,9 @@ public class WindowManagerEnquiryStudent extends JFrame implements ActionListene
                         ec.printStackTrace();
                     }
                 }
+                DefaultTableModel model = new DefaultTableModel(data, columnNames);
+                table.setModel(model);
             }
-            DefaultTableModel model = new DefaultTableModel(data, columnNames);
-            table.setModel(model);
         }
     }
     public int getColumns() {
@@ -218,10 +208,10 @@ public class WindowManagerEnquiryStudent extends JFrame implements ActionListene
         try {
             Class.forName(Driver2);
             dbConn = DriverManager.getConnection(url, userName, userPwd);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e1) {
+            throw new RuntimeException(e1);
+        } catch (SQLException e2) {
+            throw new RuntimeException(e2);
         }
         int columnCount;
         try {
@@ -233,13 +223,13 @@ public class WindowManagerEnquiryStudent extends JFrame implements ActionListene
                 //统计表中共有多少行数据
                 columnCount++;
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        } catch (SQLException e3) {
+            throw new RuntimeException(e3);
         } finally {
             try {
                 dbConn.close();
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+            } catch (SQLException e4) {
+                throw new RuntimeException(e4);
             }
         }
         return columnCount;

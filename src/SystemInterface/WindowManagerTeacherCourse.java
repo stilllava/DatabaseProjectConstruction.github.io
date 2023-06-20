@@ -17,15 +17,11 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
     JPanel panel = new JPanel();
     JPanel panel1 = new JPanel();
     JPanel panel2 = new JPanel();
-    JPanel panel4 = new JPanel();
-    JPanel panel5 = new JPanel();
-    JPanel panel6 = new JPanel();
-    JPanel panel7 = new JPanel();
     JFrame frame1 = new JFrame();
     JLabel labelSemester = new JLabel("学期");
     JComboBox comlabelSearchSemester = new JComboBox();
     JLabel labelCno = new JLabel("课程号");
-    JPasswordField txtCno = new JPasswordField(12);
+    JTextField txtCno = new JTextField(12);
     JLabel labelEmp_no = new JLabel("教工号");
     JTextField txtEmp_no = new JTextField(12);
     JLabel labelCourseOfferedSdeNo = new JLabel("允许选课院系");
@@ -37,11 +33,11 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
     JTextField txtSearchCname = new JTextField(12);
     JLabel labelSearchName = new JLabel("授课教师");
     JTextField txtSearchName = new JTextField(12);
-    JButton btnSearchSemester = new JButton("查询当前学期教师授课情况");
-    JButton btnSearchCname = new JButton("查询当前课程教师授课情况");
-    JButton btnSearchName = new JButton("查询当前教师授课情况");
-    JButton btnSearchCnameAndName = new JButton("查询当前学期当前课程当前教师授课情况");
-    JButton btnList = new JButton("显示所有学期所有教师授课情况");
+    JLabel labelCredit = new JLabel("学分");
+    JTextField txtCredit = new JTextField(12);
+    JLabel labelStu_total = new JLabel("可选学生数");
+    JTextField txtStu_total = new JTextField(12);
+    JButton btnEnquiry = new JButton("查询");
     String initialText = null;
     JTable table = new JTable();
     JScrollPane scrollPane = new JScrollPane(table);
@@ -55,38 +51,21 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
         frame1.setLocation(10, 10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame1.add(panel, BorderLayout.NORTH);
-        frame1.add(panel4, BorderLayout.CENTER);
-        frame1.add(panel5, BorderLayout.SOUTH);
-        panel.add(panel1);
-        panel.add(panel2);
-        panel1.setLayout(new GridLayout(4, 2));
+        panel.add(panel1, BorderLayout.WEST);
+        panel.add(panel2, BorderLayout.EAST);
+        panel1.setLayout(new GridLayout(8,2));
         panel2.setLayout(new GridLayout(4, 1));
-        panel1.add(labelSemester);
-        panel1.add(comlabelSearchSemester);
-        panel1.add(labelCno);
-        panel1.add(txtCno);
-        panel1.add(labelEmp_no);
-        panel1.add(txtEmp_no);
-        panel1.add(labelCourseOfferedSdeNo);
-        panel1.add(txtCourseOfferedSdeNo);
-        panel2.add(btnAdd);
-        panel2.add(btnList);
-        panel4.add(scrollPane);
+        panel1.add(labelSemester);panel1.add(comlabelSearchSemester);
+        panel1.add(labelCno);panel1.add(txtCno);
+        panel1.add(labelSearchCname);panel1.add(txtSearchCname);
+        panel1.add(labelEmp_no);panel1.add(txtEmp_no);
+        panel1.add(labelSearchName);panel1.add(txtSearchName);
+        panel1.add(labelCourseOfferedSdeNo);panel1.add(txtCourseOfferedSdeNo);
+        panel1.add(labelCredit);panel1.add(txtCredit);
+        panel1.add(labelStu_total);panel1.add(txtStu_total);
+        panel2.add(btnAdd);panel2.add(btnEnquiry);
+        frame1.add(scrollPane,BorderLayout.SOUTH);
         scrollPane.setViewportView(table);
-        panel5.add(panel6, BorderLayout.EAST);
-        panel5.add(panel7, BorderLayout.WEST);
-        panel7.setLayout(new GridLayout(4, 2));
-        panel6.setLayout(new GridLayout(4, 1));
-        panel7.add(labelSearchSemester);
-        panel7.add(comSearchSemester);
-        panel7.add(labelSearchCname);
-        panel7.add(txtSearchCname);
-        panel7.add(labelSearchName);
-        panel7.add(txtSearchName);
-        panel6.add(btnSearchSemester);
-        panel6.add(btnSearchCname);
-        panel6.add(btnSearchName);
-        panel6.add(btnSearchCnameAndName);
         int date = Calendar.getInstance().get(Calendar.YEAR);
         int i = date - 10;
         for (; i < date + 1; i++) {
@@ -99,11 +78,7 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
         comlabelSearchSemester.setSelectedIndex(18);
         initialText = (String) comlabelSearchSemester.getSelectedItem();
         btnAdd.addActionListener(this);
-        btnList.addActionListener(this);
-        btnSearchSemester.addActionListener(this);
-        btnSearchCname.addActionListener(this);
-        btnSearchName.addActionListener(this);
-        btnSearchCnameAndName.addActionListener(this);
+        btnEnquiry.addActionListener(this);
     }
 
     public static void main(String[] args) {
@@ -115,24 +90,34 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
         if (e.getSource() == btnAdd) {
             WindowManagerTeacherCourseAdd wmtca = new WindowManagerTeacherCourseAdd();
         }
-        if (e.getSource() == btnList) {
-            String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Course_Teacher_manage_view";
-            Connect(sql);
-        }
-        if (e.getSource() == btnSearchSemester) {
-            String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Course_Teacher_manage_view where Semester='" + comSearchSemester.getSelectedItem() + "'";
-            Connect(sql);
-        }
-        if (e.getSource() == btnSearchCname) {
-            String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Course_Teacher_manage_view where Cname='" + txtSearchCname.getText() + "'";
-            Connect(sql);
-        }
-        if (e.getSource() == btnSearchName) {
-            String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Course_Teacher_manage_view where Emp_name='" + txtSearchName.getText() + "'";
-            Connect(sql);
-        }
-        if (e.getSource() == btnSearchCnameAndName) {
-            String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Course_Teacher_manage_view where Cname='" + txtSearchCname.getText() + "' and Emp_name='" + txtSearchName.getText() + "'";
+        if (e.getSource() == btnEnquiry){
+            for (int i = 0; i < getColumns(); i++) {
+                for (int j = 0; j < 8; j++) {
+                    data[i][j] = "";
+                }
+            }
+            String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Course_Teacher_manage_view where Semester='" + comSearchSemester.getSelectedItem().toString() + "'";
+            if (!txtSearchCname.getText().trim().equals("")) {
+                sql += " and Cname ='" + txtSearchCname.getText().trim() + "'";
+            }
+            if (!txtSearchName.getText().trim().equals("")) {
+                sql += " and Emp_name ='" + txtSearchName.getText().trim() + "'";
+            }
+            if (!txtEmp_no.getText().trim().equals("")) {
+                sql += " and Emp_no ='" + txtEmp_no.getText().trim() + "'";
+            }
+            if (!txtCourseOfferedSdeNo.getText().trim().equals("")) {
+                sql += " and Course_Offered_Sde_no ='" + txtCourseOfferedSdeNo.getText().trim() + "'";
+            }
+            if(!txtCno.getText().trim().equals("")){
+                sql += " and Cno ='" + txtCno.getText().trim() + "'";
+            }
+            if(!txtCredit.getText().trim().equals("")){
+                sql += " and Credit ='" + txtCredit.getText().trim() + "'";
+            }
+            if(!txtStu_total.getText().trim().equals("")){
+                sql += " and Stu_total ='" + txtStu_total.getText().trim() + "'";
+            }
             Connect(sql);
         }
     }

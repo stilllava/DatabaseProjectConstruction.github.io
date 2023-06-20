@@ -1,0 +1,44 @@
+
+b	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(ˆÃŠÔ8ÅÜ¼Å1
+g	java:S112A"FDefine and throw a dedicated exception instead of using a generic one.(¨‰Øéÿÿÿÿÿ8ÆÜ¼Å1
+b	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(ö¹¿8ÆÜ¼Å1
+b	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(ğ“şÆ8ÆÜ¼Å1
+b	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(ˆÃŠÔ8ÆÜ¼Å1
+g	java:S112h"FDefine and throw a dedicated exception instead of using a generic one.(¨‰Øéÿÿÿÿÿ8ÆÜ¼Å1
+b	java:S112w"FDefine and throw a dedicated exception instead of using a generic one.(ö¹¿8ÆÜ¼Å1
+b	java:S112|"FDefine and throw a dedicated exception instead of using a generic one.(ğ“şÆ8ÆÜ¼Å1
+L
+java:S3740"/Provide the parametrized type for this generic.(ù¿´É8ÆÜ¼Å1
+L
+java:S3740"/Provide the parametrized type for this generic.(ù¿´É8ÆÜ¼Å1
+l
+java:S11926"JDefine a constant instead of duplicating this literal "s20211576" 4 times.(º×Èÿÿÿÿÿ8ÈÜ¼Å1
+m	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8ÉÜ¼Å1
+m	java:S117\"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8ÉÜ¼Å1
+Z
+java:S1163R"=Refactor this code to not throw exceptions in finally blocks.(ğ“şÆ8ÉÜ¼Å1
+Z
+java:S1163|"=Refactor this code to not throw exceptions in finally blocks.(ğ“şÆ8ÉÜ¼Å1
+Q
+java:S1143R"4Remove this throw statement from this finally block.(ğ“şÆ8ÉÜ¼Å1
+Q
+java:S1143|"4Remove this throw statement from this finally block.(ğ“şÆ8ÉÜ¼Å1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8ÊÜ¼Å1
+d
+java:S2095E"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8æÜ¼Å1
+d
+java:S2095k"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8æÜ¼Å1
+C
+java:S1948"&Make "data" transient or serializable.(­îë¢8êÜ¼Å1
+i
+java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8ğÜ¼Å1
+U	java:S106:"9Replace this use of System.out or System.err by a logger.(Â–‘ö8öÜ¼Å1
+X
+java:S6437="6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8öÜ¼Å1
+K
+java:S1481G")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8øÜ¼Å1
+Z	java:S106U"9Replace this use of System.out or System.err by a logger.(³ğ¸ûÿÿÿÿ8øÜ¼Å1
+X
+java:S6437d"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8úÜ¼Å1
+K
+java:S1481m")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8ûÜ¼Å1

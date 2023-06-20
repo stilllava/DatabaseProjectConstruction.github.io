@@ -169,11 +169,9 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
                 try {
                     Class.forName(Driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                     // 如果连接成功 控制台输出
                     Statement stmt = dbConn.createStatement();
                     System.out.println(sql);
                     ResultSet rs = stmt.executeQuery(sql);
-                    // Get the number of columns in the ResultSet
                     ResultSetMetaData rsmd = rs.getMetaData();
                     int numColumns = rsmd.getColumnCount();
                     int row = 0;
@@ -196,30 +194,7 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
                 }
             }
             else {
-                //在数据库中进行查询,先对textNo中内容进行查询，当textNo中为空时方可对textName进行查询,往后以此类推
-                int flag = 0;
-                String Input = null;
-                String sql = null;
-                if (textNo.getText().toString().equals("") == false) {
-                    Input = textNo.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where Emp_no = " + "'" +Input + "'";
-                    flag = 1;
-                } else if (textName.getText().toString().equals("") == false) {
-                    Input = textName.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where Emp_name = " + "'" +Input + "'";
-                    flag = 2;
-                } else if (textSex.getText().toString().equals("") == false) {
-                    Input = textSex.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where Sex = " + "'" +Input + "'";
-                } else if (textSdept.getText().toString().equals("") == false) {
-                    Input = textSdept.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where Sde_no = " +"''"+ Input + "''";
-                    flag = 4;
-                } else if (textPosition.getText().toString().equals("") == false) {
-                    Input = textPosition.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where Position = " + "'" +Input + "'";
-                    flag = 5;
-                }
+                String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where 1=1 ";
                 String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
                 String userName = "s20211576"; // 默认用户名
@@ -228,12 +203,31 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
                 try {
                     Class.forName(Driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                     // 如果连接成功 控制台输出
                     Statement stmt = dbConn.createStatement();
+                    if (!textNo.getText().isEmpty()) {
+                        String Input = textNo.getText();
+                        sql += " and Emp_no='" + Input + "'";
+                    }
+                    if (!textName.getText().isEmpty()) {
+                        String Input = textName.getText();
+                        sql += " and Emp_name='" + Input + "'";
+                    }
+                    if (!textSex.getText().isEmpty()) {
+                        String Input = textSex.getText();
+                        sql += " and Sex='" + Input + "'";
+                    }
+                    if (!textSdept.getText().isEmpty()) {
+                        String Input = textSdept.getText();
+                        sql += " and Sde_no='" + Input + "'";
+                    }
+                    if (!textPosition.getText().isEmpty()) {
+                        String Input = textPosition.getText();
+                        sql += " and Position='" + Input + "'";
+                    }
                     System.out.println(sql);
                     ResultSet rs = stmt.executeQuery(sql);
                     int count = 0;
-                    while(rs.next()){
+                    while (rs.next()) {
                         data[count][0] = rs.getString("Emp_no");
                         data[count][1] = rs.getString("Emp_name");
                         data[count][2] = rs.getString("Sex");
@@ -248,6 +242,7 @@ public class WindowManagerInformationUpdateTeacher extends JFrame implements Act
                     em.printStackTrace();
                 } finally {
                     try {
+                        dbConn.close();
                     } catch (Exception ec) {
                         ec.printStackTrace();
                     }

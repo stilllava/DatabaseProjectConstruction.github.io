@@ -143,51 +143,41 @@ public class WindowManagerInformationUpdateAcademy extends JFrame implements Act
                 }
             }
             else {
-                //在数据库中进行查询,先对textAcaNo中内容进行查询，当textAcaNo中为空时方可对textAcaName进行查询,往后以此类推
-                int flag = 0;
-                String Input = null;
-                String sql = null;
-                if (textAcaNo.getText().toString().equals("") == false) {
-                    Input = textAcaNo.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Academy_view where Aca_no = " + "'" +Input + "'";
-                    flag = 1;
-                } else if (textAcaName.getText().toString().equals("") == false) {
-                    Input = textAcaName.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Academy_view where Aca_name = " + "'" +Input + "'";
-                    flag = 2;
-                } else if (textAcaIntroduction.getText().toString().equals("") == false) {
-                    Input = textAcaIntroduction.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Academy_view where Aca_introduction = " + "'" +Input + "'";
+                for (int i = 0; i < getColumns(); i++) {
+                    for (int j = 0; j < 8; j++) {
+                        data[i][j] = "";
+                    }
                 }
-                String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+                String input = null;
+                String sql = null;
+                if (!textAcaNo.getText().isEmpty()) {
+                    input = textAcaNo.getText();
+                    sql = "SELECT * FROM Manager_Academy_view WHERE Aca_no = ?";
+                } else if (!textAcaName.getText().isEmpty()) {
+                    input = textAcaName.getText();
+                    sql = "SELECT * FROM Manager_Academy_view WHERE Aca_name = ?";
+                } else if (!textAcaIntroduction.getText().isEmpty()) {
+                    input = textAcaIntroduction.getText();
+                    sql = "SELECT * FROM Manager_Academy_view WHERE Aca_introduction = ?";
+                }
+                String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
-                String userName = "s20211576"; // 默认用户名
-                String userPwd = "s20211576"; // 密码
-                Connection dbConn = null;
-                try {
-                    Class.forName(Driver);
-                    dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
-                    Statement stmt = dbConn.createStatement();
-                    System.out.println(sql);
-                    ResultSet rs = stmt.executeQuery(sql);
+                String username = "s20211576";
+                String password = "s20211576";
+                try (Connection conn = DriverManager.getConnection(url, username, password);
+                     PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                    pstmt.setString(1, input);
+                    ResultSet rs = pstmt.executeQuery();
                     int count = 0;
-                    while(rs.next()){
+                    while (rs.next()) {
                         data[count][0] = rs.getString("Aca_no");
                         data[count][1] = rs.getString("Aca_name");
                         data[count][2] = rs.getString("Aca_introduction");
                         count++;
                     }
                     rs.close();
-                    stmt.close();
-                    dbConn.close();
-                } catch (Exception em) {
-                    em.printStackTrace();
-                } finally {
-                    try {
-                    } catch (Exception ec) {
-                        ec.printStackTrace();
-                    }
+                } catch (Exception e1) {
+                    e1.printStackTrace();
                 }
             }
             DefaultTableModel model = new DefaultTableModel(data, columnNames);

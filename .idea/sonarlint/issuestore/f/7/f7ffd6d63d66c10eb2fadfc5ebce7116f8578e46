@@ -1,24 +1,36 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8Ş½ù‹1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8ÁÖ‹Å1
 i
-java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8ı½ù‹1
+java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8×Ö‹Å1
 g
-java:S1854("ERemove this useless assignment to local variable "informationUpdate".(£À»­üÿÿÿÿ8…¾ù‹1
+java:S18541"ERemove this useless assignment to local variable "informationUpdate".(£À»­üÿÿÿÿ8¼ÄŒÅ1
 ^
-java:S1854+"ARemove this useless assignment to local variable "teacherCourse".(Œòô8…¾ù‹1
+java:S18544"ARemove this useless assignment to local variable "teacherCourse".(Œòô8¼ÄŒÅ1
 `
-java:S1854."CRemove this useless assignment to local variable "courseAvailable".(¦àâª8…¾ù‹1
+java:S18547"CRemove this useless assignment to local variable "courseAvailable".(¦àâª8½ÄŒÅ1
 X
-java:S18541";Remove this useless assignment to local variable "enquiry".(‰óÛª8…¾ù‹1
+java:S1854:";Remove this useless assignment to local variable "enquiry".(‰óÛª8½ÄŒÅ1
 c
-java:S18544"FRemove this useless assignment to local variable "addTeacherPassword".(²äØ‘8…¾ù‹1
+java:S1854="FRemove this useless assignment to local variable "addTeacherPassword".(²äØ‘8½ÄŒÅ1
+m
+java:S1854@"KRemove this useless assignment to local variable "getStudentCourseSummary".(¬ï‘óşÿÿÿÿ8½ÄŒÅ1
+`
+java:S1854C"CRemove this useless assignment to local variable "getClassSummary".(ª‚›‚8½ÄŒÅ1
+c
+java:S1854F"FRemove this useless assignment to local variable "countTeachingHours".(şâø8½ÄŒÅ1
 X
-java:S1481("6Remove this unused "informationUpdate" local variable.(£À»­üÿÿÿÿ8‡¾ù‹1
+java:S14811"6Remove this unused "informationUpdate" local variable.(£À»­üÿÿÿÿ8½ÄŒÅ1
 O
-java:S1481+"2Remove this unused "teacherCourse" local variable.(Œòô8‹¾ù‹1
+java:S14814"2Remove this unused "teacherCourse" local variable.(Œòô8¿ÄŒÅ1
 Q
-java:S1481."4Remove this unused "courseAvailable" local variable.(¦àâª8Œ¾ù‹1
+java:S14817"4Remove this unused "courseAvailable" local variable.(¦àâª8¿ÄŒÅ1
 I
-java:S14811",Remove this unused "enquiry" local variable.(‰óÛª8¾ù‹1
+java:S1481:",Remove this unused "enquiry" local variable.(‰óÛª8¿ÄŒÅ1
 T
-java:S14814"7Remove this unused "addTeacherPassword" local variable.(²äØ‘8¾ù‹1
+java:S1481="7Remove this unused "addTeacherPassword" local variable.(²äØ‘8ÀÄŒÅ1
+^
+java:S1481@"<Remove this unused "getStudentCourseSummary" local variable.(¬ï‘óşÿÿÿÿ8ÀÄŒÅ1
+Q
+java:S1481C"4Remove this unused "getClassSummary" local variable.(ª‚›‚8ÀÄŒÅ1
+T
+java:S1481F"7Remove this unused "countTeachingHours" local variable.(şâø8ÁÄŒÅ1

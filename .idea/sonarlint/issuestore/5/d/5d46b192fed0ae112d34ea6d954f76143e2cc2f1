@@ -1,78 +1,81 @@
 
 L
-java:S3740"/Provide the parametrized type for this generic.(É¨¨»8ğÎÁ¼1
+java:S3740"/Provide the parametrized type for this generic.(É¨¨»8ğÎÁ¼1
 L
-java:S3740"/Provide the parametrized type for this generic.(É¨¨»8ñÎÁ¼1
+java:S3740"/Provide the parametrized type for this generic.(É¨¨»8ñÎÁ¼1
 u
-java:S1192t"SDefine a constant instead of duplicating this literal "' where Emp_no = '" 3 times.(ÌâêÓÿÿÿÿÿ8óÎÁ¼1
+java:S1192s"SDefine a constant instead of duplicating this literal "' where Emp_no = '" 3 times.(ÌâêÓÿÿÿÿÿ8óÎÁ¼1
 p
-java:S1192t"NDefine a constant instead of duplicating this literal "' and Cno = '" 3 times.(ÌâêÓÿÿÿÿÿ8óÎÁ¼1
+java:S1192s"NDefine a constant instead of duplicating this literal "' and Cno = '" 3 times.(ÌâêÓÿÿÿÿÿ8óÎÁ¼1
 l
-java:S1192I"JDefine a constant instead of duplicating this literal "s20211576" 4 times.(º×Èÿÿÿÿÿ8óÎÁ¼1
+java:S1192H"JDefine a constant instead of duplicating this literal "s20211576" 4 times.(º×Èÿÿÿÿÿ8óÎÁ¼1
 ‚
-java:S1192t"`Define a constant instead of duplicating this literal "' and Course_Offered_Sde_no = '" 3 times.(ÌâêÓÿÿÿÿÿ8óÎÁ¼1
+java:S1192s"`Define a constant instead of duplicating this literal "' and Course_Offered_Sde_no = '" 3 times.(ÌâêÓÿÿÿÿÿ8óÎÁ¼1
 u
-java:S1192t"SDefine a constant instead of duplicating this literal "' and Semester = '" 3 times.(ÌâêÓÿÿÿÿÿ8óÎÁ¼1
-m	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8ôÎÁ¼1
-m	java:S117n"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8ôÎÁ¼1
+java:S1192s"SDefine a constant instead of duplicating this literal "' and Semester = '" 3 times.(ÌâêÓÿÿÿÿÿ8óÎÁ¼1
+m	java:S117F"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8ôÎÁ¼1
+m	java:S117m"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8ôÎÁ¼1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8õÎÁ¼1
 d
-java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ˆÓÁ¼1
+java:S2095O"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ˆÓÁ¼1
 j
-java:S2095O"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ˆÓÁ¼1
+java:S2095N"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ˆÓÁ¼1
+j
+java:S2095{"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ˆÓÁ¼1
 d
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ˆÓÁ¼1
-j
-java:S2095|"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ˆÓÁ¼1
-w	java:S116"VRename this field "labelEmp_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¤±øûÿÿÿÿ8ˆÓÁ¼1
-p	java:S116"TRename this field "txtEmp_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡”û¼8ˆÓÁ¼1
+java:S2095~"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ˆÓÁ¼1
+w	java:S116"VRename this field "labelEmp_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¤±øûÿÿÿÿ8ˆÓÁ¼1
+p	java:S116"TRename this field "txtEmp_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡”û¼8ˆÓÁ¼1
 i
-java:S3252%"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8ÓÁ¼1
+java:S3252$"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8ÓÁ¼1
 t
-java:S3776>"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(¼ Òşüÿÿÿÿ8’ÓÁ¼1
+java:S3776="RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(¼ Òşüÿÿÿÿ8’ÓÁ¼1
 D
-java:S1125@"'Remove the unnecessary boolean literal.(üùÈ¿8’ÓÁ¼1
+java:S1125?"'Remove the unnecessary boolean literal.(üùÈ¿8’ÓÁ¼1
 I
-java:S1125A"'Remove the unnecessary boolean literal.(‹”Š«üÿÿÿÿ8’ÓÁ¼1
+java:S1125@"'Remove the unnecessary boolean literal.(‹”Š«üÿÿÿÿ8’ÓÁ¼1
 I
-java:S1125B"'Remove the unnecessary boolean literal.(Úÿùµıÿÿÿÿ8’ÓÁ¼1
+java:S1125A"'Remove the unnecessary boolean literal.(Úÿùµıÿÿÿÿ8’ÓÁ¼1
 D
-java:S1125C"'Remove the unnecessary boolean literal.(ä¯Õ«8“ÓÁ¼1
+java:S1125B"'Remove the unnecessary boolean literal.(ä¯Õ«8“ÓÁ¼1
 D
-java:S1125D"'Remove the unnecessary boolean literal.(¸ÎŠÖ8“ÓÁ¼1
+java:S1125C"'Remove the unnecessary boolean literal.(¸ÎŠÖ8“ÓÁ¼1
 I
-java:S1125E"'Remove the unnecessary boolean literal.(µ…ë¹øÿÿÿÿ8“ÓÁ¼1
+java:S1125D"'Remove the unnecessary boolean literal.(µ…ë¹øÿÿÿÿ8“ÓÁ¼1
 D
-java:S1125F"'Remove the unnecessary boolean literal.(®‹Ç¥8“ÓÁ¼1
+java:S1125E"'Remove the unnecessary boolean literal.(®‹Ç¥8“ÓÁ¼1
 X
-java:S6437O"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8”ÓÁ¼1
-U	java:S106Q"9Replace this use of System.out or System.err by a logger.(Â–‘ö8”ÓÁ¼1
-J	java:S108[")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8•ÓÁ¼1
+java:S6437N"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8”ÓÁ¼1
+U	java:S106P"9Replace this use of System.out or System.err by a logger.(Â–‘ö8”ÓÁ¼1
+J	java:S108Z")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8•ÓÁ¼1
 D
-java:S1125g"'Remove the unnecessary boolean literal.(üùÈ¿8•ÓÁ¼1
+java:S1125f"'Remove the unnecessary boolean literal.(üùÈ¿8•ÓÁ¼1
 I
-java:S1125h"'Remove the unnecessary boolean literal.(‹”Š«üÿÿÿÿ8•ÓÁ¼1
+java:S1125g"'Remove the unnecessary boolean literal.(‹”Š«üÿÿÿÿ8•ÓÁ¼1
 I
-java:S1125i"'Remove the unnecessary boolean literal.(Úÿùµıÿÿÿÿ8–ÓÁ¼1
+java:S1125h"'Remove the unnecessary boolean literal.(Úÿùµıÿÿÿÿ8–ÓÁ¼1
 D
-java:S1125j"'Remove the unnecessary boolean literal.(ä¯Õ«8–ÓÁ¼1
+java:S1125i"'Remove the unnecessary boolean literal.(ä¯Õ«8–ÓÁ¼1
 I
-java:S1125k"'Remove the unnecessary boolean literal.(ÅŒïÊıÿÿÿÿ8–ÓÁ¼1
+java:S1125j"'Remove the unnecessary boolean literal.(ÅŒïÊıÿÿÿÿ8–ÓÁ¼1
 D
-java:S1125l"'Remove the unnecessary boolean literal.(°Ïıè8–ÓÁ¼1
+java:S1125k"'Remove the unnecessary boolean literal.(°Ïıè8–ÓÁ¼1
 D
-java:S1125m"'Remove the unnecessary boolean literal.(š¡“Š8–ÓÁ¼1
+java:S1125l"'Remove the unnecessary boolean literal.(š¡“Š8–ÓÁ¼1
 I
-java:S1125s"'Remove the unnecessary boolean literal.(Üµ—ªÿÿÿÿÿ8—ÓÁ¼1
+java:S1125r"'Remove the unnecessary boolean literal.(Üµ—ªÿÿÿÿÿ8—ÓÁ¼1
 I
-java:S1125u"'Remove the unnecessary boolean literal.(³ã¾êûÿÿÿÿ8—ÓÁ¼1
+java:S1125t"'Remove the unnecessary boolean literal.(³ã¾êûÿÿÿÿ8—ÓÁ¼1
 I
-java:S1125w"'Remove the unnecessary boolean literal.(ò†Ğçüÿÿÿÿ8˜ÓÁ¼1
+java:S1125v"'Remove the unnecessary boolean literal.(ò†Ğçüÿÿÿÿ8˜ÓÁ¼1
 X
-java:S6437|"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8™ÓÁ¼1
-U	java:S106}"9Replace this use of System.out or System.err by a logger.(ÂóÑ´8™ÓÁ¼1
-K	java:S108‡")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8™ÓÁ¼1
+java:S6437{"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8™ÓÁ¼1
+U	java:S106|"9Replace this use of System.out or System.err by a logger.(ÂóÑ´8™ÓÁ¼1
+K	java:S108†")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8™ÓÁ¼1
 b
 java:S1128"@Remove this unused import 'javax.swing.table.DefaultTableModel'.(è†åûÿÿÿÿ8šÓÁ¼1
+O
+java:S1128
+"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8ä½¥Ë1
 è
-java:S6541>"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 84 to 64, Complexity from 20 to 14, Nesting Level from 3 to 2, Number of Variables from 21 to 6.(¼ Òşüÿÿÿÿ8šÓÁ¼1
+java:S6541="ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 84 to 64, Complexity from 20 to 14, Nesting Level from 3 to 2, Number of Variables from 21 to 6.(¼ Òşüÿÿÿÿ8šÓÁ¼1

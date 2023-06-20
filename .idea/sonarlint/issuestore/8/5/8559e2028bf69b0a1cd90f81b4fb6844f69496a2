@@ -1,131 +1,129 @@
 
-h	java:S112ë"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8´ñ º1
-h	java:S112í"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8´ñ º1
-h	java:S112ù"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Æß¶º1
-h	java:S112ş"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Çß¶º1
+h	java:S112ê"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8˜›½Æ1
+h	java:S112ì"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8˜›½Æ1
+h	java:S112ø"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8˜›½Æ1
+h	java:S112ı"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8˜›½Æ1
 Ê
-java:S1192N"§Define a constant instead of duplicating this literal "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false" 4 times.(Á·™úÿÿÿÿ8·ñ º1
+java:S1192N"§Define a constant instead of duplicating this literal "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false" 4 times.(Á·™úÿÿÿÿ8››½Æ1
 l
-java:S1192O"JDefine a constant instead of duplicating this literal "s20211576" 8 times.(º×Èÿÿÿÿÿ8·ñ º1
+java:S1192O"JDefine a constant instead of duplicating this literal "s20211576" 8 times.(º×Èÿÿÿÿÿ8š›½Æ1
 Š
-java:S1192M"mDefine a constant instead of duplicating this literal "com.microsoft.sqlserver.jdbc.SQLServerDriver" 4 times.(æœÎê8·ñ º1
-m	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8·ñ º1
-r	java:S117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÌ¬ªıÿÿÿÿ8·ñ º1
-n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8·ñ º1
-s	java:S117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şë¬şÿÿÿÿ8·ñ º1
-n	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8·ñ º1
-n	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8·ñ º1
+java:S1192M"mDefine a constant instead of duplicating this literal "com.microsoft.sqlserver.jdbc.SQLServerDriver" 4 times.(æœÎê8››½Æ1
+m	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8››½Æ1
+r	java:S117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÌ¬ªıÿÿÿÿ8››½Æ1
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8››½Æ1
+s	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şë¬şÿÿÿÿ8¯„¾Æ1
+n	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8¯„¾Æ1
+n	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8››½Æ1
 >
-java:S1643]"Use a StringBuilder instead.(™ûâ¹ûÿÿÿÿ8¸ñ º1
+java:S1643]"Use a StringBuilder instead.(™ûâ¹ûÿÿÿÿ8››½Æ1
 `
-java:S1163ş"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8Íß¶º1
+java:S1163ı"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8œ›½Æ1
 W
-java:S1143ş"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8Íß¶º1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8¹ñ º1
-d
-java:S2095Y"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8¹¦¶º1
-e
-java:S2095Ä"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Êö º1
-k
-java:S2095‰"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8¹¦¶º1
+java:S1143ı"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8œ›½Æ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8›½Æ1
 j
-java:S2095V"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Êö º1
+java:S2095V"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Â¢½Æ1
 e
-java:S2095Š"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Êö º1
+java:S2095Ã"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Â¢½Æ1
+d
+java:S2095Y"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8°Š¾Æ1
 k
-java:S2095Â"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Êö º1
+java:S2095‰"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8Â¢½Æ1
 e
-java:S2095ñ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Êö º1
+java:S2095ğ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Â¢½Æ1
+e
+java:S2095Š"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8Â¢½Æ1
+k
+java:S2095Á"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8°Š¾Æ1
 C
-java:S1948"&Make "data" transient or serializable.(ÊŸ•ö8Ïö º1
-U	java:S106#"9Replace this use of System.out or System.err by a logger.(û¯ˆÏ8Öö º1
+java:S1948"&Make "data" transient or serializable.(ÊŸ•ö8Å¢½Æ1
+U	java:S106#"9Replace this use of System.out or System.err by a logger.(û¯ˆÏ8É¢½Æ1
 i
-java:S3252'"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8×ö º1
+java:S3252'"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8Ê¢½Æ1
 t
-java:S3776F"RRefactor this method to reduce its Cognitive Complexity from 57 to the 15 allowed.(¼ Òşüÿÿÿÿ8Ûö º1
+java:S3776F"RRefactor this method to reduce its Cognitive Complexity from 64 to the 15 allowed.(¼ Òşüÿÿÿÿ8Ì¢½Æ1
 I
-java:S1125H"'Remove the unnecessary boolean literal.(Ïãßåúÿÿÿÿ8Üö º1
+java:S1125H"'Remove the unnecessary boolean literal.(Ïãßåúÿÿÿÿ8Í¢½Æ1
 D
-java:S1125I"'Remove the unnecessary boolean literal.(¥»™8İö º1
+java:S1125I"'Remove the unnecessary boolean literal.(¥»™8Í¢½Æ1
 I
-java:S1125J"'Remove the unnecessary boolean literal.(íÆÒœúÿÿÿÿ8İö º1
+java:S1125J"'Remove the unnecessary boolean literal.(íÆÒœúÿÿÿÿ8Í¢½Æ1
 D
-java:S1125K"'Remove the unnecessary boolean literal.(ƒ½ÛÚ8İö º1
+java:S1125K"'Remove the unnecessary boolean literal.(ƒ½ÛÚ8Í¢½Æ1
 I
-java:S1125L"'Remove the unnecessary boolean literal.(á¸ÿÿÿÿÿ8Şö º1
+java:S1125L"'Remove the unnecessary boolean literal.(á¸ÿÿÿÿÿ8Î¢½Æ1
 X
-java:S6437V"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8ßö º1
-Z	java:S106W"9Replace this use of System.out or System.err by a logger.(ıÇ®„ûÿÿÿÿ8àö º1
-U	java:S106X"9Replace this use of System.out or System.err by a logger.(Â–‘ö8àö º1
+java:S6437V"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Î¢½Æ1
+Z	java:S106W"9Replace this use of System.out or System.err by a logger.(ıÇ®„ûÿÿÿÿ8Î¢½Æ1
+U	java:S106X"9Replace this use of System.out or System.err by a logger.(Â–‘ö8Î¢½Æ1
 C
-java:S1125_"'Remove the unnecessary boolean literal.(˜ø8áö º1
-J	java:S108l")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8âö º1
+java:S1125_"'Remove the unnecessary boolean literal.(˜ø8Ğ¢½Æ1
+J	java:S108l")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8Ğ¢½Æ1
 C
-java:S1125|"'Remove the unnecessary boolean literal.(šÙŞ8åö º1
+java:S1125|"'Remove the unnecessary boolean literal.(šÙŞ8Ñ¢½Æ1
 ]
-java:S1858|"A"getText" returns a string, there's no need to call "toString()".(šÙŞ8çö º1
+java:S1858|"A"getText" returns a string, there's no need to call "toString()".(šÙŞ8Ñ¢½Æ1
 D
-java:S1125}"'Remove the unnecessary boolean literal.(‡È¨¼8øö º1
+java:S1125}"'Remove the unnecessary boolean literal.(‡È¨¼8Ñ¢½Æ1
 ^
-java:S1858}"A"getText" returns a string, there's no need to call "toString()".(‡È¨¼8øö º1
+java:S1858}"A"getText" returns a string, there's no need to call "toString()".(‡È¨¼8Ñ¢½Æ1
 I
-java:S1125~"'Remove the unnecessary boolean literal.(ôÇÿşÿÿÿÿ8øö º1
+java:S1125~"'Remove the unnecessary boolean literal.(ôÇÿşÿÿÿÿ8Ñ¢½Æ1
 c
-java:S1858~"A"getText" returns a string, there's no need to call "toString()".(ôÇÿşÿÿÿÿ8øö º1
+java:S1858~"A"getText" returns a string, there's no need to call "toString()".(ôÇÿşÿÿÿÿ8Ñ¢½Æ1
 D
-java:S1125"'Remove the unnecessary boolean literal.(åù®Í8ùö º1
+java:S1125"'Remove the unnecessary boolean literal.(åù®Í8Ò¢½Æ1
 ^
-java:S1858"A"getText" returns a string, there's no need to call "toString()".(åù®Í8ùö º1
+java:S1858"A"getText" returns a string, there's no need to call "toString()".(åù®Í8Ò¢½Æ1
 E
-java:S1125€"'Remove the unnecessary boolean literal.(û¾Â8ùö º1
+java:S1125€"'Remove the unnecessary boolean literal.(û¾Â8Ò¢½Æ1
 _
-java:S1858€"A"getText" returns a string, there's no need to call "toString()".(û¾Â8ùö º1
+java:S1858€"A"getText" returns a string, there's no need to call "toString()".(û¾Â8Ò¢½Æ1
 Y
-java:S6437‰"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8úö º1
-V	java:S106‹"9Replace this use of System.out or System.err by a logger.(Â–‘ö8ûö º1
-K	java:S108")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8üö º1
-F
-java:S1481£")Remove this unused "flag" local variable.(ŒÖı$8ê¦¶º1
+java:S6437‰"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Ò¢½Æ1
+V	java:S106‹"9Replace this use of System.out or System.err by a logger.(Â–‘ö8Ó¢½Æ1
+K	java:S108")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8Ó¢½Æ1
 J
-java:S1125¦"'Remove the unnecessary boolean literal.(Û“áÿÿÿÿÿ8ê¦¶º1
+java:S1125ª"'Remove the unnecessary boolean literal.(Û“áÿÿÿÿÿ8ÔŠ¾Æ1
 d
-java:S1858¦"A"getText" returns a string, there's no need to call "toString()".(Û“áÿÿÿÿÿ8ê¦¶º1
+java:S1858ª"A"getText" returns a string, there's no need to call "toString()".(Û“áÿÿÿÿÿ8ÔŠ¾Æ1
 d
-java:S1858§"A"getText" returns a string, there's no need to call "toString()".(‰—ƒ»şÿÿÿÿ8ë¦¶º1
+java:S1858«"A"getText" returns a string, there's no need to call "toString()".(‰—ƒ»şÿÿÿÿ8ÔŠ¾Æ1
 J
-java:S1125ª"'Remove the unnecessary boolean literal.(ïÌĞæúÿÿÿÿ8ë¦¶º1
+java:S1125­"'Remove the unnecessary boolean literal.(ïÌĞæúÿÿÿÿ8ÔŠ¾Æ1
 d
-java:S1858ª"A"getText" returns a string, there's no need to call "toString()".(ïÌĞæúÿÿÿÿ8ë¦¶º1
+java:S1858­"A"getText" returns a string, there's no need to call "toString()".(ïÌĞæúÿÿÿÿ8ÕŠ¾Æ1
 d
-java:S1858«"A"getText" returns a string, there's no need to call "toString()".(Ö‘‰Ÿøÿÿÿÿ8î¦¶º1
+java:S1858®"A"getText" returns a string, there's no need to call "toString()".(Ö‘‰Ÿøÿÿÿÿ8ÕŠ¾Æ1
 J
-java:S1125®"'Remove the unnecessary boolean literal.(«Ğæ—şÿÿÿÿ8ğ¦¶º1
+java:S1125°"'Remove the unnecessary boolean literal.(«Ğæ—şÿÿÿÿ8ÕŠ¾Æ1
 d
-java:S1858®"A"getText" returns a string, there's no need to call "toString()".(«Ğæ—şÿÿÿÿ8ö¦¶º1
+java:S1858°"A"getText" returns a string, there's no need to call "toString()".(«Ğæ—şÿÿÿÿ8ÕŠ¾Æ1
 _
-java:S1858¯"A"getText" returns a string, there's no need to call "toString()".(ïğÖ8÷¦¶º1
+java:S1858±"A"getText" returns a string, there's no need to call "toString()".(ïğÖ8ÖŠ¾Æ1
 E
-java:S1125²"'Remove the unnecessary boolean literal.(±Ú»¯8÷¦¶º1
+java:S1125³"'Remove the unnecessary boolean literal.(±Ú»¯8ÖŠ¾Æ1
 _
-java:S1858²"A"getText" returns a string, there's no need to call "toString()".(±Ú»¯8÷¦¶º1
+java:S1858³"A"getText" returns a string, there's no need to call "toString()".(±Ú»¯8ÖŠ¾Æ1
 d
-java:S1858³"A"getText" returns a string, there's no need to call "toString()".(µü¢Íşÿÿÿÿ8÷¦¶º1
+java:S1858´"A"getText" returns a string, there's no need to call "toString()".(µü¢Íşÿÿÿÿ8ÖŠ¾Æ1
 E
-java:S1125¶"'Remove the unnecessary boolean literal.(Á—åÖ8ş¦¶º1
+java:S1125¶"'Remove the unnecessary boolean literal.(Á—åÖ8×Š¾Æ1
 _
-java:S1858¶"A"getText" returns a string, there's no need to call "toString()".(Á—åÖ8€§¶º1
+java:S1858¶"A"getText" returns a string, there's no need to call "toString()".(Á—åÖ8×Š¾Æ1
 d
-java:S1858·"A"getText" returns a string, there's no need to call "toString()".(Ò”õªÿÿÿÿÿ8§¶º1
+java:S1858·"A"getText" returns a string, there's no need to call "toString()".(Ò”õªÿÿÿÿÿ8×Š¾Æ1
 Y
-java:S6437Â"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8…§¶º1
-[	java:S106Ã"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ8‚÷ º1
-V	java:S106Å"9Replace this use of System.out or System.err by a logger.(Â–‘ö8ˆ§¶º1
-K	java:S108Ö")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8‰§¶º1
+java:S6437Á"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8×¢½Æ1
+[	java:S106Â"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ8ØŠ¾Æ1
+V	java:S106Ä"9Replace this use of System.out or System.err by a logger.(Â–‘ö8ØŠ¾Æ1
+K	java:S108Õ")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8ÚŠ¾Æ1
 c
-java:S2147ì"ECombine this catch with the one at line 234, which has the same body.(É®£8Š§¶º1
+java:S2147ë"ECombine this catch with the one at line 233, which has the same body.(É®£8Ö¢½Æ1
 Y
-java:S6437é"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Š§¶º1
+java:S6437è"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8ÛŠ¾Æ1
 L
-java:S1481ó")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8Œ§¶º1
+java:S1481ò")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8×¢½Æ1
 é
-java:S6541F"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 152 to 64, Complexity from 25 to 14, Nesting Level from 5 to 2, Number of Variables from 44 to 6.(¼ Òşüÿÿÿÿ8ˆ÷ º1
+java:S6541F"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 151 to 64, Complexity from 27 to 14, Nesting Level from 5 to 2, Number of Variables from 45 to 6.(¼ Òşüÿÿÿÿ8Ø¢½Æ1

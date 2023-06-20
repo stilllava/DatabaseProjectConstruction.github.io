@@ -35,7 +35,7 @@ public class WindowManagerEnquiryTeacher extends JFrame implements ActionListene
         frame1.setTitle("教务管理系统管理员界面-信息维护功能-教师信息查询");
         frame1.setVisible(true);
         frame1.setSize(800, 680);
-        frame1.setLocation(300, 249);
+        frame1.setLocation(300, 100);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame1.add(panelNorth, BorderLayout.NORTH);
         frame1.add(panelSouth, BorderLayout.CENTER);
@@ -79,15 +79,11 @@ public class WindowManagerEnquiryTeacher extends JFrame implements ActionListene
                 try {
                     Class.forName(Driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
                     Statement stmt = dbConn.createStatement();
                     System.out.println(sql);
                     ResultSet rs = stmt.executeQuery(sql);
-                    // Get the number of columns in the ResultSet
                     ResultSetMetaData rsmd = rs.getMetaData();
                     int numColumns = rsmd.getColumnCount();
-
-                    // Retrieve all rows of data from the ResultSet and store in the data array
                     int row = 0;
                     while (rs.next()) {
                         for (int col = 0; col < numColumns; col++) {
@@ -108,30 +104,30 @@ public class WindowManagerEnquiryTeacher extends JFrame implements ActionListene
                 }
             }
             else {
-                //在数据库中进行查询,先对textNo中内容进行查询，当textNo中为空时方可对textName进行查询,往后以此类推
+                //清空表格
+                for (int i = 0; i < getColumns(); i++) {
+                    for (int j = 0; j < 10; j++) {
+                        data[i][j] = "";
+                    }
+                }
                 int flag = 0;
                 String Input = null;
-                String sql = null;
+                String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where 1=1 ";
                 if (textNo.getText().toString().equals("") == false) {
-                    Input = textNo.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where Emp_no = " + "'" +Input + "'";
-                    flag = 1;
-                } else if (textName.getText().toString().equals("") == false) {
-                    Input = textName.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where Emp_name = " + "'" +Input + "'";
-                    flag = 2;
-                } else if (textSex.getText().toString().equals("") == false) {
-                    Input = textSex.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where Sex = " + "'" +Input + "'";
-                    flag = 3;
-                }  else if (textSdept.getText().toString().equals("") == false) {
-                    Input = textSdept.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where Sde_no = " + "'" +Input + "'";
-                    flag = 4;
-                } else if (textPosition.getText().toString().equals("") == false) {
-                    Input = textPosition.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Teacher_view where Position = " + "'" +Input + "'";
-                    flag = 5;
+                    sql += "and Emp_no = " + "'" + textNo.getText().toString() + "'";
+                }
+                if (textName.getText().toString().equals("") == false) {
+                    sql += "and Emp_name = " + "'" + textName.getText().toString() + "'";
+                }
+                if (textSex.getText().toString().equals("") == false) {
+                    sql += "and Sex = " + "'" + textSex.getText().toString() + "'";
+                }
+                if (textSdept.getText().toString().equals("") == false) {
+                    sql += "and Sdept_no = " + "'" + textSdept.getText().toString() + "'";
+                }
+                if (textPosition.getText().toString().equals("") == false) {
+                    System.out.println(textPosition.getText().toString());
+                    sql += "and Position = " + "'" + textPosition.getText().toString() + "'";
                 }
                 String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
@@ -141,7 +137,6 @@ public class WindowManagerEnquiryTeacher extends JFrame implements ActionListene
                 try {
                     Class.forName(Driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
                     Statement stmt = dbConn.createStatement();
                     System.out.println(sql);
                     ResultSet rs = stmt.executeQuery(sql);
@@ -166,10 +161,7 @@ public class WindowManagerEnquiryTeacher extends JFrame implements ActionListene
                     }
                 }
             }
-            // Create a new DefaultTableModel with the data and column names
             DefaultTableModel model = new DefaultTableModel(data, columnNames);
-
-            // Set the model for the JTable
             table.setModel(model);
         }
     }
@@ -183,7 +175,6 @@ public class WindowManagerEnquiryTeacher extends JFrame implements ActionListene
         try {
             Class.forName(Driver2);
             dbConn = DriverManager.getConnection(url, userName, userPwd);
-            System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         } catch (SQLException e) {

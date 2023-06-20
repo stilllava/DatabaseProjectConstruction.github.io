@@ -10,7 +10,6 @@ import java.util.Calendar;
 import java.util.Random;
 
 public class WindowManagerTeacherCourseAdd extends JFrame implements ActionListener {
-    Random rand = new Random();
     JPanel panel = new JPanel();
     JFrame frame1 = new JFrame();
     JLabel labelSemester = new JLabel("学期");

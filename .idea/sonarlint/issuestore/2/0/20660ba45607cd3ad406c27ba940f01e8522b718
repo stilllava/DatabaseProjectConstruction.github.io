@@ -1,8 +1,8 @@
 
-h	java:S112Ğ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…‹è¹1
-h	java:S112Ò"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…‹è¹1
-h	java:S112ß"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…‹è¹1
-h	java:S112ä"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8†‹è¹1
+h	java:S112Æ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…‹è¹1
+h	java:S112È"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…‹è¹1
+h	java:S112Õ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…‹è¹1
+h	java:S112Ú"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8†‹è¹1
 Ê
 java:S1192>"§Define a constant instead of duplicating this literal "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false" 4 times.(Á·™úÿÿÿÿ8ˆ‹è¹1
 l
@@ -12,28 +12,22 @@ java:S1192="mDefine a constant instead of duplicating this literal "com.microso
 m	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8‰‹è¹1
 r	java:S117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—³ûÉûÿÿÿÿ8‰‹è¹1
 m	java:S117q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8‰‹è¹1
-s	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şë¬şÿÿÿÿ8‰‹è¹1
-n	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8‰‹è¹1
-n	java:S117Æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8‰‹è¹1
+n	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾½Ùµ8‰‹è¹1
 >
 java:S1643N"Use a StringBuilder instead.(”Ú•úÿÿÿÿ8‰‹è¹1
 `
-java:S1163ä"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8Š‹è¹1
+java:S1163Ú"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8Š‹è¹1
 W
-java:S1143ä"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8Š‹è¹1
+java:S1143Ú"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8Š‹è¹1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8‹‹è¹1
-e
-java:S2095«"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ƒ‘è¹1
-j
-java:S2095G"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ƒ‘è¹1
-j
-java:S2095y"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ƒ‘è¹1
 d
 java:S2095z"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ƒ‘è¹1
-k
-java:S2095©"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ƒ‘è¹1
+j
+java:S2095G"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ƒ‘è¹1
 e
-java:S2095Ö"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ƒ‘è¹1
+java:S2095Ì"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ƒ‘è¹1
+j
+java:S2095y"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8ƒ‘è¹1
 d
 java:S2095J"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8ƒ‘è¹1
 C
@@ -42,7 +36,7 @@ U	java:S106"9Replace this use of System.out or System.err by a logger.(û¯ˆÏ8
 i
 java:S3252""LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8‘è¹1
 t
-java:S37768"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(¼ Òşüÿÿÿÿ8‘‘è¹1
+java:S37768"RRefactor this method to reduce its Cognitive Complexity from 59 to the 15 allowed.(¼ Òşüÿÿÿÿ8‘‘è¹1
 I
 java:S1125:"'Remove the unnecessary boolean literal.(Ã’½™üÿÿÿÿ8’‘è¹1
 D
@@ -71,37 +65,16 @@ java:S1858p"A"getText" returns a string, there's no need to call "toString()".(
 X
 java:S6437y"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8™‘è¹1
 K	java:S108‹")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8š‘è¹1
-F
-java:S1481“")Remove this unused "flag" local variable.(ŒÖı$8š‘è¹1
-E
-java:S1125–"'Remove the unnecessary boolean literal.(¤â°¢8š‘è¹1
-_
-java:S1858–"A"getText" returns a string, there's no need to call "toString()".(¤â°¢8›‘è¹1
-d
-java:S1858—"A"getText" returns a string, there's no need to call "toString()".(µü¢Íşÿÿÿÿ8›‘è¹1
-E
-java:S1125š"'Remove the unnecessary boolean literal.(Á—åÖ8›‘è¹1
-_
-java:S1858š"A"getText" returns a string, there's no need to call "toString()".(Á—åÖ8›‘è¹1
-d
-java:S1858›"A"getText" returns a string, there's no need to call "toString()".(Ò”õªÿÿÿÿÿ8›‘è¹1
-J
-java:S1125"'Remove the unnecessary boolean literal.(÷Í„Ÿşÿÿÿÿ8œ‘è¹1
-d
-java:S1858"A"getText" returns a string, there's no need to call "toString()".(÷Í„Ÿşÿÿÿÿ8œ‘è¹1
-d
-java:S1858Ÿ"A"getText" returns a string, there's no need to call "toString()".(ŸÍÏ«ıÿÿÿÿ8œ‘è¹1
-Y
-java:S6437©"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8œ‘è¹1
-[	java:S106ª"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ8‘è¹1
-V	java:S106¬"9Replace this use of System.out or System.err by a logger.(Â–‘ö8‘è¹1
-K	java:S108»")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ8‘è¹1
+I
+java:S1481£"+Remove this unused "driver" local variable.(óŞŸé8ü³ãÅ1
+T
+java:S6437§"6Revoke and change this password, as it is compromised.(ÈÒÔ8ı³ãÅ1
 c
-java:S2147Ñ"ECombine this catch with the one at line 207, which has the same body.(É®£8Ÿ‘è¹1
+java:S2147Ç"ECombine this catch with the one at line 197, which has the same body.(É®£8Ÿ‘è¹1
 Y
-java:S6437Í"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Ÿ‘è¹1
-[	java:S106Î"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ8Ÿ‘è¹1
+java:S6437Ã"6Revoke and change this password, as it is compromised.(ÛµëÌüÿÿÿÿ8Ÿ‘è¹1
+[	java:S106Ä"9Replace this use of System.out or System.err by a logger.(àŠÓ»øÿÿÿÿ8Ÿ‘è¹1
 L
-java:S1481Ø")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8 ‘è¹1
+java:S1481Î")Remove this unused "rsmd" local variable.(…åÔüùÿÿÿÿ8 ‘è¹1
 é
-java:S65418"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 140 to 64, Complexity from 19 to 14, Nesting Level from 5 to 2, Number of Variables from 44 to 6.(¼ Òşüÿÿÿÿ8¡‘è¹1
+java:S65418"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 131 to 64, Complexity from 21 to 14, Nesting Level from 5 to 2, Number of Variables from 44 to 6.(¼ Òşüÿÿÿÿ8¡‘è¹1

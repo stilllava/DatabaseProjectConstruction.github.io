@@ -160,29 +160,28 @@ public class WindowManagerInformationUpdateMajor extends JFrame implements Actio
                     }
                 }
             } else {
-                int flag = 0;
+                for (int i = 0; i < getColumns(); i++) {
+                    for (int j = 0; j < 8; j++) {
+                        data[i][j] = "";
+                    }
+                }
                 String Input = null;
-                String sql = null;
+                String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Sdept_view where 1=1";
                 if (textSdeNo.getText().toString().equals("") == false) {
                     Input = textSdeNo.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Sdept_view where Sde_no = " + "'" + Input + "'";
-                    flag = 1;
+                    sql += " and Sde_no = " + "'" + Input + "'";
                 } else if (textSdeName.getText().toString().equals("") == false) {
                     Input = textSdeName.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Sdept_view where Sde_name = " + "'" + Input + "'";
-                    flag = 2;
+                    sql += " and Sde_name = " + "'" + Input + "'";
                 } else if (textSdeIntroduction.getText().toString().equals("") == false) {
                     Input = textSdeIntroduction.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Sdept_view where Sde_introduction = " + "'" + Input + "'";
-                    flag = 3;
+                    sql += " and Sde_introduction = " + "'" + Input + "'";
                 } else if (textAcaNo.getText().toString().equals("") == false) {
                     Input = textAcaNo.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Sdept_view where Aca_no = " + "'" + Input + "'";
-                    flag = 4;
+                    sql += " and Aca_no = " + "'" + Input + "'";
                 } else if (textAcaName.getText().toString().equals("") == false) {
                     Input = textAcaName.getText().toString();
-                    sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Sdept_view where Aca_name = " + "'" + Input + "'";
-                    flag = 5;
+                    sql += " and Aca_name = " + "'" + Input + "'";
                 }
                 String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";

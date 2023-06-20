@@ -49,11 +49,11 @@ v	java:S120"ZRename this package name to match the regular expression '^[a-z_
 c
 java:S1226์"@Introduce a new variable instead of reusing the parameter "sql".(ลฯÝ๚ÿÿÿÿ8๘ฒฅถ1
 e
-java:S2095ำ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ศÜบฆ8ิดถ1
-e
 java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ศÜบฆ8ิดถ1
 e
 java:S2095ฏ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ศÜบฆ8ิดถ1
+e
+java:S2095ำ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ศÜบฆ8ิดถ1
 e
 java:S2095๗"GUse try-with-resources or close this "Statement" in a "finally" clause.(ศÜบฆ8ิดถ1
 z	java:S116&"YRename this field "TeacherRelated" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ำฅปýÿÿÿÿ8ิดถ1

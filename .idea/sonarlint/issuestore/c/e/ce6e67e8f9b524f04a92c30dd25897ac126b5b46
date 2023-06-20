@@ -1,10 +1,10 @@
 
 m	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœÎê8À£Õ·1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(é•¬‹8Ò Î·1
-j
-java:S2095E"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8†¦Õ·1
 d
 java:S2095G"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÈÜº¦8†¦Õ·1
+j
+java:S2095E"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÛµëÌüÿÿÿÿ8†¦Õ·1
 i
 java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Ô´ÍŒ8Œ£Î·1
 t

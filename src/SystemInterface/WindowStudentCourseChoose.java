@@ -7,14 +7,10 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.Scanner;
 
 public class WindowStudentCourseChoose extends JFrame implements ActionListener {
     String loginID = windowsRegister.loginID;
@@ -25,47 +21,34 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
     JFrame frame1 = new JFrame();
     JLabel labelSemester = new JLabel("学期");
     JComboBox comSemester = new JComboBox();
-    JLabel labelSdept = new JLabel("系");
-    JLabel comSdept = new JLabel(getSdept());
-    JLabel labelCno = new JLabel("课程号");
-    JTextField txtCno = new JTextField(12);
-    JLabel labelCname = new JLabel("课程名");
-    JTextField txtCname = new JTextField(12);
-    JLabel labelEmp_Name = new JLabel("教师名");
-    JTextField txtEmp_Name = new JTextField(12);
+    JLabel labelSde_ame1 = new JLabel("可选修系");
+    JLabel labelSde_name;
+    JLabel labelCourseNo = new JLabel("课程号");
+    JTextField txtCourseNo = new JTextField(12);
+    JLabel labelCourseName = new JLabel("课程名");
+    JTextField txtCourseName = new JTextField(12);
+    JLabel labelTeacherName = new JLabel("教师名");
+    JTextField txtTeacherName = new JTextField(12);
     JLabel labelCredit = new JLabel("学分");
     JTextField txtCredit = new JTextField(12);
-    JButton btnSemestersEnquire = new JButton("当前学期内可选课程查询");
-    JButton btnCnoEnquire = new JButton("课程号查询");
-    JButton btnTeacherEnquire = new JButton("授课教师查询");
-    JButton btnCreditEnquire = new JButton("学分对应课程查询");
-    JButton btnCnameEnquire = new JButton("课程名查询");
+    JLabel labelCourseNum = new JLabel("可选课人数");
+    JTextField txtCourseNum = new JTextField(12);
+    JButton btnEnquiry = new JButton("查询");
     JButton btnChoose = new JButton("选课");
     JTable table = new JTable();
+
     String sqlInsert = "";
     String sqlCheck = "";
     String[] columnNames = {"学期","可选修系","可选修专业","课程号","课程名","教师名","学分","可选课人数"};
     String[][] data = new String[getColumns()][8];
     public WindowStudentCourseChoose() {
+        labelSde_name = new JLabel(getSdept());
         frame1.setTitle("教务管理系统学生界面-学生选课界面");
         frame1.setVisible(true);
-        frame1.setSize(800,540);
+        frame1.setSize(800,600);
         frame1.setLocation(10, 10);
         frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame1.add(panelNorth, BorderLayout.NORTH);
-        panelNorth.add(panelNorthEast,BorderLayout.EAST);
-        panelNorth.add(panelNorthWest,BorderLayout.WEST);
-        panelNorth.add(panelCenter,BorderLayout.CENTER);
-        panelNorthWest.setLayout(new GridLayout(6,2));
-        panelNorthEast.setLayout(new GridLayout(4,2));
-        panelCenter.setLayout(new GridLayout(2,1));
-        panelNorthEast.add(btnSemestersEnquire);
-        panelNorthEast.add(btnCnoEnquire);panelNorthEast.add(btnCnameEnquire);
-        panelNorthEast.add(btnTeacherEnquire);panelNorthEast.add(btnCreditEnquire);
-        panelNorthEast.add(btnChoose);
-        btnChoose.setPreferredSize(new Dimension(25,30));
-
-        panelNorthWest.add(labelSemester);panelNorthWest.add(comSemester);
         int date = Calendar.getInstance().get(Calendar.YEAR);
         LocalDate dateStart = LocalDate.of(date, 1, 1);
         LocalDate dateSpring = LocalDate.of(date, 3, 1);
@@ -93,19 +76,19 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
             comSemester.addItem((date+1)+"-"+(date+2)+"年第1学期");
             comSemester.setSelectedIndex(2);
         }
-        panelNorthWest.add(labelSdept);panelNorthWest.add(comSdept);
-        panelNorthWest.add(labelCno);panelNorthWest.add(txtCno);
-        panelNorthWest.add(labelCname);panelNorthWest.add(txtCname);
-        panelNorthWest.add(labelEmp_Name);panelNorthWest.add(txtEmp_Name);
-        panelNorthWest.add(labelCredit);panelNorthWest.add(txtCredit);
+        panelNorth.setLayout(new GridLayout(8,2));
+        panelNorth.add(labelSemester);panelNorth.add(comSemester);
+        panelNorth.add(labelSde_ame1);panelNorth.add(labelSde_name);
+        panelNorth.add(labelCourseNo);panelNorth.add(txtCourseNo);
+        panelNorth.add(labelCourseName);panelNorth.add(txtCourseName);
+        panelNorth.add(labelTeacherName);panelNorth.add(txtTeacherName);
+        panelNorth.add(labelCredit);panelNorth.add(txtCredit);
+        panelNorth.add(labelCourseNum);panelNorth.add(txtCourseNum);
+        panelNorth.add(btnEnquiry);panelNorth.add(btnChoose);
         JScrollPane scrollPane = new JScrollPane(table);
         frame1.add(scrollPane,BorderLayout.CENTER);
         scrollPane.setViewportView(table);
-        btnSemestersEnquire.addActionListener(this);
-        btnCnoEnquire.addActionListener(this);
-        btnCnameEnquire.addActionListener(this);
-        btnTeacherEnquire.addActionListener(this);
-        btnCreditEnquire.addActionListener(this);
+        btnEnquiry.addActionListener(this);
         btnChoose.addActionListener(this);
     }
     public static void main(String[] args) {
@@ -113,22 +96,7 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btnSemestersEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Semester='"+comSemester.getSelectedItem()+"' and Sde_name='"+comSdept.getText().trim()+"' and Semester='"+comSemester.getSelectedItem()+"'";
-            Connect(sql);
-        }else if (e.getSource() == btnCnoEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Cno='" + txtCno.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"' and Semester='"+comSemester.getSelectedItem()+"'";
-            Connect(sql);
-        } else if (e.getSource() == btnCnameEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Cname='" + txtCname.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"' and Semester='"+comSemester.getSelectedItem()+"'";
-            Connect(sql);
-        } else if (e.getSource() == btnTeacherEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Emp_Name='" + txtEmp_Name.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"' and Semester='"+comSemester.getSelectedItem()+"'";
-            Connect(sql);
-        } else if (e.getSource() == btnCreditEnquire) {
-            String sql = "SELECT * FROM Manager_Course_Teacher_manage_view where Credit='" + txtCredit.getText().trim() + "'and Sde_name='"+comSdept.getText().trim()+"' and Semester='"+comSemester.getSelectedItem()+"'";
-            Connect(sql);
-        } else if (e.getSource() == btnChoose) {
+        if (e.getSource() == btnChoose) {
             if(sqlInsert.equals("")) {
                 JOptionPane.showMessageDialog(null, "请先选择课程！", "提示", JOptionPane.ERROR_MESSAGE);
             }else {
@@ -167,7 +135,74 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
                         throw new RuntimeException(exc);
                     }
                 }
+                DefaultTableModel model = new DefaultTableModel(data, columnNames);
+                table.setModel(model);
             }
+        }
+        if (e.getSource() == btnEnquiry){
+            for (int i = 0; i < getColumns(); i++) {
+                for (int j = 0; j < 8; j++) {
+                    data[i][j] = "";
+                }
+            }
+            String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+            String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
+            String userName = "s20211576"; // 默认用户名
+            String userPwd = "s20211576"; // 密码
+            String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Course_Teacher_manage_view where 1=1 ";
+            if (txtCourseNo.getText().trim().length() != 0) {
+                sql += " and Cno='" + txtCourseNo.getText().trim() + "'";
+            }
+            if (txtCourseName.getText().trim().length() != 0) {
+                sql += " and Cname='" + txtCourseName.getText().trim() + "'";
+            }
+            if (txtTeacherName.getText().trim().length() != 0) {
+                sql += " and Emp_name='" + txtTeacherName.getText().trim() + "'";
+            }
+            if (txtCredit.getText().trim().length() != 0) {
+                sql += " and Credit='" + txtCredit.getText().trim() + "'";
+            }
+            if (txtCourseNum.getText().trim().length() != 0) {
+                sql += " and Stu_total='" + txtCourseNum.getText().trim() + "'";
+            }
+            if (comSemester.getSelectedItem().toString().trim().length() != 0) {
+                sql += " and Semester='" + comSemester.getSelectedItem().toString().trim() + "'";
+            }
+            Connection dbConn = null;
+            try {
+                Class.forName(Driver2);
+                dbConn = DriverManager.getConnection(url, userName, userPwd);
+            } catch (ClassNotFoundException ea) {
+                throw new RuntimeException(ea);
+            } catch (SQLException eb) {
+                throw new RuntimeException(eb);
+            }
+            try {
+                Statement stmt = dbConn.createStatement();
+                ResultSet rs = stmt.executeQuery(sql);
+                int count = 0;
+                while (rs.next()) {
+                    data[count][0] = rs.getString("Semester");
+                    data[count][1] = rs.getString("Course_Offered_Sde_no");
+                    data[count][2] = rs.getString("Sde_name");
+                    data[count][3] = rs.getString("Cno");
+                    data[count][4] = rs.getString("Cname");
+                    data[count][5] = rs.getString("Emp_name");
+                    data[count][6] = rs.getString("Credit");
+                    data[count][7] = rs.getString("Stu_total");
+                    count++;
+                }
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            } finally {
+                try {
+                    dbConn.close();
+                } catch (SQLException exc) {
+                    throw new RuntimeException(exc);
+                }
+            }
+            DefaultTableModel model = new DefaultTableModel(data, columnNames);
+            table.setModel(model);
         }
         // 添加监听器，监听表格的行选中事件
         table.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
@@ -353,7 +388,6 @@ public class WindowStudentCourseChoose extends JFrame implements ActionListener 
             Statement stml = dbConn.createStatement();
             String sql = "SELECT * FROM Student_view where Sno = '"+loginID+"'";
             ResultSet rs = stml.executeQuery(sql);
-
             while (rs.next()) {
                 txtSdept = rs.getString("Sde_name");
             }

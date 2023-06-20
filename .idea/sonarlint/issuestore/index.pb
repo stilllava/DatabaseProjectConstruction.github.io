@@ -3,12 +3,8 @@
 src/Main.java,9\2\924f089edb4af5ee45c8a9d1129cd28e2b368138
 i
 9src/function/WindowManagerAddTeacherPasswordFunction.java,9\5\95c8ce9413550ab549cfd542540f4971c4cde3e6
-X
-(src/SystemInterface/TransportString.java,4\6\4685e86799f1de849749f641bc10e85788aaa675
 ]
 -src/SystemInterface/WindowManagerEnquiry.java,d\9\d982450433803196497192f5b55707821a526e59
-M
-src/SystemInterface/Main.java,d\5\d565efb7962924e5bff03326613ae3a6990c89e8
 m
 =src/SystemInterface/WindowManagerGetStudentCourseSummary.java,a\7\a7537f4ea9a8d59881b1d51746cc409168929c9d
 e
@@ -55,5 +51,3 @@ V
 &src/SystemInterface/WindowTeacher.java,4\0\40c205d73104e6a6ad2fe767c62ea52494d71685
 a
 1src/SystemInterface/WindowTeacherScoreManage.java,8\5\85682d5c1ab03debddf8d19e09529befb8dbdd36
-X
-(src/SystemInterface/windowsRegister.java,a\d\ad9a32a3d230ee04c1019ddaac01eb3e7dfb0ecb

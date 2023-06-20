@@ -44,29 +44,34 @@ public class WindowManagerAddTeacherPassword extends JFrame implements ActionLis
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnAdd) {
-            frame1.dispose();
-            String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-            String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
-            String userName = "s20211576"; // 默认用户名
-            String userPwd = "s20211576"; // 密码
-            String sql1 = "use Academic_Affairs_Management_System_20211576 insert into Teacher_20211576 values ('" + txtEmp_No.getText().toString() + "','" + txtEmp_name.getText().toString() + "','" + txtSex.getText().toString() + "','" + txtEmp_SdeptNo.getText().toString() + "','教务管理人员')"; // SQL语句
-            Connection dbConn = null;
-            try {
-                Class.forName(Driver);
-                dbConn = DriverManager.getConnection(url, userName, userPwd);
-                System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
-                Statement stmt = dbConn.createStatement();
-                ResultSet rs = stmt.executeQuery(sql1);
-                JOptionPane.showMessageDialog(null, "教师表添加成功！密码表添加成功！", "提示", JOptionPane.INFORMATION_MESSAGE);
-                rs.close();
-                stmt.close();
-                dbConn.close();
-            } catch (Exception em) {
-                em.printStackTrace();
-            } finally {
+            if (txtEmp_No.getText().equals("") || txtEmp_name.getText().equals("") || txtSex.getText().equals("") || txtEmp_SdeptNo.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "请填写完整信息", "提示", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            else{
+                frame1.dispose();
+                String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+                String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
+                String userName = "s20211576"; // 默认用户名
+                String userPwd = "s20211576"; // 密码
+                String sql1 = "use Academic_Affairs_Management_System_20211576 insert into Teacher_20211576 values ('" + txtEmp_No.getText().toString() + "','" + txtEmp_name.getText().toString() + "','" + txtSex.getText().toString() + "','" + txtEmp_SdeptNo.getText().toString() + "','教务管理人员')"; // SQL语句
+                Connection dbConn = null;
                 try {
-                } catch (Exception ec) {
-                    ec.printStackTrace();
+                    Class.forName(Driver);
+                    dbConn = DriverManager.getConnection(url, userName, userPwd);
+                    Statement stmt = dbConn.createStatement();
+                    JOptionPane.showMessageDialog(null, "教师表添加成功！密码表添加成功！", "提示", JOptionPane.INFORMATION_MESSAGE);
+                    ResultSet rs = stmt.executeQuery(sql1);
+                    rs.close();
+                    stmt.close();
+                    dbConn.close();
+                } catch (Exception em) {
+                    em.printStackTrace();
+                } finally {
+                    try {
+                    } catch (Exception ec) {
+                        ec.printStackTrace();
+                    }
                 }
             }
         }

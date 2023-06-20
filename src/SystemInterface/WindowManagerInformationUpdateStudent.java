@@ -40,7 +40,6 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
     JButton btnSearch = new JButton("查询");
     JLabel labelWarning1 = new JLabel("提示：当上方所有项为空时查询键为查询所有信息，否则为查询指定信息" );
     JLabel labelWarning2 = new JLabel("出生日期/入学日期格式为yyyy-mm-dd/(yyyy/mm/dd)");
-    JButton btnInsert = new JButton("从excel表/.csv文件中读取信息");
     JTable table = new JTable();
     JScrollPane scrollPane = new JScrollPane(table);
     String [] columnNames = {"学号","姓名","性别","出生日期","入学日期","班级号","家庭住址","所在系","邮政编码","就读状态"};
@@ -81,14 +80,12 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
         panelCenter.setLayout(new GridLayout(6,1));
         panelCenter.add(btnAdd);
         panelCenter.add(btnUpdate);panelCenter.add(btnSearch);
-        panelCenter.add(btnInsert);
         panelCenter.add(labelWarning1);panelCenter.add(labelWarning2);
         frame1.add(scrollPane,BorderLayout.SOUTH);
         scrollPane.setViewportView(table);
         btnAdd.addActionListener(this);
         btnUpdate.addActionListener(this);
         btnSearch.addActionListener(this);
-        btnInsert.addActionListener(this);
     }
     public static void main(String[] args) {
         new WindowManagerInformationUpdateStudent();
@@ -96,30 +93,41 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btnAdd){
-            if(textNo.getText().trim().equals("") == true
-            && textName.getText().trim().equals("") == true
-            && textSex.getText().trim().equals("") == true
-            && textBirth.getText().trim().equals("") == true
-            && textEntrancedate.getText().trim().equals("") == true
-            && textClassno.getText().trim().equals("") == true
-            && textHomeaddress.getText().trim().equals("") == true
-            && textSdept.getText().trim().equals("") == true){}
-            else {
+        if (e.getSource() == btnAdd) {
+            if(textNo.getText().trim().equals("") == false
+                    && textName.getText().trim().equals("") == false
+                    && textSex.getText().trim().equals("") == false
+                    && textBirth.getText().trim().equals("") == false
+                    && textEntrancedate.getText().trim().equals("") == false
+                    && textClassno.getText().trim().equals("") == false
+                    && textHomeaddress.getText().trim().equals("") == false
+                    && textSdept.getText().trim().equals("") == false) {
                 String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
                 String userName = "s20211576"; // 默认用户名
                 String userPwd = "s20211576"; // 密码
+                String sql0 = "use Academic_Affairs_Management_System_20211576 select * from Manager_Student_view where Sde_no ='" + textNo.getText() + "'";
                 String sql = "insert into Academic_Affairs_Management_System_20211576.dbo.Student_20211576(Sno,Sname,Sex,Birth,Entrance_date,Class_no,Home_addr,Sde_no,Postcode) values('"+textNo.getText()+"','"+textName.getText()+"','"+textSex.getText()+"',"+textBirth.getText()+","+textEntrancedate.getText()+",'"+textClassno.getText()+"','"+textHomeaddress.getText()+"','"+textSdept.getText()+"','"+textPostcode.getText()+"')";
                 Connection dbConn = null;
                 try {
                     Class.forName(Driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println(sql); // 如果连接成功 控制台输出
+                    System.out.println(sql0); // 如果连接成功 控制台输出
+                    System.out.println(sql);
                     Statement stmt = dbConn.createStatement();
-                    JOptionPane.showMessageDialog(null, "学号为"+textNo+"的同学信息添加成功！", "提示", JOptionPane.INFORMATION_MESSAGE);
-                    ResultSet rs = stmt.executeQuery(sql);
-                    rs.close();
+                    ResultSet rs0 = stmt.executeQuery(sql0);
+                    String Class_no = "";
+                    while (rs0.next()) {
+                        Class_no += rs0.getString("Sno");
+                    }
+                    if (Class_no.equals("") == false) {
+                        JOptionPane.showMessageDialog(null, "学号为"+textNo.getText()+"的同学信息已存在!", "提示", JOptionPane.INFORMATION_MESSAGE);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "学号为"+textNo.getText()+"的同学信息添加成功!", "提示", JOptionPane.INFORMATION_MESSAGE);
+                        ResultSet rs = stmt.executeQuery(sql);
+                        rs.close();
+                    }
+                    rs0.close();
                     stmt.close();
                     dbConn.close();
                 } catch (Exception em) {
@@ -130,6 +138,8 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
                         ec.printStackTrace();
                     }
                 }
+            } else {
+                JOptionPane.showMessageDialog(null, "请填写完整信息!");
             }
         }
         if (e.getSource() == btnUpdate){
@@ -181,6 +191,9 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
                         ec.printStackTrace();
                     }
                 }
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "学号和（姓名/性别/出生日期/入学日期/班级号/家庭住址/所在系/邮政编码中至少有一项）不为空!");
             }
         }
         if (e.getSource() == btnSearch){
@@ -320,14 +333,8 @@ public class WindowManagerInformationUpdateStudent extends JFrame implements Act
                     }
                 }
             }
-            // Create a new DefaultTableModel with the data and column names
             DefaultTableModel model = new DefaultTableModel(data, columnNames);
-
-            // Set the model for the JTable
             table.setModel(model);
-        }
-        if (e.getSource() == btnInsert){
-            WindowManagerInformationUpdateStudentInsert insert = new WindowManagerInformationUpdateStudentInsert();
         }
     }
     public int getColumns() {

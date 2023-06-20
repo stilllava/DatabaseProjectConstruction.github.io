@@ -21,7 +21,6 @@ public class WindowManagerInformationUpdateAcademy extends JFrame implements Act
     JTextField textAcaIntroduction = new JTextField(12);
     JButton btnAdd = new JButton("添加");
     JButton btnSearch = new JButton("查询");
-    JButton btnInsert = new JButton("从excel表/.csv文件中读取信息");
     JTable table = new JTable();
     JScrollPane scrollPane = new JScrollPane(table);
     String [] columnNames = {"学院编号","学院名","学院简介"};
@@ -46,10 +45,8 @@ public class WindowManagerInformationUpdateAcademy extends JFrame implements Act
         panelNorth.add(btnAdd);panelNorth.add(btnSearch);
         panelCenter.add(scrollPane);
         scrollPane.setViewportView(table);
-        panelSouth.add(btnInsert);
         btnAdd.addActionListener(this);
         btnSearch.addActionListener(this);
-        btnInsert.addActionListener(this);
     }
     public static void main(String[] args) {
         new WindowManagerInformationUpdateAcademy();
@@ -58,25 +55,37 @@ public class WindowManagerInformationUpdateAcademy extends JFrame implements Act
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnAdd){
-            if(textAcaNo.getText().trim().equals("") == true
-                    && textAcaName.getText().trim().equals("") == true
-                    && textAcaIntroduction.getText().trim().equals("") == true){}
-            else {
+            if(textAcaNo.getText().trim().equals("") == false
+                    && textAcaName.getText().trim().equals("") == false
+                    && textAcaIntroduction.getText().trim().equals("") == false){
                 String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";
                 String userName = "s20211576"; // 默认用户名
                 String userPwd = "s20211576"; // 密码
+                String sql0 = "use Academic_Affairs_Management_System_20211576 select * from Manager_Academy_view where Aca_no ='"+textAcaNo.getText()+"'";
                 String sql = "insert into Academic_Affairs_Management_System_20211576.dbo.Academy_20211576(Aca_no,Aca_name,Aca_introduction) " +
                         "values('"+textAcaNo.getText()+"','"+textAcaName.getText()+"','"+textAcaIntroduction.getText()+"')";
                 Connection dbConn = null;
                 try {
                     Class.forName(Driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println(sql); // 如果连接成功 控制台输出
+                    System.out.println(sql0); // 如果连接成功 控制台输出
+                    System.out.println(sql);
                     Statement stmt = dbConn.createStatement();
-                    JOptionPane.showMessageDialog(null, "名字为"+textAcaName.getText()+"的学院信息添加成功！", "提示", JOptionPane.INFORMATION_MESSAGE);
-                    ResultSet rs = stmt.executeQuery(sql);
-                    rs.close();
+                    ResultSet rs0 = stmt.executeQuery(sql0);
+                    String Aca_no = "";
+                    while(rs0.next()){
+                        Aca_no += rs0.getString("Aca_no");
+                    }
+                    if(Aca_no.equals("") == false){
+                        JOptionPane.showMessageDialog(null, "名字为"+textAcaName.getText()+"的学院信息已存在！", "提示", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "名字为"+textAcaName.getText()+"的学院信息添加成功！", "提示", JOptionPane.INFORMATION_MESSAGE);
+                        ResultSet rs = stmt.executeQuery(sql);
+                        rs.close();
+                    }
+                    rs0.close();
                     stmt.close();
                     dbConn.close();
                 } catch (Exception em) {
@@ -88,9 +97,11 @@ public class WindowManagerInformationUpdateAcademy extends JFrame implements Act
                     }
                 }
             }
+            else{
+                JOptionPane.showMessageDialog(null,"请填写完整信息!");
+            }
         }
         if (e.getSource() == btnSearch){
-            //清空表格
             for (int i = 0; i < getColumns(); i++) {
                 for (int j = 0; j < 10; j++) {
                     data[i][j] = "";
@@ -108,15 +119,10 @@ public class WindowManagerInformationUpdateAcademy extends JFrame implements Act
                 try {
                     Class.forName(Driver);
                     dbConn = DriverManager.getConnection(url, userName, userPwd);
-                    System.out.println("Connection Successful!"); // 如果连接成功 控制台输出
                     Statement stmt = dbConn.createStatement();
-                    System.out.println(sql);
                     ResultSet rs = stmt.executeQuery(sql);
-                    // Get the number of columns in the ResultSet
                     ResultSetMetaData rsmd = rs.getMetaData();
                     int numColumns = rsmd.getColumnCount();
-
-                    // Retrieve all rows of data from the ResultSet and store in the data array
                     int row = 0;
                     while (rs.next()) {
                         for (int col = 0; col < numColumns; col++) {
@@ -184,14 +190,8 @@ public class WindowManagerInformationUpdateAcademy extends JFrame implements Act
                     }
                 }
             }
-            // Create a new DefaultTableModel with the data and column names
             DefaultTableModel model = new DefaultTableModel(data, columnNames);
-
-            // Set the model for the JTable
             table.setModel(model);
-        }
-        if (e.getSource() == btnInsert){
-            WindowManagerInformationUpdateStudentInsert insert = new WindowManagerInformationUpdateStudentInsert();
         }
     }
     public int getColumns() {

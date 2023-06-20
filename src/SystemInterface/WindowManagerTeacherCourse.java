@@ -30,8 +30,7 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
     JTextField txtEmp_no = new JTextField(12);
     JLabel labelCourseOfferedSdeNo = new JLabel("允许选课院系");
     JTextField txtCourseOfferedSdeNo = new JTextField(12);
-    JButton btnAdd = new JButton("添加");
-    JButton btnUpdate = new JButton("修改");
+    JButton btnAdd = new JButton("添加/修改");
     JLabel labelSearchSemester = new JLabel("学期");
     JComboBox comSearchSemester = new JComboBox();
     JLabel labelSearchCname = new JLabel("课程名");
@@ -71,7 +70,6 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
         panel1.add(labelCourseOfferedSdeNo);
         panel1.add(txtCourseOfferedSdeNo);
         panel2.add(btnAdd);
-        panel2.add(btnUpdate);
         panel2.add(btnList);
         panel4.add(scrollPane);
         scrollPane.setViewportView(table);
@@ -101,7 +99,6 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
         comlabelSearchSemester.setSelectedIndex(18);
         initialText = (String) comlabelSearchSemester.getSelectedItem();
         btnAdd.addActionListener(this);
-        btnUpdate.addActionListener(this);
         btnList.addActionListener(this);
         btnSearchSemester.addActionListener(this);
         btnSearchCname.addActionListener(this);
@@ -117,9 +114,6 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnAdd) {
             WindowManagerTeacherCourseAdd wmtca = new WindowManagerTeacherCourseAdd();
-        }
-        if (e.getSource() == btnUpdate) {
-
         }
         if (e.getSource() == btnList) {
             String sql = "use Academic_Affairs_Management_System_20211576 select * from Manager_Course_Teacher_manage_view";
@@ -163,7 +157,6 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
             ResultSetMetaData rsmd = rs.getMetaData();
             columnCount = 0;
             while (rs.next()) {
-                //统计表中共有多少行数据
                 columnCount++;
             }
         } catch (SQLException e) {
@@ -194,11 +187,8 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
             Statement stmt = dbConn.createStatement();
             System.out.println(sql);
             ResultSet rs = stmt.executeQuery(sql);
-            // Get the number of columns in the ResultSet
             ResultSetMetaData rsmd = rs.getMetaData();
             int numColumns = rsmd.getColumnCount();
-
-            // Retrieve all rows of data from the ResultSet and store in the data array
             int row = 0;
             while (rs.next()) {
                 for (int col = 0; col < numColumns; col++) {
@@ -217,10 +207,7 @@ public class WindowManagerTeacherCourse extends JFrame implements ActionListener
                 ec.printStackTrace();
             }
         }
-        // Create a new DefaultTableModel with the data and column names
         DefaultTableModel model = new DefaultTableModel(data, columnNames);
-
-        // Set the model for the JTable
         table.setModel(model);
     }
 }

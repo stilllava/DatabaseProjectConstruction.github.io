@@ -110,8 +110,6 @@ public class WindowManagerEnquiryStudent extends JFrame implements ActionListene
                     // Get the number of columns in the ResultSet
                     ResultSetMetaData rsmd = rs.getMetaData();
                     int numColumns = rsmd.getColumnCount();
-
-                    // Retrieve all rows of data from the ResultSet and store in the data array
                     int row = 0;
                     while (rs.next()) {
                         for (int col = 0; col < numColumns; col++) {
@@ -207,14 +205,10 @@ public class WindowManagerEnquiryStudent extends JFrame implements ActionListene
                     }
                 }
             }
-            // Create a new DefaultTableModel with the data and column names
             DefaultTableModel model = new DefaultTableModel(data, columnNames);
-
-            // Set the model for the JTable
             table.setModel(model);
         }
     }
-
     public int getColumns() {
         String Driver2 = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Academic_Affairs_Management_System_20211576;encrypt=false";

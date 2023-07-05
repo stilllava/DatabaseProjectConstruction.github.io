@@ -41,3 +41,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        theme:static.yml
+        title:数据库课程设计项目
+        description:数据库备份（backup文件）及Java源代码均已上传。
